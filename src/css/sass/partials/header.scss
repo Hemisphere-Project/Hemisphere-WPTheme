@@ -5,7 +5,47 @@
 
 
 // Header container
-.header {}
+.header {
+	
+	a {
+		color:$hmsphr-green;
+	}
+
+	.header-pack {
+		/*float:left;*/
+		position:fixed;
+		top:$header-offset-top;
+		left:$header-offset-left;
+		
+		font-family:$font-family-base;
+		font-size:$font-size-base;
+		
+		.element{
+			font-family:$font-family-head;	
+			font-size:$font-size-head;
+			display:inline;
+			
+			.current{
+				color:$text-color;	
+			}
+			
+			a{
+				text-decoration: none;	
+			}
+			
+			a:hover{
+				font-family:$font-family-head-2;
+			}
+			a:active{
+				font-family:$font-family-head-3;
+			}
+		}
+		
+
+	}
+
+
+}
 
 // Logo
 .logo {}

@@ -1,8 +1,57 @@
+@charset "UTF-8";
 /**
  * styles.scss
  * ---
  * Main `sass` file. Import here `sass` files
  */
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+  Mixins available:
+    -   css3-prefix             - arguments: Property, Value
+    -   background-gradient     - arguments: Start Color: #3C3C3C, End Color: #999999
+    -   background-horizontal   - arguments: Start Color: #3C3C3C, End Color: #999999
+    -   background-radial       - arguments: Start Color: #FFFFFF, Start position: 0%, End Color: #000000, End position: 100%
+    -   background-size         - arguments: Width: 100%, Height: 100%
+    -   background-opacity      - arguments: Color: #000, Opacity: .85
+    -   border-radius           - arguments: Radius: 5px
+    -   border-radius-separate  - arguments: Top Left: 5px, Top Right: 5px, Bottom Left: 5px, Bottom Right: 5px
+    -   box                     - arguments: Orientation: horizontal, Pack: center, Align: center
+    -   box-rgba                - arguments: R: 60, G: 3, B: 12, Opacity: 0.23, Color: #3C3C3C
+    -   box-shadow              - arguments: X: 2px, Y: 2px, Blur: 5px, Color: rgba(0,0,0,.4)
+    -   box-sizing              - arguments: Type: border-box
+    -   columns                 - arguments: Count: 3, Gap: 10
+    -   double-borders          - arguments: Color One: #3C3C3C, Color Two: #999999, Radius: 0
+    -   flex                    - arguments: Value: 1
+    -   flip                    - arguments: ScaleX: -1
+    -   font-face               - arguments: Font Family: myFont, Eot File Src: myFont.eot, Woff File Src: myFont.woff, Ttf File Src: myFont.ttf
+    -   opacity                 - arguments: Opacity: 0.5
+    -   outline radius          - arguments: Radius: 5px
+    -   resize                  - arguments: Direction: both
+    -   rotate                  - arguments: Degree: 0, M11: 0, M12: 0, M21: 0, M22: 0
+    CSS Matrix Rotation Calculator http://www.boogdesign.com/examples/transforms/matrix-calculator.html
+    -   text-shadow             - arguments: X: 2px, Y: 2px, Blur: 5px, Color: rgba(0,0,0,.4)
+    -   transform               - arguments: Parameters: null
+    -   transform-style         - arguments: Style: preserve-3d
+    -   transition              - Default arguments: What: all, Length: 1s, Easing: ease-in-out
+    -                            - Examples: @include transition (all 2s ease-in-out);
+    -                                        @include transition (opacity 1s ease-in 2s, width 2s ease-out);
+    -   triple-borders          - arguments: Color One: #3C3C3C, Color Two: #999999, Color Three: #000000, Radius: 0
+    -   keyframes               - arguments: Animation name
+                                - content:   Animation css
+    -   animation               - arguments: name duration timing-function delay iteration-count direction fill-mode play-state
+                                             (http://www.w3schools.com/cssref/css3_pr_animation.asp)
+
+------------------------------------------------------------- */
 /**
  * modules/variables
  * ---
@@ -13,8 +62,23 @@
 /**
  * Colors
  */
+/* HMSPHR GREEN */
+/**
+* Positioning
+*/
+/* global */
+/* header */
+/* repertoire page */
+/* to be replaced with border image */
+/* projects (actu/hemisphere) page */
+/* single project page */
+/*264px;*/
 /**
  * Grid
+ */
+/*$wrapper-width: 1280px;*/
+/**
+ * Indentation
  */
 /**
  * modules/mixins
@@ -37,6 +101,88 @@
   font-style: normal;
 }
 */
+/******************************************************************************/
+/******************************************************************************/
+/* BTP Familiy */
+/******************************************************************************/
+/******************************************************************************/
+@font-face {
+  font-family: 'btpnormal';
+  src: url("fonts/aa_btp-webfont.eot");
+  src: url("fonts/aa_btp-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/aa_btp-webfont.woff2") format("woff2"), url("fonts/aa_btp-webfont.woff") format("woff"), url("fonts/aa_btp-webfont.ttf") format("truetype"), url("fonts/aa_btp-webfont.svg#btpnormal") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'btp_modify1';
+  src: url("fonts/btpmodify1-webfont.eot");
+  src: url("fonts/btpmodify1-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/btpmodify1-webfont.woff2") format("woff2"), url("fonts/btpmodify1-webfont.woff") format("woff"), url("fonts/btpmodify1-webfont.ttf") format("truetype"), url("fonts/btpmodify1-webfont.svg#btp_modify1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'btp_modify2';
+  src: url("fonts/btpmodify2-webfont.eot");
+  src: url("fonts/btpmodify2-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/btpmodify2-webfont.woff2") format("woff2"), url("fonts/btpmodify2-webfont.woff") format("woff"), url("fonts/btpmodify2-webfont.ttf") format("truetype"), url("fonts/btpmodify2-webfont.svg#btp_modify2") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/*@font-face {
+    font-family: 'btplight_rotated';
+    src: url('fonts/aa_btp_light_rotated-webfont.eot');
+    src: url('fonts/aa_btp_light_rotated-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/aa_btp_light_rotated-webfont.woff2') format('woff2'),
+         url('fonts/aa_btp_light_rotated-webfont.woff') format('woff'),
+         url('fonts/aa_btp_light_rotated-webfont.ttf') format('truetype'),
+         url('fonts/aa_btp_light_rotated-webfont.svg#btplight_rotated') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'btplight';
+    src: url('fonts/aa_btp_light-webfont.eot');
+    src: url('fonts/aa_btp_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/aa_btp_light-webfont.woff2') format('woff2'),
+         url('fonts/aa_btp_light-webfont.woff') format('woff'),
+         url('fonts/aa_btp_light-webfont.ttf') format('truetype'),
+         url('fonts/aa_btp_light-webfont.svg#btplight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'btprotated';
+    src: url('fonts/aa_btp_rotated-webfont.eot');
+    src: url('fonts/aa_btp_rotated-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/aa_btp_rotated-webfont.woff2') format('woff2'),
+         url('fonts/aa_btp_rotated-webfont.woff') format('woff'),
+         url('fonts/aa_btp_rotated-webfont.ttf') format('truetype'),
+         url('fonts/aa_btp_rotated-webfont.svg#btprotated') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+/******************************************************************************/
+/******************************************************************************/
+/* Anka/Coder Familiy */
+/******************************************************************************/
+/******************************************************************************/
+@font-face {
+  font-family: 'ankacoder_narrowregular';
+  src: url("fonts/ankacoder-c75-r-webfont.eot");
+  src: url("fonts/ankacoder-c75-r-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/ankacoder-c75-r-webfont.woff2") format("woff2"), url("fonts/ankacoder-c75-r-webfont.woff") format("woff"), url("fonts/ankacoder-c75-r-webfont.ttf") format("truetype"), url("fonts/ankacoder-c75-r-webfont.svg#ankacoder_narrowregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /**
  * partials/reset
  * ---
@@ -55,11 +201,11 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Open Sans", sans-serif;
-  font-size: 140%;
-  line-height: 1.5;
-  color: #444444;
-  background-color: white;
+  font-family: "ankacoder_narrowregular";
+  font-size: 15px;
+  line-height: 1.3;
+  color: #000;
+  background-color: #fff;
 }
 
 img {
@@ -68,7 +214,7 @@ img {
 }
 
 a {
-  color: #444444;
+  color: #000;
   text-decoration: none;
 }
 a:focus, a:hover {
@@ -82,8 +228,8 @@ input[type="search"] {
 }
 
 ::selection {
-  background-color: #04a4cc;
-  color: white;
+  background-color: #009A65;
+  color: #fff;
   text-shadow: none;
 }
 
@@ -96,7 +242,7 @@ input[type="search"] {
  * Alignment
  */
 .alignnone {
-  margin: 5px 15px 15px 0;
+  margin: 5px 0px 15px 0;
 }
 
 .aligncenter {
@@ -107,19 +253,19 @@ input[type="search"] {
 .alignright {
   float: right;
   margin: 5px 0 20px 20px;
-  margin: 5px 0 15px 15px;
+  margin: 5px 0 15px 0px;
 }
 
 .alignleft {
   float: left;
-  margin: 5px 15px 15px 0;
+  margin: 5px 0px 15px 0;
 }
 
 /**
  * Gallery & images
  */
 .wp-caption {
-  background: white;
+  background: #fff;
   border: thin solid #F0F0F0;
   max-width: 95%;
   padding: 5px 5px;
@@ -138,8 +284,8 @@ input[type="search"] {
 .gallery-caption {
   margin: 0;
   padding: 0 5px 5px;
-  font-size: 140%;
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.3;
 }
 
 /**
@@ -160,26 +306,96 @@ input[type="search"] {
   margin: 0;
 }
 
+.hidden {
+  display: none;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
 /**
  * partials/wrapper
  * ---
  */
 .wrapper {
-  max-width: 1280px;
-  padding: 0 15px;
+  max-width: 100%;
+  padding: 0 0px;
   margin: 0 auto;
   position: relative;
 }
 
 /**
- * partial/header
+ * partials/header
  * ---
  */
+.header a {
+  color: #009A65;
+}
+.header .header-pack {
+  /*float:left;*/
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  font-family: "ankacoder_narrowregular";
+  font-size: 15px;
+}
+.header .header-pack .element {
+  font-family: "btpnormal";
+  font-size: 24px;
+  display: inline;
+}
+.header .header-pack .element .current {
+  color: #000;
+}
+.header .header-pack .element a {
+  text-decoration: none;
+}
+.header .header-pack .element a:hover {
+  font-family: "btp_modify1";
+}
+.header .header-pack .element a:active {
+  font-family: "btp_modify2";
+}
+
 /**
  * partials/nav
  * ---
  * Menus
  */
+.nav {
+  /*float:right;*/
+  position: fixed;
+  top: 20px;
+  right: 160px;
+}
+.nav ul {
+  list-style-type: none;
+}
+.nav .menu-item {
+  font-family: 'btpnormal';
+  font-size: 1.1em;
+}
+.nav .menu-real {
+  text-indent: 115px;
+}
+.nav .menu-rep {
+  text-indent: 230px;
+}
+.nav .menu-lab {
+  text-indent: 345px;
+}
+.nav .menu-about {
+  text-indent: 460px;
+}
+.nav .menu-search {
+  text-indent: 575px;
+}
+
+.menu {
+  /* pb ici cette class n'est pas ajoutée à la creation du menu (cf. functions.php)*/
+}
+
 /**
  * partials/sidebar
  * ---
@@ -259,3 +475,340 @@ input[type="search"] {
     page-break-after: avoid;
   }
 }
+/**
+ * partials/projects
+ * ---
+ */
+.projects {
+  margin: 146px 132px 0 132px;
+}
+
+.project-item {
+  margin: 40px 0 0 0;
+}
+.project-item img {
+  width: 100%;
+  border: 6px solid #009A65;
+}
+
+.legend {
+  position: fixed;
+  top: 60px;
+  left: 132px;
+  font-family: "btpnormal";
+  font-size: 24px;
+}
+.legend .legend-line-1 .lgd-numbering:after {
+  content: " — ";
+}
+.legend .legend-line-2 {
+  text-indent: 115px;
+}
+.legend .legend-line-3 {
+  text-indent: 230px;
+}
+
+.numbering {
+  padding-top: 6px;
+}
+
+.numbering:after {
+  content: ".";
+}
+
+/* grid */
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+[class*="col-"] {
+  padding-right: 40px;
+  width: 100%;
+}
+
+.top-margin-1 {
+  margin-top: 40px;
+}
+
+.top-margin-2 {
+  margin-top: 80px;
+}
+
+.top-margin-3 {
+  margin-top: 120px;
+}
+
+.top-margin-4 {
+  margin-top: 160px;
+}
+
+.top-margin-5 {
+  margin-top: 200px;
+}
+
+.top-margin-6 {
+  margin-top: 240px;
+}
+
+.top-margin-7 {
+  margin-top: 280px;
+}
+
+.top-margin-8 {
+  margin-top: 320px;
+}
+
+.top-margin-9 {
+  margin-top: 360px;
+}
+
+.top-margin-10 {
+  margin-top: 400px;
+}
+
+@media all and (min-width: 600px) {
+  /* set col widths */
+  .col-1-2 {
+    width: 50%;
+  }
+
+  .col-1-3 {
+    width: 33.33%;
+  }
+
+  .col-2-3 {
+    width: 66.66%;
+  }
+
+  .col-1-4 {
+    width: 25%;
+  }
+
+  .col-1-8 {
+    width: 12.5%;
+  }
+
+  .col-1-10 {
+    width: 10%;
+  }
+
+  .col-2-10 {
+    width: 20%;
+  }
+
+  .col-3-10 {
+    width: 30%;
+  }
+
+  .col-4-10 {
+    width: 40%;
+  }
+
+  .col-5-10 {
+    width: 50%;
+  }
+
+  .col-6-10 {
+    width: 60%;
+  }
+
+  .col-7-10 {
+    width: 70%;
+  }
+
+  .col-8-10 {
+    width: 80%;
+  }
+
+  .col-9-10 {
+    width: 90%;
+  }
+}
+.project .legend {
+  position: relative;
+}
+.project .image-column {
+  /*float:left;*/
+  /*width:50%;*/
+  height: calc(100vh - 183px);
+  overflow-y: scroll;
+  margin-top: 90px;
+  margin-left: 132px;
+  margin-right: 657px;
+  /*width:100%;*/
+}
+.project .image-column img {
+  width: 100%;
+  margin-bottom: 45px;
+  border: 6px solid #009A65;
+  /*max-height: calc(100vh - 183px);*/
+}
+.project .text-column {
+  font-family: "ankacoder_narrowregular";
+  font-size: 15px;
+  /*position:fixed;*/
+  float: right;
+  max-width: 50%;
+  width: 275px;
+  margin-right: 342px;
+  margin-top: calc(-100vh + 183px);
+  /*top:$project-margin-top;*/
+}
+.project .infos {
+  margin-top: 10px;
+}
+.project .info-separator {
+  color: #009A65;
+}
+
+.repertoire {
+  height: 100vh;
+  overflow: hidden;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+.repertoire .fixed-table-container {
+  margin-top: 104px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: relative;
+  padding-top: 30px;
+}
+.repertoire .header-background {
+  height: 35px;
+  border-bottom: 2px dashed #009A65;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.repertoire .fixed-table-container-inner {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  margin-top: 3px;
+}
+.repertoire .repertoire-table {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-collapse: collapse;
+  border-spacing: 2px;
+  padding-left: 5px;
+  margin-bottom: 300px;
+}
+.repertoire .repertoire-table .th-inner {
+  font-family: "ankacoder_narrowregular";
+  color: #009A65;
+  position: absolute;
+  top: 0;
+  /* line-height: 30px; */
+  text-align: left;
+}
+.repertoire .repertoire-table th {
+  padding-left: 5px;
+}
+.repertoire .repertoire-table tr {
+  width: 100%;
+  border-top: 2px dashed #009A65;
+  border-bottom: 2px dashed #009A65;
+}
+.repertoire .repertoire-table tr:first-child {
+  border: none;
+}
+.repertoire .repertoire-table td {
+  text-align: left;
+  padding: 20px 90px 60px 0px;
+  /*height: 100px;*/
+  width: 20px;
+  vertical-align: top;
+}
+
+.search-section {
+  margin-top: 220px;
+}
+.search-section .search-header {
+  position: fixed;
+  left: 15px;
+  right: 15px;
+  /*.search-input {
+  	animation: blink-empty 1s infinite;
+  	border-left: transparent solid 1px;
+  	margin:5px; 
+  }*/
+  /*@keyframes blink-empty {
+  	50% {border-left: 1px solid #333;}
+  }*/
+}
+.search-section .search-header .votre-recherche {
+  color: #009A65;
+  font-family: "btpnormal";
+  font-size: 1.1em;
+}
+.search-section .search-header .search {
+  display: inline;
+}
+.search-section .search-header .search-submit {
+  visibility: hidden;
+}
+.search-section .search-header .search-input {
+  border: none;
+  border-left: none;
+}
+.search-section .search-header .search-input:focus {
+  border: none;
+  outline: none;
+}
+.search-section .search-header hr {
+  border-color: #009A65;
+  border-style: solid;
+}
+.search-section .search-results {
+  z-index: -1;
+  padding-top: 60px;
+}
+.search-section .search-results .search-results-columns {
+  -webkit-column-count: 4;
+  -khtml-column-count: 4;
+  -moz-column-count: 4;
+  -ms-column-count: 4;
+  -o-column-count: 4;
+  column-count: 4;
+  -webkit-column-gap: 200px;
+  -khtml-column-gap: 200px;
+  -moz-column-gap: 200px;
+  -ms-column-gap: 200px;
+  -o-column-gap: 200px;
+  column-gap: 200px;
+}
+.search-section .search-results .search-results-columns article {
+  display: inline-block;
+}
+
+.elevator {
+  position: fixed;
+  left: 24px;
+  top: 180px;
+  text-align: center;
+  font-family: "btpnormal";
+  font-size: 24px;
+  color: #009A65;
+}
+.elevator .selected-item {
+  color: #000;
+}
+.elevator .selected-item:before {
+  content: "<";
+}
+.elevator .selected-item:after {
+  content: ">";
+}
+
+/*# sourceMappingURL=style.css.map */

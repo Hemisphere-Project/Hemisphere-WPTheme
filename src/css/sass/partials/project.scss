@@ -1,0 +1,56 @@
+.project{
+	
+	
+	.legend{
+		position:relative;
+	}
+	
+	.image-column{
+		/*float:left;*/
+		/*width:50%;*/
+		height:calc(100vh - #{$project-bottom-offset});
+		overflow-y:scroll;
+		margin-top:$project-margin-top;
+		margin-left:$base-margin-left;
+		margin-right:$project-text-column-right+$project-text-column-width+$project-image-column-right-margin;
+		/*width:100%;*/
+		
+		img{
+			width:100%;
+			margin-bottom : $project-img-interspace;
+			border : $img-border;
+			// pour éviter que l'image sorte du viewport quant elle est en portrait
+			/*max-height: calc(100vh - #{$project-bottom-offset});*/
+		}
+	}
+	 
+	.text-column{
+		font-family: $font-family-base;
+		font-size: $font-size-base;
+		
+		/*position:fixed;*/
+		float:right;
+		max-width:50%;
+		width:$project-text-column-width;
+		margin-right:$project-text-column-right;
+		margin-top:calc(-100vh + #{$project-bottom-offset});;
+		/*top:$project-margin-top;*/
+	}
+	
+	.excerpt{
+		
+	}
+	
+	.infos{
+		margin-top:10px;
+	}
+	.info-separator{
+		color:$hmsphr-green;
+	}
+	.info{
+		
+	}
+	.legend{
+		
+	}
+}

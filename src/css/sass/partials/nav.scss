@@ -5,9 +5,42 @@
  */
 
 
-.nav {}
+.nav {
+	/*float:right;*/
+	position:fixed;
+	top:20px;
+	right:160px;	
+	ul {
+		 list-style-type: none;	
+	}
+	
+	.menu-item{
+		font-family:'btpnormal';	
+		font-size:1.1em;
+	}
+	
+	.menu-real{
+		text-indent:$text-indent-base	
+	}
+	.menu-rep{
+		text-indent:$text-indent-base*2;
+	}
+	.menu-lab{
+		text-indent:$text-indent-base*3;
+	}
+	.menu-about{
+		text-indent:$text-indent-base*4;
+	}
+	.menu-search{
+		text-indent:$text-indent-base*5;
+	}
+}
 
-.menu {}
+.menu {
+/* pb ici cette class n'est pas ajoutée à la creation du menu (cf. functions.php)*/
+
+
+}
 
 .sub-menu {}
 

@@ -21,3 +21,10 @@
 .reset-box {
   @include reset-box;
 }
+.hidden{
+	display: none;	
+}
+.overflow-hidden{
+	overflow:hidden !important;	
+}
+

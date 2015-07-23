@@ -1,0 +1,80 @@
+.repertoire{
+	
+	height: 100vh;
+	overflow:hidden;
+	padding-left:$repertoire-h-padding;
+	padding-right:$repertoire-h-padding;
+	
+	.fixed-table-container{
+		margin-top:$repertoire-margin-top;
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		position: relative;
+		padding-top: 30px;	
+	}
+	.header-background {
+		height: 35px;
+		border-bottom:$repertoire-line-style;
+		background-color:$background-color-base;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+	}
+	.fixed-table-container-inner {
+		overflow-x: hidden;
+		overflow-y: auto;
+		height: 100%;
+		margin-top: 3px;
+	}
+	.repertoire-table {
+		
+		
+		width: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		
+		border-collapse:collapse;
+		border-spacing:2px;
+		padding-left:5px;
+		margin-bottom:300px;
+		
+		.th-inner {
+			font-family: $font-family-base;
+			color:$hmsphr-green;
+			position: absolute;
+			top: 0;
+			/* line-height: 30px; */
+			text-align: left;
+		}
+		th {
+			padding-left:5px;
+		}
+		
+		
+		tr{
+			width:100%;
+						border-top:$repertoire-line-style;
+			border-bottom:$repertoire-line-style;
+		}	
+		tr:first-child{
+			border:none;	
+		}		
+		
+		td {
+
+			text-align:left;
+			padding:$repertoire-td-padding;
+			/*height: 100px;*/
+			width:20px;
+			vertical-align:top;
+		}
+
+		
+	}
+
+	
+	
+	
+}

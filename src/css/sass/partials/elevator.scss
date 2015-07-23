@@ -1,0 +1,32 @@
+.elevator{
+	
+	position:fixed;
+	left:$elevator-left;
+	top:$elevator-top;
+	
+	text-align: center;
+	
+	font-family:$font-family-head;	
+	font-size:$font-size-head;
+	color:$hmsphr-green;
+	
+	.elevator-item{
+		
+		
+	}
+	.selected-item{
+		color:$text-color;
+	}
+	.selected-item:before{
+		content:"<";
+	}
+	.selected-item:after{
+		content:">";
+	}
+	.up-arrow{
+		
+	}
+	.down-arrow{
+		
+	}
+}

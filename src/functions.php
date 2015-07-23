@@ -68,7 +68,7 @@ function html5blank_nav()
     wp_nav_menu(
     array(
         'theme_location'  => 'header-menu',
-        'menu'            => '',
+        'menu'            => 'main-menu',
         'container'       => 'div',
         'container_class' => 'menu-{menu slug}-container',
         'container_id'    => '',
@@ -102,6 +102,11 @@ function html5blank_header_scripts()
             // Modernizr
             wp_register_script('modernizr', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', array(), '2.8.3');
 
+            wp_register_script('anchor-position', get_template_directory_uri() . '/js/title-shuffle/AnchorPosition.js', array(), '1.0.0');
+            
+            wp_register_script('panel-snap', get_template_directory_uri() . '/js/lib/jquery.panelSnap.js', array(), '1.0.0');
+
+            
             // Custom scripts
             wp_register_script(
                 'html5blankscripts',
@@ -111,9 +116,12 @@ function html5blank_header_scripts()
                     'modernizr',
                     'jquery'),
                 '1.0.0');
+            
+
 
             // Enqueue Scripts
             wp_enqueue_script('html5blankscripts');
+
 
         // If production
         } else {
@@ -133,6 +141,16 @@ function html5blank_conditional_scripts()
         wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0');
         wp_enqueue_script('scriptname');
     }
+	else if(is_page('hemisphere')){
+		wp_register_script('projectsscripts',get_template_directory_uri() . '/js/projects-script.js',array(),'1.0.0');
+		wp_enqueue_script('projectsscripts');
+	}else if(is_singular('project')){
+		wp_register_script('projectscripts',get_template_directory_uri() . '/js/project-script.js',array(),'1.0.0');
+		wp_enqueue_script('projectscripts');	
+	}else if(is_post_type_archive('project')){
+		wp_register_script('projectarchivescripts',get_template_directory_uri() . '/js/project-archive.js',array('panel-snap'),'1.0.0');
+		wp_enqueue_script('projectarchivescripts');	
+	}
 }
 
 // Load HTML5 Blank styles

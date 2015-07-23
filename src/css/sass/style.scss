@@ -4,6 +4,7 @@
  * Main `sass` file. Import here `sass` files
  */
 
+@import "sass-css3-mixins/css3-mixins.scss";
 // Modules
 @import "modules/variables";
 @import "modules/mixins";
@@ -19,3 +20,13 @@
 @import "partials/sidebar";
 @import "partials/footer";
 @import "partials/print";
+
+@import "partials/projects";
+@import "partials/project";
+@import "partials/repertoire";
+@import "partials/search";
+@import "partials/elevator";
+
+
+
+

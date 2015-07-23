@@ -1,0 +1,37 @@
+/**
+ * partials/mutable-title
+ * ---
+ */
+ 
+ .mutable-title{
+ 	 
+ 	 font-family: $font-family-head;
+ 	 font-size: 1.5em;
+ 	 position:fixed;
+ 	 left: 0;
+ 	 right: 200px;
+ 	 top:160px;
+ 	 width:400px;
+ 	 margin: auto;
+ 	 
+ 	 /*color:white;*/
+ 	 
+ 	 /*@include text-shadow(-$text-indent-base,93px,0px,rgba(1,1,1,1));*/
+ 	 
+	.mt-date{
+		
+	}
+	.mt-title{
+		
+	}
+	.mt-sub{
+		white-space: nowrap;
+		text-indent: $text-indent-base;
+	}
+	.mt-commanditaire{
+		
+	}
+	.mt-lieu{
+		
+	}
+ }	
