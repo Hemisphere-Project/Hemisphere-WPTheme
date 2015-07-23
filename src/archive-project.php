@@ -2,10 +2,8 @@
 
 	<div class="elevator">
 		<div class="up-arrow">↑</div>
-		<div class="elevator-item">1</div>
-		<div class="elevator-item">2</div>
-		<div class="elevator-item selected-item">3</div>
-		<div class="elevator-item">4</div>
+		<div class="elevator-items-list">
+		</div>
 		<div class="down-arrow">↓</div>
 	</div>
 	<main role="main">
@@ -15,7 +13,7 @@
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 		
 			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-panel="<?php echo 'dp'.$res_count; ?>">
 				
 				
 				<div class="legend">

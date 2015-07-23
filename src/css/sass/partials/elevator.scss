@@ -3,6 +3,7 @@
 	position:fixed;
 	left:$elevator-left;
 	top:$elevator-top;
+	width:45px;
 	
 	text-align: center;
 	
@@ -12,7 +13,7 @@
 	
 	.elevator-item{
 		
-		
+		cursor: pointer;
 	}
 	.selected-item{
 		color:$text-color;
@@ -24,9 +25,9 @@
 		content:">";
 	}
 	.up-arrow{
-		
+		cursor: pointer;
 	}
 	.down-arrow{
-		
+		cursor: pointer;
 	}
 }

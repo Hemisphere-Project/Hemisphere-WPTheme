@@ -30,7 +30,8 @@
 		
 		<div class="cover-image">
 			<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+				<!--<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">-->
+				<a href="<?php echo get_post_type_archive_link('project').'#post-'.get_the_ID(); ?>" >	
 					<?php the_post_thumbnail("large"); // Declare pixel size you need inside the array ?>
 				</a>
 			<?php endif; ?>
