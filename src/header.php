@@ -61,7 +61,7 @@
 						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'repertoire' ) );?>">Répertoire__</a></div>
 						<div class="element" ><a  href="<?php echo get_permalink( get_page_by_path( 'hemisphere' ) );?>">Hémisphère__</a></div>
 						<div class="element" ><a href="#">Laboratoire__</a></div>
-						<div class="element" ><a href="#">À propos__</a></div>
+						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'a-propos' ) );?>">À propos__</a></div>
 						<div class="element" ><a href="<?php echo get_search_link(''); ?>">Rechercher</a></div>
 
 					</div>

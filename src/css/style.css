@@ -73,6 +73,7 @@
 /* projects (actu/hemisphere) page */
 /* single project page */
 /*264px;*/
+/* about page */
 /**
  * Grid
  */
@@ -819,6 +820,39 @@ input[type="search"] {
 }
 .elevator .down-arrow {
   cursor: pointer;
+}
+
+.about .cartouche {
+  font-family: "btpnormal";
+  font-size: 24px;
+  margin-top: 54px;
+}
+.about .cartouche .first-block {
+  margin-left: 24px;
+}
+.about .cartouche .second-block {
+  margin-left: 132px;
+}
+.about .about-content {
+  margin-left: 132px;
+  margin-top: 30px;
+}
+.about .about-content .images-column {
+  width: 590px;
+  float: left;
+  height: 457px;
+  overflow: scroll;
+}
+.about .about-content .images-column img {
+  border: 6px solid #009A65;
+  margin-bottom: 45px;
+}
+.about .about-content .text-column {
+  width: 275px;
+  margin-left: 630px;
+}
+.about .about-content .text-column .about-title {
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -78,6 +78,16 @@ $project-img-interspace: 45px;
 $elevator-left: 8px;
 $elevator-top: 180px;
 
+/* about page */
+
+$about-image-column-width: 6*$base-grid + 5*$base-grid-margin;
+$about-image-column-height: 457px;
+$about-text-column-width: 3*$base-grid + 2*$base-grid-margin;
+$about-text-margin-left: 6*$base-grid + 6*$base-grid-margin;
+$about-cartouche-margin-top : 54px;
+$about-content-margin-top: 30px;
+$about-img-interspace : $project-img-interspace;
+
 /**
  * Grid
  */

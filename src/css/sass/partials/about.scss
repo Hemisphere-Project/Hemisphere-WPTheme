@@ -1,0 +1,44 @@
+.about{
+
+	.cartouche{
+		font-family:$font-family-head;
+		font-size:$font-size-head;
+		margin-top:$about-cartouche-margin-top;
+		
+		.first-block{
+			margin-left:$header-offset-left;
+		}
+		.second-block{
+			margin-left:$base-margin-left;
+		}
+	}
+	
+	.about-content{
+	
+		margin-left:$base-margin-left;
+		margin-top:$about-content-margin-top;
+		
+		.images-column{
+			width:$about-image-column-width;
+			float:left;
+			height:$about-image-column-height;
+			overflow : scroll;
+			
+			img{
+				border : $img-border;	
+				margin-bottom: $about-img-interspace;
+			}
+		}
+		
+		.text-column{
+			
+			width:$about-text-column-width;
+			margin-left:$about-text-margin-left;
+			.about-title{
+				text-transform: uppercase;	
+			}
+		}
+		
+	}
+	
+}
