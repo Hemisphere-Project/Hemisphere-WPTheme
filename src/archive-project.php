@@ -40,7 +40,8 @@
 				</div>
 				<div class="text-column">
 					<div class="excerpt">
-						<?php the_excerpt(); ?>
+						<!--<?php the_excerpt(); ?>-->
+						<?php the_content(); ?>
 					</div>
 					<div class="infos">
 						<div>

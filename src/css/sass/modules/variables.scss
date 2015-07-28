@@ -28,7 +28,7 @@ $hmsphr-green: #009A65;/* HMSPHR GREEN */
 $background-color-base: white;
 
 $text-color: #000;
-$body-bg: #fff;
+$body-bg: $background-color-base;
 $selection-bg: $hmsphr-green;
 
 
@@ -78,6 +78,7 @@ $project-img-interspace: 45px;
 $elevator-left: 8px;
 $elevator-top: 180px;
 
+
 /* about page */
 
 $about-image-column-width: 6*$base-grid + 5*$base-grid-margin;
@@ -88,6 +89,16 @@ $about-cartouche-margin-top : 54px;
 $about-content-margin-top: 30px;
 $about-img-interspace : $project-img-interspace;
 
+/* labo */
+
+$labo-margin-top: 60px;
+$labo-margin-left: $base-margin-left;
+$labo-width: 6*$base-grid + 5*$base-grid-margin;
+
+/* search */
+$search-margin-top: 60px;
+$search-results-padding-top: 60px;
+$search-results-width : 9*$base-grid + 8*$base-grid-margin;
 /**
  * Grid
  */

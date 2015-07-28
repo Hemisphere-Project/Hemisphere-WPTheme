@@ -1,9 +1,6 @@
 <?php get_header(); ?>
 
 	<main role="main">
-	
-	<?php get_template_part("mutable-title"); ?> 
-	
 	<!-- section -->
 	<section>
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -36,7 +33,8 @@
 			</div>
 			<div class="text-column">
 				<div class="excerpt">
-					<?php the_excerpt(); ?>
+					<!--<?php the_excerpt(); ?>-->
+					<?php the_content(); ?>
 				</div>
 				<div class="infos">
 					<div>

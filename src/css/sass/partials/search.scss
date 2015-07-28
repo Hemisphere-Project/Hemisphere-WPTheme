@@ -1,16 +1,15 @@
 .search-section{
-	margin-top:220px;
+	margin-top:$search-margin-top;
 	
 	.search-header{
 		
 		position:fixed;
-		left:15px;
-		right:15px;
 		
 		.votre-recherche{
-			color:$hmsphr-green;
+			color:$text-color;
 			font-family:$font-family-head;	
-			font-size:1.1em;
+			font-size:$font-size-head;
+			margin-left:$base-margin-left;
 		}
 		.search-form{
 			
@@ -24,6 +23,9 @@
 		.search-input{
 			border: none;
 			border-left:none;
+			color:$text-color;
+			font-family:$font-family-head;
+			font-size:$font-size-head;
 		}
 		.search-input:focus{
 			border:none;
@@ -39,21 +41,15 @@
 			50% {border-left: 1px solid #333;}
 		}*/
 		
-		hr{
-			border-color: $hmsphr-green;	
-			border-style: solid;
-		}
 	}
 		
 	.search-results{
-		z-index:-1;
-		padding-top:60px;
+		padding-top:$search-results-padding-top;
+		margin-left:$base-margin-left;
+		width : $search-results-width;
 		
 		.search-results-columns{
-			@include columns(4,200px);	
-			article{
-				display:inline-block;
-			}
+			
 		}
 		
 	}	

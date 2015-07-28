@@ -150,6 +150,13 @@ function html5blank_conditional_scripts()
 	}else if(is_post_type_archive('project')){
 		wp_register_script('projectarchivescripts',get_template_directory_uri() . '/js/project-archive.js',array('panel-snap'),'1.0.0');
 		wp_enqueue_script('projectarchivescripts');	
+	}else if(is_post_type_archive('labo')){
+		
+		wp_register_script( 'laboajax', get_template_directory_uri().'/js/labo-ajax.js', array('jquery'), '1.0.0');
+		wp_enqueue_script('laboajax');
+		// pass Ajax Url to script.js
+		wp_localize_script('laboajax', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
+		
 	}
 }
 
@@ -282,6 +289,11 @@ function html5wp_index($length) // Create 20 Word Callback for Index page Excerp
     return 20;
 }
 
+function html5wp_search($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
+{
+    return 10;
+}
+
 // Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
 function html5wp_custom_post($length)
 {
@@ -393,6 +405,10 @@ function html5blankcomments($comment, $args, $depth)
     <?php endif; ?>
 <?php }
 
+
+
+
+
 /*------------------------------------*\
     Actions + Filters + ShortCodes
 \*------------------------------------*/
@@ -403,9 +419,14 @@ add_action('wp_print_scripts', 'html5blank_conditional_scripts'); // Add Conditi
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'html5blank_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
-add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
+//add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
+
+// AJAX action
+
+add_action( 'wp_ajax_labo_load', 'labo_load' );
+add_action( 'wp_ajax_nopriv_labo_load', 'labo_load' );
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
@@ -444,6 +465,31 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 
 // Shortcodes above would be nested like this -
 // [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
+
+/*---------------------------------*\
+	Ajax funtions
+\*---------------------------------*/
+
+function labo_load() {
+	
+
+	$args = array(
+	    'p' => $_POST['postId'],
+	    'post_type' => 'labo'
+	);
+
+	$ajax_query = new WP_Query($args);
+
+	//var_dump($ajax_query);
+
+	if ( $ajax_query->have_posts() ) : while ( $ajax_query->have_posts() ) : $ajax_query->the_post();
+		echo types_render_field( "titre", array( ) );
+		the_content();
+	endwhile;
+	endif;
+
+	die();
+}
 
 /*------------------------------------*\
     Custom Post Types

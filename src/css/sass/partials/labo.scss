@@ -1,0 +1,42 @@
+.labo{
+	
+
+	
+	margin-left:$labo-margin-left;
+	margin-top:$labo-margin-top;
+	
+	.type-labo{
+		margin:0;
+		width:$labo-width;
+		.labo-title{
+			font-family: $font-family-head;
+			font-size: $font-size-head;
+		}
+		.labo-sub-title{
+			text-indent: $base-grid;	
+		}
+		.labo-title:before{
+			content:">";	
+		}
+		.labo-content{
+		}
+	}
+	
+	
+}
+
+/* body classes for both single and archive labo pages */
+.single-labo, .post-type-archive-labo{
+	background-color: $hmsphr-green ;
+	
+	.header{
+		a{
+			color:$text-color;
+
+		}
+		.current{
+			color:$background-color-base !important;	
+		}
+	}
+	
+}

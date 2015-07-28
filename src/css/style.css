@@ -74,6 +74,8 @@
 /* single project page */
 /*264px;*/
 /* about page */
+/* labo */
+/* search */
 /**
  * Grid
  */
@@ -206,7 +208,7 @@ body {
   font-size: 15px;
   line-height: 1.3;
   color: #000;
-  background-color: #fff;
+  background-color: white;
 }
 
 img {
@@ -230,7 +232,7 @@ input[type="search"] {
 
 ::selection {
   background-color: #009A65;
-  color: #fff;
+  color: white;
   text-shadow: none;
 }
 
@@ -266,7 +268,7 @@ input[type="search"] {
  * Gallery & images
  */
 .wp-caption {
-  background: #fff;
+  background: white;
   border: thin solid #F0F0F0;
   max-width: 95%;
   padding: 5px 5px;
@@ -733,12 +735,10 @@ input[type="search"] {
 }
 
 .search-section {
-  margin-top: 220px;
+  margin-top: 60px;
 }
 .search-section .search-header {
   position: fixed;
-  left: 15px;
-  right: 15px;
   /*.search-input {
   	animation: blink-empty 1s infinite;
   	border-left: transparent solid 1px;
@@ -749,9 +749,10 @@ input[type="search"] {
   }*/
 }
 .search-section .search-header .votre-recherche {
-  color: #009A65;
+  color: #000;
   font-family: "btpnormal";
-  font-size: 1.1em;
+  font-size: 24px;
+  margin-left: 132px;
 }
 .search-section .search-header .search {
   display: inline;
@@ -762,35 +763,18 @@ input[type="search"] {
 .search-section .search-header .search-input {
   border: none;
   border-left: none;
+  color: #000;
+  font-family: "btpnormal";
+  font-size: 24px;
 }
 .search-section .search-header .search-input:focus {
   border: none;
   outline: none;
 }
-.search-section .search-header hr {
-  border-color: #009A65;
-  border-style: solid;
-}
 .search-section .search-results {
-  z-index: -1;
   padding-top: 60px;
-}
-.search-section .search-results .search-results-columns {
-  -webkit-column-count: 4;
-  -khtml-column-count: 4;
-  -moz-column-count: 4;
-  -ms-column-count: 4;
-  -o-column-count: 4;
-  column-count: 4;
-  -webkit-column-gap: 200px;
-  -khtml-column-gap: 200px;
-  -moz-column-gap: 200px;
-  -ms-column-gap: 200px;
-  -o-column-gap: 200px;
-  column-gap: 200px;
-}
-.search-section .search-results .search-results-columns article {
-  display: inline-block;
+  margin-left: 132px;
+  width: 905px;
 }
 
 .elevator {
@@ -853,6 +837,36 @@ input[type="search"] {
 }
 .about .about-content .text-column .about-title {
   text-transform: uppercase;
+}
+
+.labo {
+  margin-left: 132px;
+  margin-top: 60px;
+}
+.labo .type-labo {
+  margin: 0;
+  width: 590px;
+}
+.labo .type-labo .labo-title {
+  font-family: "btpnormal";
+  font-size: 24px;
+}
+.labo .type-labo .labo-sub-title {
+  text-indent: 65px;
+}
+.labo .type-labo .labo-title:before {
+  content: ">";
+}
+
+/* body classes for both single and archive labo pages */
+.single-labo, .post-type-archive-labo {
+  background-color: #009A65;
+}
+.single-labo .header a, .post-type-archive-labo .header a {
+  color: #000;
+}
+.single-labo .header .current, .post-type-archive-labo .header .current {
+  color: white !important;
 }
 
 /*# sourceMappingURL=style.css.map */
