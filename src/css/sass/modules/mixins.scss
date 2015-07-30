@@ -8,3 +8,18 @@
   padding: 0;
   margin: 0;
 }
+
+@mixin input-placeholder($color){
+  &::-webkit-input-placeholder{
+    color: $color
+  }
+  &:-moz-placeholder{
+    color: $color
+  }
+  &::-moz-placeholder{ //for newer versions of Firefox
+    color: $color
+  }
+  &:-ms-input-placeholder{
+    color: $color
+  }
+}
