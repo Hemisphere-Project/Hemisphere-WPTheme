@@ -23,7 +23,7 @@
 			},
 			onActivate: function(event){
 			},
-			directionThreshold: 1000,
+			directionThreshold: 1000,/* 1000 */
 			slideSpeed: 300,
 			easing: 'swing',
 			offset: 0,

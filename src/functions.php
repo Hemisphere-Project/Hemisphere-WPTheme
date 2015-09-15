@@ -106,6 +106,10 @@ function html5blank_header_scripts()
             
             wp_register_script('panel-snap', get_template_directory_uri() . '/js/lib/jquery.panelSnap.js', array(), '1.0.0');
 
+            wp_register_script('typedjs', get_template_directory_uri() . '/bower_components/typed.js/dist/typed.min.js', array(), '1.0.0');
+
+            wp_register_script('masonry', get_template_directory_uri() . '/bower_components/masonry/dist/masonry.pkgd.min.js', array(), '1.0.0');
+
             
             // Custom scripts
             wp_register_script(
@@ -142,7 +146,7 @@ function html5blank_conditional_scripts()
         wp_enqueue_script('scriptname');
     }
 	else if(is_page('hemisphere')){
-		wp_register_script('projectsscripts',get_template_directory_uri() . '/js/projects-script.js',array(),'1.0.0');
+		wp_register_script('projectsscripts',get_template_directory_uri() . '/js/projects-script.js',array('typedjs','masonry'),'1.0.0');
 		wp_enqueue_script('projectsscripts');
 	}else if(is_singular('project')){
 		wp_register_script('projectscripts',get_template_directory_uri() . '/js/project-script.js',array(),'1.0.0');

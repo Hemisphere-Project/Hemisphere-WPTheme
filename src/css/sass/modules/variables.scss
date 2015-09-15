@@ -12,25 +12,22 @@ $font-family-base: 'ankacoder_narrowregular';
 $font-size-base: 15px;
 $line-height-base: 1.3;
 
-
 $font-family-head : 'btpnormal';
 $font-size-head : $font-size-base*1.6;
 
 $font-family-head-2: 'btp_modify1';
 $font-family-head-3: 'btp_modify2';
 
-
 /**
  * Colors
  */
 
 $hmsphr-green: #009A65;/* HMSPHR GREEN */ 
-$background-color-base: white;
+$background-color-base: #FFF;
 
 $text-color: #000;
 $body-bg: $background-color-base;
 $selection-bg: $hmsphr-green;
-
 
 /**
 * Positioning
@@ -41,7 +38,11 @@ $base-margin-left : 132px;
 $base-margin-right : $base-margin-left ; 
 $base-grid : 65px;
 $base-grid-margin : 40px;
-$img-border: 6px solid $hmsphr-green;
+$img-border: 3px solid $hmsphr-green;
+
+$text-indent-base: $base-grid + $base-grid-margin;/* = 105px initialement 115px */
+
+$content-margin-top: 60px;
 
 /* header */
 $header-offset-left: 24px;
@@ -52,27 +53,28 @@ $header-offset-top: 24px;
 $repertoire-h-padding: 64px;
 $repertoire-margin-top: $header-offset-top+80px;
 $repertoire-line-style:	2px dashed $hmsphr-green;/* to be replaced with border image */
-$repertoire-td-padding: 20px 90px 60px 0px;
+$repertoire-td-padding: 20px 90px 30px 0px;
 
 
 /* projects (actu/hemisphere) page */
-$projects-legend-top: 60px;
-
+$projects-legend-top: $content-margin-top;
 $projects-margin-sides : $base-margin-left;
-$projects-margin-top : 146px;
+$projects-margin-top : 0;
 $projects-margin-bottom : 0;
-$projects-margin: $projects-margin-top $projects-margin-sides $projects-margin-bottom $projects-margin-sides ;
+$projects-margin: 0 $projects-margin-sides $projects-margin-bottom $projects-margin-sides ;
+$projects-padding-top : 246px;
 
 $project-item-margin-base: $base-grid-margin;
 $project-item-margin: $project-item-margin-base 0 0 0;
 
-/* single project page */
+/* single project (realisations) page */
 
 $project-text-column-width : 3*$base-grid + 2*$base-grid-margin;/*264px;*/
 $project-text-column-right: $base-margin-right + 5*$base-grid + 4*$base-grid-margin - $project-text-column-width;
 $project-image-column-right-margin: $base-grid-margin;
 $project-margin-top: 90px;
-$project-bottom-offset: 183px;
+$project-bottom-offset: 230px;
+$project-img-max-height : calc(100vh - #{$project-bottom-offset + 20});
 $project-img-interspace: 45px;
 
 $elevator-left: 8px;
@@ -85,21 +87,23 @@ $about-image-column-width: 6*$base-grid + 5*$base-grid-margin;
 $about-image-column-height: 457px;
 $about-text-column-width: 3*$base-grid + 2*$base-grid-margin;
 $about-text-margin-left: 6*$base-grid + 6*$base-grid-margin;
-$about-cartouche-margin-top : 54px;
+$about-cartouche-margin-top : $content-margin-top;
 $about-content-margin-top: 30px;
 $about-img-interspace : $project-img-interspace;
 
 /* labo */
 
-$labo-margin-top: 60px;
+$labo-margin-top: $content-margin-top;
 $labo-margin-left: $base-margin-left;
 $labo-width: 6*$base-grid + 5*$base-grid-margin;
 
 /* search */
-$search-margin-top: 60px;
+$search-margin-top: $content-margin-top;
 $search-results-padding-top: 60px;
 $search-results-width : 9*$base-grid + 8*$base-grid-margin;
 $search-result-article-padding-bottom: 40px;
+
+
 /**
  * Grid
  */
@@ -115,8 +119,3 @@ $margin-vertical-base: 5px;
 $margin-horizontal-large: 0px;
 $margin-vertical-large: 15px;
 
-/**
- * Indentation
- */
- 
-$text-indent-base: 115px;

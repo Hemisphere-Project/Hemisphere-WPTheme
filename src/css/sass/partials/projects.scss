@@ -2,9 +2,25 @@
  * partials/projects
  * ---
  */
+ 
+ .intro{
+ 	color:$hmsphr-green;
+ 	font-family: $font-family-head;
+	font-size: $font-size-head;
+	height:100vh;
+	margin-top:$header-offset-top;
+	
+	.intro-block1{
+		margin-left:$header-offset-left;
+	}
+	.intro-block2{
+		margin-left:$base-margin-left;
+	}
+ }
 
 .projects{
 	margin: $projects-margin;
+	padding-top:$projects-padding-top;/*for the #start anchor */
 }
 
 .project-item{

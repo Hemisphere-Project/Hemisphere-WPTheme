@@ -1,7 +1,24 @@
 <?php /* Template Name: Actu Page Template */ get_header(); ?>
-<?php $width_sequence = [0=>"4",1=>"3",2=>"4",3=>"6",4=>"4",5=>"5",6=>"3",7=>"6",]; $width_sequence_length = count($width_sequence);?>
-<?php $margin_top_sequence = [0=>"1",1=>"6",2=>"8",3=>"3",4=>"4",5=>"5",6=>"2",7=>"1",]; $margin_top_sequence_length = count($margin_top_sequence);?>
+<?php $width_sequence = [0=>"3",1=>"4",2=>"4",3=>"3",4=>"3",5=>"3",6=>"4",7=>"3",]; $width_sequence_length = count($width_sequence);?>
+<?php $margin_top_sequence = [0=>"1",1=>"2",2=>"1",3=>"1",4=>"2",5=>"1",6=>"2",7=>"1",]; $margin_top_sequence_length = count($margin_top_sequence);?>
 	
+
+<script>
+	document.body.className += ' hidden';
+</script>
+
+<section class="intro">
+	<div class="intro-block1">
+		<div class="intro-block1-l1">Hémisphère,</div>
+		<div class="intro-block1-l2">Atelier de dispositifs numériques</div>
+		<div class="intro-block1-l3">234 avenue Felix Faure 69003 Lyon</div>
+	</div>
+	<div class="intro-block2">
+		<div>&lt;m.&gt; bonjour@hemisphere-project.com</div>
+		<div>&lt;m.&gt; [0033] 682 984 800</div>
+	</div>
+</section>
+
 <div class="legend">
 	<div class="legend-line-1">
 		<span class="lgd-numbering"></span><span class="lgd-title"></span>
@@ -13,7 +30,8 @@
 		<span class="lgd-lieu"></span>, <span class="lgd-annee"></span>
 	</div>
 </div>
-<main role="main">
+
+<main id="start" role="main">
 
 	<!-- section -->
 	<section class="projects row">

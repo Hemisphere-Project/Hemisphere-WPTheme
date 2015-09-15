@@ -56,7 +56,7 @@
 						</div>
 						<div>
 						<span class="info-separator">&lt;Lien&gt;</span>
-						<span class="info"><?php echo types_render_field("lien", array()) ?></span>. 
+						<span class="info"><?php echo types_render_field("lien", array(target => "_blank")) ?></span>
 						</div>
 					</div>
 					<div class="legend"></div>

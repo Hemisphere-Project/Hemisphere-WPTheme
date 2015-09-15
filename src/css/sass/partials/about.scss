@@ -28,6 +28,9 @@
 				border : $img-border;	
 				margin-bottom: $about-img-interspace;
 			}
+			img:last-child{
+				margin-bottom:0;	
+			}
 		}
 		
 		.text-column{

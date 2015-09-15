@@ -8,6 +8,7 @@
     "normalize.css": "~3.0.1"
   },
   "dependencies": {
-    "masonry": "~3.3.1"
+    "masonry": "~3.3.1",
+    "typed.js": "*"
   }
 }
