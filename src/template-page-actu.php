@@ -15,7 +15,7 @@
 	</div>
 	<div class="intro-block2">
 		<div>&lt;m.&gt; bonjour@hemisphere-project.com</div>
-		<div>&lt;m.&gt; [0033] 682 984 800</div>
+		<div>&lt;t.&gt; [0033] 682 984 800</div>
 	</div>
 </section>
 

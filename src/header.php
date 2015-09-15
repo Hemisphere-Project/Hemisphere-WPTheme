@@ -36,27 +36,7 @@
 
 					<!-- logo -->
 					<div class="header-pack">
-<!--						<div class="main-title">
-						<a href="<?php echo home_url(); ?>">
-							Hemisphere,<br>
-							Atelier de dispositifs numériques
-						</a>
-						</div>
-						<div class="address">
-						<a href="http://maps.google.com/?q=234%20avenue%20Felix%Faure%Lyon">
-							234 avenue Felix Faure 69003 Lyon
-						</a>
-						</div>
-						<div class="email">
-						<a  href="mailto:bonjour@hemisphere-project.com">
-							bonjour@hemisphere-project.com
-						</a>
-						</div>
-						<div class="tel">
-						<a  href="tel:+33682984802">
-							[0033] 682 984 800
-						</a>
-						</div>-->
+
 						<?php if(is_page('hemisphere')) : ?>
 						
 						<div class="element" ><a class="current" href="<?php echo get_permalink( get_page_by_path( 'hemisphere' ) )."#start";?>">Hémisphère__</a></div>
@@ -67,39 +47,39 @@
 						
 						<?php elseif(is_post_type_archive('project')) : ?>
 						
+						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'hemisphere' ) )."#start";?>">Hémisphère__</a></div>
 						<div class="element" ><a class="current" href="<?php echo get_post_type_archive_link('project'); ?>">Réalisations__</a></div>
-						<div class="element" ><a  href="<?php echo get_permalink( get_page_by_path( 'hemisphere' ) )."#start";?>">Hémisphère__</a></div>
 						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'repertoire' ) );?>">Répertoire__</a></div>
 						<div class="element" ><a href="<?php echo get_post_type_archive_link('labo'); ?>">Laboratoire__</a></div>
 						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'a-propos' ) );?>">À propos__</a></div>
 						
 						<?php elseif(is_post_type_archive('labo')) : ?>
 
-						<div class="element" ><a class="current"  href="<?php echo get_post_type_archive_link('labo'); ?>">Laboratoire__</a></div>
 						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'hemisphere' ) )."#start";?>">Hémisphère__</a></div>
 						<div class="element" ><a href="<?php echo get_post_type_archive_link('project'); ?>">Réalisations__</a></div>
 						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'repertoire' ) );?>">Répertoire__</a></div>
+						<div class="element" ><a class="current" href="<?php echo get_post_type_archive_link('labo'); ?>">Laboratoire__</a></div>
 						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'a-propos' ) );?>">À propos__</a></div>
 						
 						<?php elseif(is_page('repertoire')) : ?>
 
-						<div class="element" ><a class="current"  href="<?php echo get_permalink( get_page_by_path( 'repertoire' ) );?>">Répertoire__</a></div>
 						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'hemisphere' ) )."#start";?>">Hémisphère__</a></div>
 						<div class="element" ><a href="<?php echo get_post_type_archive_link('project'); ?>">Réalisations__</a></div>
+						<div class="element" ><a class="current" href="<?php echo get_permalink( get_page_by_path( 'repertoire' ) );?>">Répertoire__</a></div>
 						<div class="element" ><a href="<?php echo get_post_type_archive_link('labo'); ?>">Laboratoire__</a></div>
 						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'a-propos' ) );?>">À propos__</a></div>
 
 						<?php elseif(is_page('a-propos')) : ?>
 						
-						<div class="element" ><a class="current" href="<?php echo get_permalink( get_page_by_path( 'a-propos' ) );?>">À propos__</a></div>
 						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'hemisphere' ) )."#start";?>">Hémisphère__</a></div>
 						<div class="element" ><a href="<?php echo get_post_type_archive_link('project'); ?>">Réalisations__</a></div>
 						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'repertoire' ) );?>">Répertoire__</a></div>
 						<div class="element" ><a href="<?php echo get_post_type_archive_link('labo'); ?>">Laboratoire__</a></div>
+						<div class="element" ><a class="current" href="<?php echo get_permalink( get_page_by_path( 'a-propos' ) );?>">À propos__</a></div>
 						
 						<?php else: ?>
 						
-						<div class="element" ><a class="current" href="<?php echo get_permalink( get_page_by_path( 'hemisphere' ) )."#start";?>">Hémisphère__</a></div>
+						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'hemisphere' ) )."#start";?>">Hémisphère__</a></div>
 						<div class="element" ><a href="<?php echo get_post_type_archive_link('project'); ?>">Réalisations__</a></div>
 						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'repertoire' ) );?>">Répertoire__</a></div>
 						<div class="element" ><a href="<?php echo get_post_type_archive_link('labo'); ?>">Laboratoire__</a></div>
