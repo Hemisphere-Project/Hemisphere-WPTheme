@@ -75,3 +75,15 @@ input[type="search"] {
 *::-webkit-scrollbar-thumb {
   background-color: $hmsphr-green;
 }
+
+.repertoire::-webkit-scrollbar, .fixed-table-container-inner::-webkit-scrollbar, .fixed-table-container::-webkit-scrollbar {
+    width: 0px;
+}
+ 
+.repertoire::-webkit-scrollbar-track {
+    background-color:none;
+}
+ 
+.repertoire::-webkit-scrollbar-thumb {
+  background-color: $hmsphr-green;
+}

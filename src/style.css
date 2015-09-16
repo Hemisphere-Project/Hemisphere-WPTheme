@@ -267,6 +267,18 @@ input[type="search"] {
   background-color: #009A65;
 }
 
+.repertoire::-webkit-scrollbar, .fixed-table-container-inner::-webkit-scrollbar, .fixed-table-container::-webkit-scrollbar {
+  width: 0px;
+}
+
+.repertoire::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+.repertoire::-webkit-scrollbar-thumb {
+  background-color: #009A65;
+}
+
 /**
  * partials/wordpress
  * ---
@@ -689,6 +701,9 @@ input[type="search"] {
   /* body */
 }
 
+.project {
+  margin: 0;
+}
 .project .legend {
   position: relative;
 }
