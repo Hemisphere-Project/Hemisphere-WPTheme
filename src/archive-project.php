@@ -6,9 +6,9 @@
 		</div>
 		<div class="down-arrow">↓</div>
 	</div>
-	<main role="main">
+	<!--<main role="main">-->
 	<!-- section -->
 		<?php get_template_part('single-project'); ?>
 	<!-- /section -->
-	</main>
+	<!--</main>-->
 

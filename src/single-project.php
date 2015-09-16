@@ -2,7 +2,7 @@
 
 	<main role="main">
 	<!-- section -->
-	<section >
+	<section>
 		<?php $res_count = 0 ?>
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 		

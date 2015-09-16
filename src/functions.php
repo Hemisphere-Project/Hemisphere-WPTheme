@@ -104,7 +104,7 @@ function html5blank_header_scripts()
 
             wp_register_script('anchor-position', get_template_directory_uri() . '/js/title-shuffle/AnchorPosition.js', array(), '1.0.0');
             
-            wp_register_script('panel-snap', get_template_directory_uri() . '/js/lib/jquery.panelSnap.js', array(), '1.0.0');
+            //wp_register_script('panel-snap', get_template_directory_uri() . '/js/lib/jquery.panelSnap.js', array(), '1.0.0');
 
             wp_register_script('typedjs', get_template_directory_uri() . '/bower_components/typed.js/dist/typed.min.js', array(), '1.0.0');
 
@@ -152,7 +152,7 @@ function html5blank_conditional_scripts()
 		wp_register_script('projectscripts',get_template_directory_uri() . '/js/project-script.js',array(),'1.0.0');
 		wp_enqueue_script('projectscripts');	
 	}else if(is_post_type_archive('project')){
-		wp_register_script('projectarchivescripts',get_template_directory_uri() . '/js/project-archive.js',array('panel-snap'),'1.0.0');
+		wp_register_script('projectarchivescripts',get_template_directory_uri() . '/js/project-archive.js',array(),'1.0.0');
 		wp_enqueue_script('projectarchivescripts');	
 	}else if(is_post_type_archive('labo')){
 		
