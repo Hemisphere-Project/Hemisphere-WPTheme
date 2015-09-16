@@ -69,12 +69,22 @@
 		
 		// DOM ready, take it away
 		/*** script for realisations page ***/
-		$(".project-item").on("mouseover",function(event){
-			currentProject.numbering = $(event.currentTarget).find(".numbering").text();
-			currentProject.date = $(event.currentTarget).find(".date").text();
-			currentProject.title = $(event.currentTarget).find(".title").text();
-			currentProject.commanditaire = $(event.currentTarget).find(".commanditaire").text();
-			currentProject.lieu = $(event.currentTarget).find(".lieu").text();
+		$(".project-item .cover-image").on("mouseover",function(event){
+			currentProject.numbering = $(event.currentTarget.parentElement).find(".numbering").text();
+			currentProject.date = $(event.currentTarget.parentElement).find(".date").text();
+			currentProject.title = $(event.currentTarget.parentElement).find(".title").text();
+			currentProject.commanditaire = $(event.currentTarget.parentElement).find(".commanditaire").text();
+			currentProject.lieu = $(event.currentTarget.parentElement).find(".lieu").text();
+			
+			updateCurrentProject();
+		});
+		
+		$(".project-item .cover-image").on("mouseleave",function(event){
+			currentProject.numbering = "";
+			currentProject.date = "";
+			currentProject.title = "";
+			currentProject.commanditaire = "";
+			currentProject.lieu = "";
 			
 			updateCurrentProject();
 		});
