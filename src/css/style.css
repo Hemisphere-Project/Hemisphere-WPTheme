@@ -540,6 +540,7 @@ input[type="search"] {
   left: 132px;
   font-family: "btpnormal";
   font-size: 24px;
+  pointer-events: none;
 }
 .legend .legend-line-1 .lgd-numbering:after {
   content: " — ";

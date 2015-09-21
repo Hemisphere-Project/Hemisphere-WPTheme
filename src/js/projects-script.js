@@ -80,6 +80,7 @@
 		});
 		
 		$(".project-item .cover-image").on("mouseleave",function(event){
+			
 			currentProject.numbering = "";
 			currentProject.date = "";
 			currentProject.title = "";
