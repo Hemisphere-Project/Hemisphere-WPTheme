@@ -100,7 +100,9 @@
 		
 		window.addEventListener("optimizedScroll", function(event){
 			//var currentScrollTop = $(document).scrollTop();
-			var currentScrollTop = $('body').scrollTop()
+			var currentScrollTop = $(document).scrollTop();
+			
+			console.log("current scroll top  "+currentScrollTop);
 			
 			if(currentScrollTop < vh ){
 				$(".header-pack").offset({top:menuDefaultOffset.top+vh,left:menuDefaultOffset.left});

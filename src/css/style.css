@@ -208,6 +208,8 @@ body {
   color: #000;
   background-color: #FFF;
   overflow-x: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  /* safari aliasing position:fixed patched */
 }
 
 img {
@@ -364,8 +366,8 @@ input[type="search"] {
   position: fixed;
   top: 24px;
   left: 24px;
-  font-family: "ankacoder_narrowregular";
-  font-size: 15px;
+  /*font-family:$font-family-base;
+  font-size:$font-size-base;*/
 }
 .header .header-pack .element {
   font-family: "btpnormal";
