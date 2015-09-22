@@ -98,22 +98,23 @@
 			$(".legend .lgd-lieu").text(currentProject.lieu);
 		}
 		
-		window.addEventListener("optimizedScroll", function(event){
-			//var currentScrollTop = $(document).scrollTop();
+		window.addEventListener("optimizedScroll", ajustHeader);
+		
+		$( window ).resize(function() {
+			vh = $( window ).height();
+			ajustHeader();
+		});
+		
+		function ajustHeader(){
 			var currentScrollTop = $(document).scrollTop();
-			
-			console.log("current scroll top  "+currentScrollTop);
-			
 			if(currentScrollTop < vh ){
 				$(".header-pack").offset({top:menuDefaultOffset.top+vh,left:menuDefaultOffset.left});
 				$(".legend").offset({top:legendDefaultOffset.top+vh,left:legendDefaultOffset.left});
 			}else{
 				$(".header-pack").offset({top:currentScrollTop + menuDefaultOffset.top,left:menuDefaultOffset.left});
 				$(".legend").offset({top:currentScrollTop + legendDefaultOffset.top,left:legendDefaultOffset.left});	
-			}
-			
-				
-		});
+			}	
+		}
 		
 	});
 
