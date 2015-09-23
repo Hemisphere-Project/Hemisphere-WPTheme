@@ -22,7 +22,7 @@
 			width:$about-image-column-width;
 			float:left;
 			height:$about-image-column-height;
-			overflow : scroll;
+			overflow : hidden;
 			
 			img{
 				border : $img-border;	
@@ -37,10 +37,26 @@
 			
 			width:$about-text-column-width;
 			margin-left:$about-text-margin-left;
+			padding-right:5px;
+			height:$about-text-column-height;
+			overflow:scroll;
+			
 			.about-title{
 				text-transform: uppercase;	
 			}
 		}
+		
+		.about-title{
+			margin-bottom: 24px;	
+		}
+		.presentation-text, .acteurs-text, .credits-text{
+			margin-bottom: 48px;
+		}
+		
+	}
+	
+	.indent-1{
+		padding-left: $base-grid;	
 		
 	}
 	

@@ -140,12 +140,7 @@ function html5blank_header_scripts()
 // Load HTML5 Blank conditional scripts
 function html5blank_conditional_scripts()
 {
-    if (is_page('pagenamehere')) {
-        // Conditional script(s)
-        wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0');
-        wp_enqueue_script('scriptname');
-    }
-	else if(is_page('hemisphere')){
+	if(is_page('hemisphere')){
 		wp_register_script('projectsscripts',get_template_directory_uri() . '/js/projects-script.js',array('typedjs','masonry'),'1.0.0');
 		wp_enqueue_script('projectsscripts');
 	}else if(is_singular('project')){
@@ -160,7 +155,9 @@ function html5blank_conditional_scripts()
 		wp_enqueue_script('laboajax');
 		// pass Ajax Url to script.js
 		wp_localize_script('laboajax', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
-		
+	}else if(is_page('a-propos')){
+		wp_register_script('aboutscripts',get_template_directory_uri() . '/js/about-script.js',array(),'1.0.0');
+		wp_enqueue_script('aboutscripts');
 	}
 }
 

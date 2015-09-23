@@ -938,7 +938,7 @@ input[type="search"]:-ms-input-placeholder {
   width: 590px;
   float: left;
   height: 457px;
-  overflow: scroll;
+  overflow: hidden;
 }
 .about .about-content .images-column img {
   border: 3px solid #009A65;
@@ -950,9 +950,21 @@ input[type="search"]:-ms-input-placeholder {
 .about .about-content .text-column {
   width: 275px;
   margin-left: 630px;
+  padding-right: 5px;
+  height: 457px;
+  overflow: scroll;
 }
 .about .about-content .text-column .about-title {
   text-transform: uppercase;
+}
+.about .about-content .about-title {
+  margin-bottom: 24px;
+}
+.about .about-content .presentation-text, .about .about-content .acteurs-text, .about .about-content .credits-text {
+  margin-bottom: 48px;
+}
+.about .indent-1 {
+  padding-left: 65px;
 }
 
 .labo {

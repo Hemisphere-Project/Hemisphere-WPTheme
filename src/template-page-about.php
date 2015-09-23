@@ -5,7 +5,6 @@
 		<section class="about">
 			<section class="cartouche">
 				<div class="first-block">
-					<div> Hémisphère </div>
 					<div> Atelier de dispositifs numériques </div>
 					<div> 234 avenue Felix Faure 69003 Lyon </div>
 				</div>
@@ -20,13 +19,13 @@
 				<?php echo types_render_field( "about_images", array("width" => "1200", "height" => "1200", "proportional" => "true" ) ) ;?>
 				</div>
 				<div class="text-column">
-					<div class="about-title">presentation :</div>
+					<div class="about-title">presentation:</div>
 					<div class="presentation-text"><?php echo types_render_field( "presentation", array( ) ); ?></div>
-					<div class="about-title">acteurs :</div>
+					<div class="about-title">acteurs:</div>
 					<div class="acteurs-text"><?php echo types_render_field( "acteurs", array( ) ); ?></div>
-					<div class="about-title">newsletter :</div>
-					<div class="newsletter-text"></div>
-					<div class="about-title">credits :</div>
+					<!--<div class="about-title">newsletter :</div>
+					<div class="newsletter-text"></div>-->
+					<div class="about-title">credits:</div>
 					<div class="credits-text"><?php echo types_render_field( "credits", array( ) ); ?></div>
 				
 				</div>
