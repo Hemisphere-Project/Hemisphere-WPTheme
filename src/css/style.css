@@ -366,6 +366,7 @@ input[type="search"] {
   position: fixed;
   top: 24px;
   left: 24px;
+  z-index: 1000;
   /*font-family:$font-family-base;
   font-size:$font-size-base;*/
 }
@@ -531,9 +532,37 @@ input[type="search"] {
 .project-item {
   margin: 40px 0 0 0;
 }
+.project-item .cover-image {
+  -webkit-filter: grayscale(100%) brightness(160%) contrast(85%);
+  filter: grayscale(1) brightness(1.4) contrast(0.9);
+  /*FFOX*/
+  filter: gray;
+  /* IE 6 - 9 */
+  -webkit-transition: .03s ease-in-out;
+  -moz-transition: .03s ease-in-out;
+  -o-transition: .03s ease-in-out;
+}
+.project-item .cover-image:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0);
+}
 .project-item img {
   width: 100%;
   border: 3px solid #009A65;
+  float: left;
+}
+.project-item .noise {
+  background-image: url("img/noisy.png");
+  height: 100px;
+  width: inherit;
+  position: relative;
+  top: 3px;
+  margin: 0 2.5px;
+  /* to be continued */
+  opacity: 0.2;
+}
+.project-item .noise:hover {
+  opacity: 0.05;
 }
 
 .legend {
@@ -543,6 +572,7 @@ input[type="search"] {
   font-family: "btpnormal";
   font-size: 24px;
   pointer-events: none;
+  z-index: 1000;
 }
 .legend .legend-line-1 .lgd-numbering:after {
   content: " — ";

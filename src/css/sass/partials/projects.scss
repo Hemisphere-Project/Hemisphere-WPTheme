@@ -26,10 +26,41 @@
 .project-item{
 	margin: $project-item-margin;
 	
+	.cover-image{
+		-webkit-filter: grayscale(100%) brightness(160%) contrast(85%);
+		filter: grayscale(1) brightness(1.4) contrast(0.9); /*FFOX*/
+		filter: gray; /* IE 6 - 9 */
+		-webkit-transition: .03s ease-in-out;
+		-moz-transition: .03s ease-in-out;
+		-o-transition: .03s ease-in-out;	
+	}
+	.cover-image:hover{
+		-webkit-filter: grayscale(0%);
+		filter: grayscale(0); 
+	}
+	
 	img{
 		width:100%;
 		border : $img-border;
+		float:left;
 	}
+	
+	.noise{
+		background-image: url("img/noisy.png"); 	
+		height: 100px;
+		width: inherit;
+		position: relative;
+		top:3px;
+		margin: 0 2.5px;
+		/* to be continued */
+		opacity: 0.2;
+		
+	}
+	
+	.noise:hover{
+		opacity: 0.05;
+	}
+	
 }
 
 .legend{
@@ -42,6 +73,8 @@
 	font-size: $font-size-head;
 	
 	pointer-events:none;
+	
+	z-index: 1000;
 	
 	.legend-line-1{
 		.lgd-numbering{

@@ -10,7 +10,7 @@
 	
 	
 
-	$(function () {
+	$(window).load(function () {
 			
 			
 		/*$('.projects').masonry({
@@ -65,7 +65,7 @@
 		});*/
 	
 		
-		
+		ajustNoiseSizes();
 		
 		// DOM ready, take it away
 		/*** script for realisations page ***/
@@ -115,6 +115,14 @@
 				$(".legend").offset({top:currentScrollTop + legendDefaultOffset.top,left:legendDefaultOffset.left});	
 			}	
 		}
+		
+		function ajustNoiseSizes(){
+			$( ".cover-image a" ).each(function( index ) {
+				var imgHeight = $(this).children("img").height();
+				$(this).children(".noise").height(imgHeight);
+			});
+		}
+		
 		
 	});
 
