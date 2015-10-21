@@ -38,7 +38,7 @@
 <glyph unicode="&#x3e;" horiz-adv-x="1132" />
 <glyph unicode="?" horiz-adv-x="1091" />
 <glyph unicode="@" horiz-adv-x="1765" d="M92 0v1032h215v-1032h-215zM497 408v210h770v-210h-770zM1456 0v1032h215v-1032h-215z" />
-<glyph unicode="A" horiz-adv-x="1392" d="M228 416v196h936v-196h-936z" />
+<glyph unicode="A" horiz-adv-x="1392" d="M102 408v210h1033v-210h-1033z" />
 <glyph unicode="B" horiz-adv-x="1419" d="M152 0v1524h217v-1524h-217zM874 0v1032h216v-1032h-216z" />
 <glyph unicode="C" horiz-adv-x="1425" d="M102 416v196h936v-196h-936zM686 0v197h660v-197h-660zM686 1329v197h660v-197h-660z" />
 <glyph unicode="D" horiz-adv-x="1409" d="M152 0v1032h215v-1032h-215zM872 0v1524h218v-1524h-218z" />
@@ -64,7 +64,7 @@
 <glyph unicode="X" horiz-adv-x="1296" d="M10 0v1032h215v-1032h-215zM543 280v491h211v-491h-211zM1071 0v1032h215v-1032h-215z" />
 <glyph unicode="Y" horiz-adv-x="1343" d="M225 1032h211l2 -491h-211zM901 0v1032h215v-1032h-215z" />
 <glyph unicode="Z" horiz-adv-x="1226" d="M111 1032v492h211v-492h-211zM940 0v492h211v-492h-211z" />
-<glyph unicode="a" d="M259 408v210h770v-210h-770z" />
+<glyph unicode="a" d="M102 408v210h770v-210h-770z" />
 <glyph unicode="b" horiz-adv-x="1245" d="M156 0v1524h217v-1524h-217zM727 0v1032h215v-1032h-215z" />
 <glyph unicode="c" horiz-adv-x="1148" d="M87 409v211h492v-211h-492zM581 839v211h491v-211h-491zM583 -1v211h491v-211h-491z" />
 <glyph unicode="d" horiz-adv-x="1245" d="M303 0v1032h215v-1032h-215zM872 0v1524h218v-1524h-218z" />
