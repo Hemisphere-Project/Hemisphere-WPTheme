@@ -1,4 +1,4 @@
-# [HTML5 Blank](http://html5blank.com)
+# HEMISPHERE WPTheme forked from [HTML5 Blank](http://html5blank.com)
 
 Powerful shell for rapidly deploying your WordPress projects.
 
