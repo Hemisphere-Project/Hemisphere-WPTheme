@@ -5,14 +5,14 @@
 	<section>
 		<?php $res_count = 0 ?>
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-		
+
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-panel="<?php echo 'dp'.$res_count; ?>">
-				
-				
+
+
 				<div class="legend">
 					<div class="legend-line-1">
-						<span class="lgd-numbering"><?php $res_count++; echo $res_count; ?></span><span class="lgd-title"><?php echo types_render_field("titre", array()) ?></span>
+						<span class="lgd-numbering"><?php $res_count++; echo $res_count; ?></span> — <span class="lgd-title"><?php echo types_render_field("titre", array()) ?></span>
 					</div>
 					<div class="legend-line-2">
 						<span class="lgd-commanditaire"><?php echo types_render_field( "commanditaire", array( ) ); ?></span>
@@ -21,14 +21,14 @@
 						<span class="lgd-lieu"><?php echo types_render_field( "lieu", array( ) ); ?></span>, <span class="lgd-annee"><?php echo types_render_field("date", array("format" => "m.Y")) ?></span>
 					</div>
 				</div>
-				
-				
+
+
 				<!--<?php echo types_render_field( "membres", array( ) ); ?>
 				<?php the_category(); ?>
 				<?php echo get_the_term_list( $post->ID, 'membre', '<h5>Membres</h5><ul><li>', '</li><li>', '</li></ul>' ); ?>
 				<?php echo get_the_term_list( $post->ID, 'collaborateur', '<h5>Collaborateurs</h5><ul><li>', '</li><li>', '</li></ul>' ); ?>-->
-	
-			
+
+
 				<div class="image-column ">
 					<?php echo types_render_field( "images", array("width" => "1200", "height" => "1200", "proportional" => "true" ) ) ;?>
 				</div>
@@ -61,23 +61,23 @@
 					</div>
 					<div class="legend"></div>
 				</div>
-				
+
 			</article>
 			<!-- /article -->
-	
-	
+
+
 		<?php endwhile; ?>
-	
+
 		<?php else: ?>
-	
+
 			<!-- article -->
 			<article>
-	
+
 				<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
-	
+
 			</article>
 			<!-- /article -->
-	
+
 		<?php endif; ?>
 
 
@@ -86,5 +86,3 @@
 	</section>
 	<!-- /section -->
 	</main>
-
-
