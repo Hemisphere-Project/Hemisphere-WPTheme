@@ -7,31 +7,33 @@
 		commanditaire:"",
 		lieu:""
 	};
-	
-	
+
+
 
 	$(window).load(function () {
-			
-			
+
 		/*$('.projects').masonry({
 			// options...
 			itemSelector: '.project-item',
 			columnWidth: 0
 		});*/
-			
-			
+
+
 		// <init>
 		var menuDefaultOffset = {top:24,left:24};
 		var legendDefaultOffset = {top:60,left:24};
-		var vh = $( window ).height();
-		
+		//var vh = $( window ).height();hideIntroAnim()
+		var vh = $('#introSection').height();
+		var introStep = true;
+
 		$(".header-pack").offset({top:menuDefaultOffset.top+vh,left:menuDefaultOffset.left});
 		$(".legend").offset({top:legendDefaultOffset.top+vh,left:legendDefaultOffset.left});
 		$("body").removeClass("hidden");
-		
-		
-		
+
+
+
 		// typed things
+			console.log(vh);
 		/*$(".intro").typed({
 			strings: ['<div class="intro-block1"><div class="intro-block1-l1">Hémisphère,</div></div>','<div class="intro-block1"><div class="intro-block1-l1">Hémisphère,</div><div class="intro-block1-l2">Atelier de dispositifs numériques</div><div class="intro-block1-l3">234 avenue Felix Faure 69003 Lyon</div></div><div class="intro-block2"><div>&lt;m.&gt; bonjour@hemisphere-project.com</div><div>&lt;m.&gt; [0033] 682 984 800</div></div>'],
 			// typing speed
@@ -63,10 +65,10 @@
 			// callback for reset
 			resetCallback: function() {}
 		});*/
-	
-		
+
+
 		ajustNoiseSizes();
-		
+
 		// DOM ready, take it away
 		/*** script for realisations page ***/
 		$(".project-item .cover-image").on("mouseover",function(event){
@@ -75,21 +77,21 @@
 			currentProject.title = $(event.currentTarget.parentElement).find(".title").text();
 			currentProject.commanditaire = $(event.currentTarget.parentElement).find(".commanditaire").text();
 			currentProject.lieu = $(event.currentTarget.parentElement).find(".lieu").text();
-			
+hideIntroAnim()
 			updateCurrentProject();
 		});
-		
+
 		$(".project-item .cover-image").on("mouseleave",function(event){
-			
+
 			currentProject.numbering = "";
 			currentProject.date = "";
 			currentProject.title = "";
 			currentProject.commanditaire = "";
 			currentProject.lieu = "";
-			
+
 			updateCurrentProject();
 		});
-		
+
 		function updateCurrentProject(){
 			$(".legend .lgd-numbering").text(currentProject.numbering);
 			$(".legend .lgd-annee").text(currentProject.date);
@@ -97,33 +99,50 @@
 			$(".legend .lgd-commanditaire").text(currentProject.commanditaire);
 			$(".legend .lgd-lieu").text(currentProject.lieu);
 		}
-		
+
 		window.addEventListener("optimizedScroll", ajustHeader);
-		
-		$( window ).resize(function() {
-			vh = $( window ).height();
-			ajustHeader();
-		});
-		
+		$( window ).resize(function() { ajustHeader(); });
+		$('.intro').on('click', hideIntroAnim);
+
+		function hideIntroAnim(){
+			if (introStep){
+				introStep = false;
+				window.onscroll = function () { window.scrollTo(0, 0); };
+				$("#introSpacer").animate( {height: '0px'}, 500, "linear", function() {
+					window.onscroll = function () { };
+					$(".intro").hide();
+				});
+				$(".intro").fadeTo(500, 0.2);
+				$(".header-pack").animate({top:menuDefaultOffset.top, left:menuDefaultOffset.left}, 500, "linear");
+				$(".legend").animate({top:legendDefaultOffset.top, left:legendDefaultOffset.left}, 500, "linear");
+			}
+		}
+
+
 		function ajustHeader(){
+			//vh = $( window ).height();
+			vh = $('#introSpacer').height();
 			var currentScrollTop = $(document).scrollTop();
-			if(currentScrollTop < vh ){
+
+			if (currentScrollTop > 0 && vh > 0 && introStep) hideIntroAnim();
+			else  if(currentScrollTop < vh ){
 				$(".header-pack").offset({top:menuDefaultOffset.top+vh,left:menuDefaultOffset.left});
 				$(".legend").offset({top:legendDefaultOffset.top+vh,left:legendDefaultOffset.left});
-			}else{
-				$(".header-pack").offset({top:currentScrollTop + menuDefaultOffset.top,left:menuDefaultOffset.left});
-				$(".legend").offset({top:currentScrollTop + legendDefaultOffset.top,left:legendDefaultOffset.left});	
-			}	
+			}
+			// else{
+			// 	$(".header-pack").offset({top:currentScrollTop + menuDefaultOffset.top,left:menuDefaultOffset.left});
+			// 	$(".legend").offset({top:currentScrollTop + legendDefaultOffset.top,left:legendDefaultOffset.left});
+			// }
 		}
-		
+
 		function ajustNoiseSizes(){
 			$( ".cover-image a" ).each(function( index ) {
 				var imgHeight = $(this).children("img").height();
 				$(this).children(".noise").height(imgHeight);
 			});
 		}
-		
-		
+
+
 	});
 
 } ( this, jQuery ));

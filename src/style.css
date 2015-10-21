@@ -528,12 +528,18 @@ input[type="search"] {
  * partials/projects
  * ---
  */
+#introSection {
+  position: fixed;
+}
+
 .intro {
+  background:transparent;
   color: #009A65;
   font-family: "btpnormal";
   font-size: 24px;
   height: 100vh;
   margin-top: 24px;
+  overflow: hidden;
 }
 .intro .intro-block1 {
   margin-left: 24px;
@@ -890,7 +896,7 @@ input[type="search"]:-ms-input-placeholder {
   /*.search-input {
   	animation: blink-empty 1s infinite;
   	border-left: transparent solid 1px;
-  	margin:5px; 
+  	margin:5px;
   }*/
   /*@keyframes blink-empty {
   	50% {border-left: 1px solid #333;}

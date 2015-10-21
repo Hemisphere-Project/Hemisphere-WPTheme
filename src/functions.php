@@ -102,15 +102,18 @@ function html5blank_header_scripts()
             // Modernizr
             wp_register_script('modernizr', get_template_directory_uri() . '/bower_components/modernizr/modernizr.js', array(), '2.8.3');
 
+            // Velocity
+            wp_register_script('velocity', get_template_directory_uri() . '/js/lib/velocity.min.js', array(), '1.0.0');
+
             wp_register_script('anchor-position', get_template_directory_uri() . '/js/title-shuffle/AnchorPosition.js', array(), '1.0.0');
-            
+
             //wp_register_script('panel-snap', get_template_directory_uri() . '/js/lib/jquery.panelSnap.js', array(), '1.0.0');
 
             wp_register_script('typedjs', get_template_directory_uri() . '/bower_components/typed.js/dist/typed.min.js', array(), '1.0.0');
 
             wp_register_script('masonry', get_template_directory_uri() . '/bower_components/masonry/dist/masonry.pkgd.min.js', array(), '1.0.0');
 
-            
+
             // Custom scripts
             wp_register_script(
                 'html5blankscripts',
@@ -118,9 +121,10 @@ function html5blank_header_scripts()
                 array(
                     'conditionizr',
                     'modernizr',
+                    'velocity',
                     'jquery'),
                 '1.0.0');
-            
+
 
 
             // Enqueue Scripts
@@ -145,12 +149,12 @@ function html5blank_conditional_scripts()
 		wp_enqueue_script('projectsscripts');
 	}else if(is_singular('project')){
 		wp_register_script('projectscripts',get_template_directory_uri() . '/js/project-script.js',array(),'1.0.0');
-		wp_enqueue_script('projectscripts');	
+		wp_enqueue_script('projectscripts');
 	}else if(is_post_type_archive('project')){
 		wp_register_script('projectarchivescripts',get_template_directory_uri() . '/js/project-archive.js',array(),'1.0.0');
-		wp_enqueue_script('projectarchivescripts');	
+		wp_enqueue_script('projectarchivescripts');
 	}else if(is_post_type_archive('labo')){
-		
+
 		wp_register_script( 'laboajax', get_template_directory_uri().'/js/labo-ajax.js', array('jquery'), '1.0.0');
 		wp_enqueue_script('laboajax');
 		// pass Ajax Url to script.js
@@ -476,7 +480,7 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 \*---------------------------------*/
 
 function labo_load() {
-	
+
 
 	$args = array(
 	    'p' => $_POST['postId'],
