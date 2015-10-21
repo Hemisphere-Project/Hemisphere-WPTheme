@@ -600,8 +600,9 @@ input[type="search"] {
   pointer-events: none;
   z-index: 1000;
 }
-.legend .legend-line-1 .lgd-numbering:after {
-  content: " — ";
+.legend .legend-line-1 .lgd-dash {
+  animation: blink 1s steps(5, start) infinite;
+  -webkit-animation: blink 1s steps(5, start) infinite;
 }
 .legend .legend-line-2 {
   text-indent: 105px;

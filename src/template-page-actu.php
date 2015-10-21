@@ -24,13 +24,13 @@
 
 <div class="legend">
 	<div class="legend-line-1">
-		<span class="lgd-numbering"></span><span class="lgd-title"></span>
+		<span class="lgd-numbering"></span><span class="lgd-dash"> — </span><span class="lgd-title"></span>
 	</div>
 	<div class="legend-line-2">
 		<span class="lgd-commanditaire"></span>
 	</div>
 	<div class="legend-line-3">
-		<span class="lgd-lieu"></span>, <span class="lgd-annee"></span>
+		<span class="lgd-lieu"></span> <span class="lgd-annee"></span>
 	</div>
 </div>
 

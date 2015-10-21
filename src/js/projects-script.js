@@ -72,13 +72,14 @@
 		// DOM ready, take it away
 		/*** script for realisations page ***/
 		$(".project-item .cover-image").on("mouseover",function(event){
-			currentProject.numbering = $(event.currentTarget.parentElement).find(".numbering").text();
+			currentProject.numbering = $(event.currentTarget.parentElement).find(".numbering").text()+' — ';
 			currentProject.date = $(event.currentTarget.parentElement).find(".date").text();
 			currentProject.title = $(event.currentTarget.parentElement).find(".title").text();
 			currentProject.commanditaire = $(event.currentTarget.parentElement).find(".commanditaire").text();
-			currentProject.lieu = $(event.currentTarget.parentElement).find(".lieu").text();
+			currentProject.lieu = $(event.currentTarget.parentElement).find(".lieu").text()+', ';
 hideIntroAnim()
 			updateCurrentProject();
+			$('.lgd-dash').hide();
 		});
 
 		$(".project-item .cover-image").on("mouseleave",function(event){
@@ -90,6 +91,7 @@ hideIntroAnim()
 			currentProject.lieu = "";
 
 			updateCurrentProject();
+			$('.lgd-dash').show();
 		});
 
 		function updateCurrentProject(){
@@ -99,6 +101,16 @@ hideIntroAnim()
 			$(".legend .lgd-commanditaire").text(currentProject.commanditaire);
 			$(".legend .lgd-lieu").text(currentProject.lieu);
 		}
+
+		function cursorAnimation() {
+		    $('.lgd-dash').animate({
+		        opacity: 0
+		    }, 'fast', 'linear').animate({
+		        opacity: 1
+		    }, 'fast', 'linear');
+		}
+
+		setInterval (cursorAnimation, 600);
 
 		window.addEventListener("optimizedScroll", ajustHeader);
 		$( window ).resize(function() { ajustHeader(); });
