@@ -39,14 +39,20 @@
 					</div>
 					<div class="infos">
 						<div>
-						<span class="info-separator">&lt;Activités&gt;</span>
+						<span class="info-separator">&lt;Domaine&gt;</span>
+						<span class="info"><?php echo get_the_term_list( $post->ID, 'category', '', ', ', '' ); ?></span>
+						</div>
+						<div>
+						<span class="info-separator">&lt;Type&gt;</span>
 						<span class="info"><?php echo get_the_term_list( $post->ID, 'project-type', '', ', ', '' ); ?></span>
 						</div>
+						<br>
 						<div>
 						<span class="info-separator">&lt;Équipe&gt;</span>
 						<span class="info"><?php echo types_render_field( "equipe", array( ) ); ?></span>
 						</div>
 						<div>
+						<br>
 						<span class="info-separator">&lt;Lieu&gt;</span>
 						<span class="info"><?php echo types_render_field( "lieu", array( ) ); ?></span>
 						</div>

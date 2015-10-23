@@ -14,7 +14,7 @@
 								<th><div class="th-inner">Lieu</div></th>
 								<th><div class="th-inner">Type</div></th>
 								<th><div class="th-inner">Equipe</div></th>
-								<th><div class="th-inner">Catégorie</div></th>
+								<th><div class="th-inner">Domaine</div></th>
 							</tr>
 						</thead>
 						<tbody>
