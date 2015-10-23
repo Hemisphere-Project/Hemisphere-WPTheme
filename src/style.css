@@ -1033,9 +1033,9 @@ input[type="search"]:-ms-input-placeholder {
   margin-bottom: 0;
 }
 .about .about-content .text-column {
-  width: 590px;
+  width: 670px;
   float: left;
-  height: 380px;
+  height: 340px;
   overflow: scroll;
 }
 .about .about-content .text-column .about-title {
