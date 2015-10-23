@@ -21,14 +21,17 @@
 
 							<?php
 								$args = array( 'post_type' => 'project', 'posts_per_page' => 20 );
+								// $args = array( 'post_type' => 'project', 'posts_per_page' => 20, 'orderby' => 'meta_value', 'order' => 'DESC' );
 								$loop = new WP_Query( $args );
+
 								while ( $loop->have_posts() ) : $loop->the_post(); ?>
 								<tr>
 									<td>
 										<?php echo types_render_field("date", array("format" => "m.Y")) ?>
 									</td>
 									<td>
-										<?php echo types_render_field("titre", array()) ?>
+										<!-- <?php echo types_render_field("titre", array()) ?> -->
+										<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 									</td>
 									<td>
 										<?php echo types_render_field( "lieu", array( ) ); ?>
