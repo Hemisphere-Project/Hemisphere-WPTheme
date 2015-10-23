@@ -1,7 +1,7 @@
 <?php /* Template Name: Repertoire Page Template */ get_header(); ?>
 
 	<main role="main">
-	
+
 		<section class="repertoire">
 			<div class="fixed-table-container">
 				<div class="header-background"> </div>
@@ -18,14 +18,14 @@
 							</tr>
 						</thead>
 						<tbody>
-				
-							<?php 
+
+							<?php
 								$args = array( 'post_type' => 'project', 'posts_per_page' => 20 );
 								$loop = new WP_Query( $args );
 								while ( $loop->have_posts() ) : $loop->the_post(); ?>
 								<tr>
 									<td>
-										<?php echo types_render_field("date", array("format" => "d.m.Y")) ?>
+										<?php echo types_render_field("date", array("format" => "m.Y")) ?>
 									</td>
 									<td>
 										<?php echo types_render_field("titre", array()) ?>
@@ -55,5 +55,3 @@
 			</div>
 		</section>
 	</main>
-
-

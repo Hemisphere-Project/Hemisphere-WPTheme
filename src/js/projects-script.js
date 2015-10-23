@@ -77,7 +77,7 @@
 			currentProject.title = $(event.currentTarget.parentElement).find(".title").text();
 			currentProject.commanditaire = $(event.currentTarget.parentElement).find(".commanditaire").text();
 			currentProject.lieu = $(event.currentTarget.parentElement).find(".lieu").text()+', ';
-hideIntroAnim()
+			hideIntroAnim();
 			updateCurrentProject();
 			$('.lgd-dash').hide();
 		});
@@ -110,8 +110,7 @@ hideIntroAnim()
 		        opacity: 1
 		    }, 'fast', 'linear');
 		}
-
-		setInterval (cursorAnimation, 600);
+		// setInterval (cursorAnimation, 600);
 
 		window.addEventListener("optimizedScroll", ajustHeader);
 		$( window ).resize(function() { ajustHeader(); });

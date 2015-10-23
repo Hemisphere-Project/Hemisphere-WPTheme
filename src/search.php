@@ -5,12 +5,12 @@
 	<main role="main">
 		<!-- section -->
 		<section class="search-section">
-		
+
 			<div class="search-header">
 				<span class="votre-recherche">
-					Votre Recherche : 
+					Votre Recherche :
 				</span>
-				
+
 				<span class="search-form">
 					<?php get_template_part('searchform'); ?>
 				</span>
@@ -22,8 +22,7 @@
 					<?php get_template_part('pagination'); ?>
 				<!--</div>-->
 			</div>
-			
+
 		</section>
 		<!-- /section -->
 	</main>
-

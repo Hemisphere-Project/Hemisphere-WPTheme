@@ -24,7 +24,7 @@
 
 <div class="legend">
 	<div class="legend-line-1">
-		<span class="lgd-numbering"></span><span class="lgd-dash"> _ </span><span class="lgd-title"></span>
+		<span class="lgd-numbering"></span><span class="lgd-dash">  </span><span class="lgd-title"></span>
 	</div>
 	<div class="legend-line-2">
 		<span class="lgd-commanditaire"></span>
