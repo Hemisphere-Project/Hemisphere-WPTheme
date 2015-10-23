@@ -18,7 +18,6 @@
 			columnWidth: 0
 		});*/
 
-
 		// <init>
 		var menuDefaultOffset = {top:24,left:24};
 		var legendDefaultOffset = {top:60,left:24};
@@ -68,10 +67,11 @@
 
 
 		ajustNoiseSizes();
+		adjustBorderSizes();
 
 		// DOM ready, take it away
 		/*** script for realisations page ***/
-		$(".project-item .cover-image").on("mouseover",function(event){
+		$(".container").on("mouseover",function(event){
 			currentProject.numbering = $(event.currentTarget.parentElement).find(".numbering").text()+' — ';
 			currentProject.date = $(event.currentTarget.parentElement).find(".date").text();
 			currentProject.title = $(event.currentTarget.parentElement).find(".title").text();
@@ -82,17 +82,18 @@ hideIntroAnim()
 			$('.lgd-dash').hide();
 		});
 
-		$(".project-item .cover-image").on("mouseleave",function(event){
-
+		$(".container").on("mouseleave",function(event){
 			currentProject.numbering = "";
 			currentProject.date = "";
 			currentProject.title = "";
 			currentProject.commanditaire = "";
 			currentProject.lieu = "";
-
 			updateCurrentProject();
 			$('.lgd-dash').show();
 		});
+
+
+
 
 		function updateCurrentProject(){
 			$(".legend .lgd-numbering").text(currentProject.numbering);
@@ -116,9 +117,27 @@ hideIntroAnim()
 		$( window ).resize(function() { ajustHeader(); });
 		$('.intro').on('click', hideIntroAnim);
 
+
+		// $('.intro-block1').css('font-family', 'btp_modify1');
+		// $('.intro-block1').css('font-family', 'btpnormal');
+		// HOVER TITLE
+		$('.intro-block1').on('mouseover', function(){
+			$(this).css('font-family', 'btp_modify1');
+		});
+		$('.intro-block1').on('mouseleave', function(){
+			$(this).css('font-family', 'btpnormal');
+		});
+		// CLICK TITLE
+		$('.intro-block1').on('mousedown', function(){
+			$(this).css('font-family', 'btp_modify2');
+		});
+
+
+
 		function hideIntroAnim(){
 			if (introStep){
 				introStep = false;
+				$(this).css('font-family', 'btp_modify2');
 				window.onscroll = function () { window.scrollTo(0, 0); };
 				$("#introSpacer").animate( {height: '0px'}, 500, "linear", function() {
 					window.onscroll = function () { };
@@ -150,7 +169,18 @@ hideIntroAnim()
 		function ajustNoiseSizes(){
 			$( ".cover-image a" ).each(function( index ) {
 				var imgHeight = $(this).children("img").height();
-				$(this).children(".noise").height(imgHeight);
+				$(this).children(".noise").height(imgHeight-4);
+			});
+		}
+
+		function adjustBorderSizes(){
+			$( ".cover-image a" ).each(function( index ) {
+				var imgHeight = $(this).children("img").height();
+				var imgWidth = $(this).children("img").width();
+				$(this).parent().parent().css({
+						'height': imgHeight+2,
+						'width': imgWidth
+				});
 			});
 		}
 

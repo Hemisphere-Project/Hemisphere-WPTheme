@@ -24,7 +24,7 @@
 
 <div class="legend">
 	<div class="legend-line-1">
-		<span class="lgd-numbering"></span><span class="lgd-dash"> — </span><span class="lgd-title"></span>
+		<span class="lgd-numbering"></span><span class="lgd-dash"> _ </span><span class="lgd-title"></span>
 	</div>
 	<div class="legend-line-2">
 		<span class="lgd-commanditaire"></span>
@@ -49,16 +49,18 @@
 
 	<div id="<?php the_title(); ?>" class="project-<?php the_ID(); ?> project-item col-<?php $cnt = $loop->current_post;echo $width_sequence[($cnt % $width_sequence_length)]?>-10 top-margin-<?php $cnt = $loop->current_post;echo $margin_top_sequence[($cnt % $margin_top_sequence_length)]?>">
 
-		<div class="cover-image">
-			<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-				<!--<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">-->
-				<a href="<?php echo get_post_type_archive_link('project').'#post-'.get_the_ID(); ?>" >
-					<?php the_post_thumbnail("large"); // Declare pixel size you need inside the array ?>
-					<div class="noise"></div>
-				</a>
-
-			<?php endif; ?>
+		<div class="container">
+			<div class="cover-image">
+				<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
+					<!--<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">-->
+					<a href="<?php echo get_post_type_archive_link('project').'#post-'.get_the_ID(); ?>" >
+						<?php the_post_thumbnail("large"); // Declare pixel size you need inside the array ?>
+						<div class="noise"></div>
+					</a>
+				<?php endif; ?>
+			</div>
 		</div>
+
 
 		<div class="numbering"><?php echo $cnt+1; ?></div>
 
