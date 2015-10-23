@@ -49,7 +49,12 @@
 						<br>
 						<div>
 						<span class="info-separator">&lt;Équipe&gt;</span>
-						<span class="info"><?php echo types_render_field( "equipe", array( ) ); ?></span>
+						<!-- <span class="info"><?php echo types_render_field( "equipe", array( ) ); ?> </span> -->
+						<?php
+							$str = types_render_field( "equipe", array( ) );
+							$arr = explode(",", $str);
+							foreach($arr as $val) { echo $val.',<br>'; }
+						?>
 						</div>
 						<div>
 						<br>
