@@ -30,6 +30,21 @@
 		$("body").removeClass("hidden");
 
 
+		// $('.intro-block1').css('font-family', 'btp_modify1');
+		// $('.intro-block1').css('font-family', 'btpnormal');
+		// HOVER TITLE
+		$('.intro-block1').on('mouseover', function(){
+			$(this).css('font-family', 'btp_modify1');
+		});
+		$('.intro-block1').on('mouseleave', function(){
+			$(this).css('font-family', 'btpnormal');
+		});
+		// CLICK TITLE
+		$('.intro-block1').on('mousedown', function(){
+			$(this).css('font-family', 'btp_modify2');
+		});
+
+
 
 		// typed things
 			console.log(vh);
@@ -117,19 +132,6 @@
 		$('.intro').on('click', hideIntroAnim);
 
 
-		// $('.intro-block1').css('font-family', 'btp_modify1');
-		// $('.intro-block1').css('font-family', 'btpnormal');
-		// HOVER TITLE
-		$('.intro-block1').on('mouseover', function(){
-			$(this).css('font-family', 'btp_modify1');
-		});
-		$('.intro-block1').on('mouseleave', function(){
-			$(this).css('font-family', 'btpnormal');
-		});
-		// CLICK TITLE
-		$('.intro-block1').on('mousedown', function(){
-			$(this).css('font-family', 'btp_modify2');
-		});
 
 
 

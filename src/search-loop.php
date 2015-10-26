@@ -11,7 +11,11 @@
 
 		<!-- post thumbnail -->
 		<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-				<?php the_post_thumbnail(array(240,240)); // Declare pixel size you need inside the array ?>
+			<a href="<?php the_permalink(); ?>" ?>
+				<?php the_post_thumbnail(array(240,240)); ?>
+			</a>
+			<!-- <?php the_post_thumbnail(array(240,240));
+			?> -->
 		<?php endif; ?>
 		<!-- /post thumbnail -->
 	</article>

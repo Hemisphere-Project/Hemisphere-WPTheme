@@ -8,7 +8,7 @@
 
 			<div class="search-header">
 				<span class="votre-recherche">
-					Résultats:
+					Affichage de: <?php single_cat_title(); ?>
 				</span>
 
 			</div>

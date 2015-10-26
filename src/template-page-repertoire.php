@@ -20,10 +20,14 @@
 						<tbody>
 
 							<?php
-								$args = array( 'post_type' => 'project', 'posts_per_page' => 20 );
-								// $args = array( 'post_type' => 'project', 'posts_per_page' => 20, 'orderby' => 'meta_value', 'order' => 'DESC' );
-								$loop = new WP_Query( $args );
+								// $args = array( 'post_type' => 'project', 'posts_per_page' => 20 );
+								$args = array( 'post_type' => 'project',
+												'posts_per_page' => 20,
+												'orderby'   => 'meta_value',
+												'meta_key'  => 'wpcf-date',
+												'order'   => 'DESC');
 
+								$loop = new WP_Query( $args );
 								while ( $loop->have_posts() ) : $loop->the_post(); ?>
 								<tr>
 									<td>
@@ -44,11 +48,12 @@
 										<?php echo get_the_term_list( $post->ID, 'collaborateur', '', ', ', '' ); ?>
 									</td>
 									<td>
-										<?php
+										<?php echo get_the_term_list( $post->ID, 'category', '', ', ', '' ); ?>
+										<!-- <?php
 											foreach((get_the_category()) as $category) {
 												echo $category->cat_name . ' ';
 											}
-										?>
+										?> -->
 									</td>
 								</tr>
 							<?php endwhile; ?>

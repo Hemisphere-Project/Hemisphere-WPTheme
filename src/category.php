@@ -1,19 +1,23 @@
 <?php get_header(); ?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
+<main role="main">
+	<!-- section -->
+	<section class="search-section">
 
-			<h1><?php _e( 'Category: ', 'html5blank' ); single_cat_title(); ?></h1>
+		<div class="search-header">
+			<span class="votre-recherche">
+				Domaine: <?php single_cat_title(); ?>
+			</span>
 
-			<?php get_template_part('loop'); ?>
+		</div>
+		<div class="search-results row">
+			<?php if($wp_query->found_posts == 0) : echo sprintf( __( '%s Search Results for ', 'html5blank' ), $wp_query->found_posts ); echo get_search_query(); endif; ?>
+			<!--<div class="search-results-columns">-->
+				<?php get_template_part('search-loop'); ?>
+				<?php get_template_part('pagination'); ?>
+			<!--</div>-->
+		</div>
 
-			<?php get_template_part('pagination'); ?>
-
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+	</section>
+	<!-- /section -->
+</main>
