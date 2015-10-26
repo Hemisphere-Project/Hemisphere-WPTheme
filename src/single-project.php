@@ -71,7 +71,7 @@
 					</div>
 					<div class="legend"></div>
 				</div>
-
+				<br><br><br><br><br><br><br><br>
 			</article>
 			<!-- /article -->
 

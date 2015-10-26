@@ -105,6 +105,7 @@ function html5blank_header_scripts()
             // Velocity
             wp_register_script('velocity', get_template_directory_uri() . '/js/lib/velocity.min.js', array(), '1.0.0');
 
+
             wp_register_script('anchor-position', get_template_directory_uri() . '/js/title-shuffle/AnchorPosition.js', array(), '1.0.0');
 
             //wp_register_script('panel-snap', get_template_directory_uri() . '/js/lib/jquery.panelSnap.js', array(), '1.0.0');

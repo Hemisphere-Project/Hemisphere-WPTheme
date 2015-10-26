@@ -55,7 +55,7 @@
 			updatePosition(currentPanelIndex);
 		});
 		$('.up-arrow').click(function(event){
-			console.log("up arrow");
+			// console.log("up arrow");
 			if(currentPanelIndex <= 0)
 				return;
 
@@ -64,7 +64,7 @@
 
 		});
 		$('.elevator').on('click', '.elevator-item', function(event) {
-			console.log("elevator item");
+			// console.log("elevator item");
 			currentPanelIndex = event.currentTarget.dataset.panel.substring(2);
 			updatePosition(currentPanelIndex);
 		});
@@ -94,17 +94,18 @@
 
 	function updatePosition(index){
 		scrollToPanel("article[data-panel='dp"+index+"']",function(){
-			console.log("anim complete");
+			// console.log("anim complete");
 			if(window.location.hash != $("article[data-panel='dp"+index+"']").attr("id"))
 				window.location.hash = $("article[data-panel='dp"+index+"']").attr("id");
 		});
 		selectElevator(index);
+		//animateText(index);
 		//window.location.hash = $("article[data-panel='dp"+index+"']").attr("id");
 	}
 
 	function scrollToPanel(selector,completecb){
 		var aTag = $(selector);
-		$('html,body').animate({scrollTop: aTag.offset().top},{duration:400,easing:"swing",complete:completecb});
+		$('html,body').animate({scrollTop: aTag.offset().top},{duration:0,easing:"swing",complete:completecb}); // changed duration 400 to 0
 	}
 
 	function selectElevator(index){
@@ -113,5 +114,36 @@
 
 		$($(".elevator-item")[index]).addClass("selected-item");
 	}
+
+
+
+	function animateText(index){
+
+		// $('.legend').css("color","white");
+		var articleDiv = $("article[data-panel='dp"+index+"']");
+		var legend = articleDiv.children(".legend");
+		console.log(legend.children('.legend-line-1').children('.lgd-numbering').html());
+		console.log(legend.children('.legend-line-1').children('.lgd-title').html());
+		console.log(legend.children('.legend-line-2').children('.lgd-commanditaire').html());
+		console.log(legend.children('.legend-line-3').children('.lgd-lieu').html());
+		console.log(legend.children('.legend-line-3').children('.lgd-annee').html());
+		// console.log( $("article[data-panel='dp"+index+"']").attr("id") );
+
+	// legend.children('.legend-line-1').children('.lgd-numbering').html("dede");
+	// legend.children('.legend-line-1').children('.lgd-title').html('ezez');
+	// legend.children('.legend-line-2').children('.lgd-commanditaire').html("sdsds");
+	// legend.children('.legend-line-3').children('.lgd-lieu').html("dsdsds");
+	// legend.children('.legend-line-3').children('.lgd-annee').html('hdjshjs');
+
+
+	legend.typed({
+				strings: ["First sentence.", "Second sentence."],
+				typeSpeed: 30
+		});
+
+	}
+
+
+
 
 } ( this, jQuery ));
