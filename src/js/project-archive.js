@@ -101,6 +101,7 @@
 		});
 		selectElevator(index);
 		animateText(index);
+
 		//window.location.hash = $("article[data-panel='dp"+index+"']").attr("id");
 	}
 
@@ -123,10 +124,8 @@
 
 		var articleDiv = $("article[data-panel='dp"+index+"']");
 		var legend = articleDiv.children(".legend");
-
 		var fixHeight = legend.height();
 		legend.css('height', fixHeight );
-
 		// $('.text-column').hide();
 		// $('.legend').hide();
 		// legend.show();
@@ -141,7 +140,6 @@
 		// var allTexts = [num.html(),title.html(), commanditaire.html(),lieu.html(),annee.html()];
 		var allDivs = [title, commanditaire,lieu,annee];
 		var allTexts = [title.html(), commanditaire.html(),lieu.html(),annee.html()];
-
 		type(allDivs,allTexts,index);
 	}
 

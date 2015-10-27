@@ -9,12 +9,12 @@
 					<table class="repertoire-table">
 						<thead>
 							<tr>
-								<th><div class="th-inner">Date</div></th>
-								<th><div class="th-inner">Titre</div></th>
-								<th><div class="th-inner">Lieu</div></th>
-								<th><div class="th-inner">Type</div></th>
-								<th><div class="th-inner">Equipe</div></th>
-								<th><div class="th-inner">Domaine</div></th>
+								<th><div class="th-inner repertoireDate">Date</div></th>
+								<th><div class="th-inner repertoireTitle">Titre</div></th>
+								<th><div class="th-inner repertoirePlace">Lieu</div></th>
+								<th><div class="th-inner repertoireType">Type</div></th>
+								<th><div class="th-inner repertoireTeam">Equipe</div></th>
+								<th><div class="th-inner repertoireDomain">Domaine</div></th>
 							</tr>
 						</thead>
 						<tbody>
