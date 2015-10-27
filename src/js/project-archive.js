@@ -90,6 +90,7 @@
 		}
 		scrollToPanel("article[data-panel='dp"+currentPanelIndex+"']");
 		selectElevator(currentPanelIndex);
+		// animateText(currentPanelIndex);
 	}
 
 	function updatePosition(index){
@@ -99,7 +100,7 @@
 				window.location.hash = $("article[data-panel='dp"+index+"']").attr("id");
 		});
 		selectElevator(index);
-		// animateText(index);
+		animateText(index);
 		//window.location.hash = $("article[data-panel='dp"+index+"']").attr("id");
 	}
 
@@ -120,9 +121,15 @@
 
 	function animateText(index){
 
-		// $('.legend').css("color","white");
 		var articleDiv = $("article[data-panel='dp"+index+"']");
 		var legend = articleDiv.children(".legend");
+
+		var fixHeight = legend.height();
+		legend.css('height', fixHeight );
+
+		// $('.text-column').hide();
+		// $('.legend').hide();
+		// legend.show();
 
 		var num = legend.children('.legend-line-1').children('.lgd-numbering');
 		var title =	legend.children('.legend-line-1').children('.lgd-title');
@@ -130,16 +137,11 @@
 		var lieu = legend.children('.legend-line-3').children('.lgd-lieu');
 		var annee = legend.children('.legend-line-3').children('.lgd-annee');
 
-		// legend.typed({
-		// 			strings: ["<div class=legend-line-1><span class=lgd-numbering>2</span> — <span class=lgd-title>Do not Clean</span></div><div class=legend-line-2><span class=lgd-commanditaire>Komplex Kapharnaüm</span></div><div class=legend-line-3><span class=lgd-lieu>Villeurbanne</span>, <span class=lgd-annee>04.2013</span></div>"],
-		// 			typeSpeed: 0,
-		// 			startDelay: 0
-		// 	});
+		// var allDivs = [num,title, commanditaire,lieu,annee];
+		// var allTexts = [num.html(),title.html(), commanditaire.html(),lieu.html(),annee.html()];
+		var allDivs = [title, commanditaire,lieu,annee];
+		var allTexts = [title.html(), commanditaire.html(),lieu.html(),annee.html()];
 
-		var allDivs = [num,title, commanditaire,lieu,annee];
-		var allTexts = [num.html(),title.html(), commanditaire.html(),lieu.html(),annee.html()];
-
-		// $('.legend').css('color','white');
 		type(allDivs,allTexts,index);
 	}
 
@@ -148,20 +150,23 @@
 		if (divs.length > 0){
 			$.each(divs,function(index,div){
 				div.html('');
-			})
+				div.data('typed', null);
+			});
 			var div = divs.shift();
 			var text = texts.shift();
-			// div.empty();
 			div.typed({
 						strings: [text],
-						typeSpeed: 0,
+						typeSpeed: 5,
 						contentType: 'text',
 						showCursor: false,
+						cursorChar: "|",
 						callback: function() { div.html(text); type(divs,texts);}
 				});
 		}
 		else{
-
+			// console.log("done");
+			// $('.legend').show();
+			// $('.text-column').show();
 		}
 	}
 

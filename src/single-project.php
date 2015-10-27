@@ -9,7 +9,7 @@
 
 		<?php if (have_posts()): while (have_posts()) : the_post();?>
 
-			
+
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-panel="<?php echo 'dp'.$res_count; ?>">
 
@@ -22,7 +22,7 @@
 						<span class="lgd-commanditaire"><?php echo types_render_field( "commanditaire", array( ) ); ?></span>
 					</div>
 					<div class="legend-line-3">
-						<span class="lgd-lieu"><?php echo types_render_field( "lieu", array( ) ); ?></span>, <span class="lgd-annee"><?php echo types_render_field("date", array("format" => "m.Y")) ?></span>
+						<span class="lgd-lieu"><?php echo types_render_field( "lieu", array( ) ); ?> ,</span> <span class="lgd-annee"><?php echo types_render_field("date", array("format" => "m.Y")) ?></span>
 					</div>
 				</div>
 
