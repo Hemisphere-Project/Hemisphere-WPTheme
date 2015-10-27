@@ -8,7 +8,14 @@
 	</div>
 	<!--<main role="main">-->
 	<!-- section -->
-		<?php get_template_part('single-project'); ?>
+		<?php
+			$args = array( 'post_type' => 'project',
+							'posts_per_page' => 20,
+							'orderby'   => 'meta_value',
+							'meta_key'  => 'wpcf-date',
+							'order'   => 'DESC');
+			query_posts($args);
+			get_template_part('single-project');
+		?>
 	<!-- /section -->
 	<!--</main>-->
-

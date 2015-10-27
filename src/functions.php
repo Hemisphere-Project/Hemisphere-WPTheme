@@ -123,7 +123,8 @@ function html5blank_header_scripts()
                     'conditionizr',
                     'modernizr',
                     'velocity',
-                    'jquery'),
+                    'jquery',
+                    'typedjs'),
                 '1.0.0');
 
 
