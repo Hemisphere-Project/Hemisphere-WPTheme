@@ -54,11 +54,17 @@
 						<div>
 						<span class="info-separator">&lt;Équipe&gt;</span>
 						<!-- <span class="info"><?php echo types_render_field( "equipe", array( ) ); ?> </span> -->
-						<?php
-							$str = types_render_field( "equipe", array( ) );
-							$arr = explode(",", $str);
-							foreach($arr as $val) { echo $val.',<br>'; }
-						?>
+							<?php
+								$str = types_render_field( "equipe", array( ) );
+								$arr = explode(",", $str);
+								$numItems = count($arr);
+								$i = 0;
+								foreach($arr as $val) {
+									++$i;
+									if($i != $numItems) { echo $val.',<br>';}
+								  if($i === $numItems) { echo $val;}
+								}
+							?>
 						</div>
 						<div>
 						<br>
