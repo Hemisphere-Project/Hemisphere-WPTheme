@@ -96,7 +96,7 @@
 		}
 		scrollToPanel("article[data-panel='dp"+currentPanelIndex+"']");
 		selectElevator(currentPanelIndex);
-		// animateText(currentPanelIndex);
+		animateText(currentPanelIndex);
 	}
 
 	function updatePosition(index){
