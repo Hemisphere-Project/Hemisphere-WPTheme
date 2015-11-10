@@ -12,7 +12,8 @@
 
 		<!-- post thumbnail -->
 		<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-			<a href="<?php the_permalink(); ?>" ?>
+			<!-- <a href="<?php the_permalink(); ?>" ?> -->
+			<a href="<?php echo get_post_type_archive_link('project').'#post-'.get_the_ID(); ?>" ?>
 				<?php the_post_thumbnail(array(240,240)); ?>
 			</a>
 			<!-- <?php the_post_thumbnail(array(240,240));
