@@ -48,22 +48,22 @@
 
 
 		$('.down-arrow').click(function(event){
-			console.log("down arrow");
-			if(currentPanelIndex >= $('article').length-1)
-				return;
-
-			currentPanelIndex++;
-			updatePosition(currentPanelIndex);
+			goDown();
 		});
 		$('.up-arrow').click(function(event){
-			// console.log("up arrow");
-			if(currentPanelIndex <= 0)
-				return;
-
-			currentPanelIndex--;
-			updatePosition(currentPanelIndex);
-
+			goUp();
 		});
+
+		$(document).keyup(function(e){
+			if(e.keyCode == 38){
+				goUp();
+			 }
+			 if(e.keyCode == 40){
+				 goDown();
+			 }
+		});
+
+
 		$('.elevator').on('click', '.elevator-item', function(event) {
 			// console.log("elevator item");
 			currentPanelIndex = event.currentTarget.dataset.panel.substring(2);
@@ -97,6 +97,20 @@
 		scrollToPanel("article[data-panel='dp"+currentPanelIndex+"']");
 		selectElevator(currentPanelIndex);
 		animateText(currentPanelIndex);
+	}
+
+	function goUp(){
+		if(currentPanelIndex <= 0)
+			return;
+		currentPanelIndex--;
+		updatePosition(currentPanelIndex);
+	}
+
+	function goDown(){
+		if(currentPanelIndex >= $('article').length-1)
+			return;
+		currentPanelIndex++;
+		updatePosition(currentPanelIndex);
 	}
 
 	function updatePosition(index){
