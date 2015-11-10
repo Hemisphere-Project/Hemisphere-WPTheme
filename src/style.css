@@ -225,6 +225,8 @@ body {
   /* safari aliasing position:fixed patched */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  max-width: 1500px;
 }
 
 img {
@@ -780,9 +782,9 @@ input[type="search"] {
   font-family: "ankacoder_narrowregular";
   font-size: 15px;
   /*position:fixed;*/
-  float: right;
   max-width: 50%;
   width: 275px;
+  float: right;
   margin-right: 342px;
   margin-top: -webkit-calc(-100vh + 230px);
   margin-top: calc(-100vh + 230px);
@@ -1002,7 +1004,7 @@ input[type="search"]:-ms-input-placeholder {
 .about .about-content .text-column {
   width: 670px;
   float: left;
-  height: 340px;
+  height: 550px;
   overflow: scroll;
 }
 .about .about-content .text-column .about-title {
