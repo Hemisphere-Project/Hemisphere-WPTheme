@@ -9,9 +9,8 @@
 
 <section id="introSection" class="intro">
 	<div class="intro-block1">
-		<div class="intro-block1-l1">Hémisphère,</div>
-		<div class="intro-block1-l2">Atelier de dispositifs numériques</div>
-		<!-- <div class="intro-block1-l3">234 avenue Felix Faure 69003 Lyon</div> -->
+		<div id="introL1" class="intro-block1-l1">Hémisphère,</div>
+		<div id="introL2" class="intro-block1-l2">Atelier de dispositifs numériques</div>
 	</div>
 </div>
 <section id="introSpacer" class="intro">

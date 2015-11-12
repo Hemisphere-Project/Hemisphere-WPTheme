@@ -20,17 +20,42 @@
 
 
 		// ACCUEIL INIT
-		// HOVER TITLE
-		$('.intro-block1').on('mouseover', function(){
-			$(this).css('font-family', 'btp_modify1');
-		});
-		$('.intro-block1').on('mouseleave', function(){
-			$(this).css('font-family', 'btpnormal');
-		});
-		// CLICK TITLE
+		// HOVER TITLE SIMPLE
+		// $('.intro-block1').on('mouseover', function(){
+		// 	$(this).css('font-family', 'btp_modify1');
+		// });
+		// $('.intro-block1').on('mouseleave', function(){
+		// 	$(this).css('font-family', 'btpnormal');
+		// });
+		// CLICK
 		$('.intro-block1').on('mousedown', function(){
 			$(this).css('font-family', 'btp_modify2');
 		});
+
+		// HOVER TITLE SCOPE
+		var phrase1 = $('#introL1').text().split('');
+		var phrase2 = $('#introL2').text().split('');
+		$("#introL1,#introL2").empty();
+		
+		$.each(phrase1, function(index,char){
+			var charDiv = $('<span>').addClass("singleChar").html(char).appendTo($("#introL1"));
+		});
+		$.each(phrase2, function(index,char){
+			var charDiv = $('<span>').addClass("singleChar").html(char).appendTo($("#introL2"));
+		});
+
+		$('.singleChar').on('mouseover', function(){
+			$(this).css('font-family', 'btp_modify1');
+			$(this).prev().css('font-family', 'btp_modify1');
+			$(this).prev().prev().css('font-family', 'btp_modify1');
+			$(this).next().css('font-family', 'btp_modify1');
+		});
+		// CLICK
+		$('.singleChar').on('mousedown', function(){
+			$('.singleChar').css('font-family', 'btp_modify2');
+		});
+
+
 
 
 		// STARTUP ANIM
@@ -50,38 +75,38 @@
 
 
 		// typed things
-			console.log(vh);
-		/*$(".intro").typed({
-			strings: ['<div class="intro-block1"><div class="intro-block1-l1">Hémisphère,</div></div>','<div class="intro-block1"><div class="intro-block1-l1">Hémisphère,</div><div class="intro-block1-l2">Atelier de dispositifs numériques</div><div class="intro-block1-l3">234 avenue Felix Faure 69003 Lyon</div></div><div class="intro-block2"><div>&lt;m.&gt; bonjour@hemisphere-project.com</div><div>&lt;m.&gt; [0033] 682 984 800</div></div>'],
-			// typing speed
-			typeSpeed: -50,
-			// time before typing starts
-			startDelay: 500,
-			// backspacing speed
-			backSpeed: -200,
-			// time before backspacing
-			backDelay: 500,
-			// loop
-			loop: false,
-			// false = infinite
-			loopCount: false,
-			// show cursor
-			showCursor: false,
-			// character for cursor
-			cursorChar: "|",
-			// attribute to type (null == text)
-			attr: null,
-			// either html or text
-			contentType: 'html',
-			// call when done callback function
-			callback: function() {},
-			// starting callback function before each string
-			preStringTyped: function() {},
-			//callback for every typed string
-			onStringTyped: function() {},
-			// callback for reset
-			resetCallback: function() {}
-		});*/
+		// 	console.log(vh);
+		// $(".intro").typed({
+		// 	strings: ['<div class="intro-block1"><div class="intro-block1-l1">Hémisphère,</div></div>','<div class="intro-block1"><div class="intro-block1-l1">Hémisphère,</div><div class="intro-block1-l2">Atelier de dispositifs numériques</div><div class="intro-block1-l3">234 avenue Felix Faure 69003 Lyon</div></div><div class="intro-block2"><div>&lt;m.&gt; bonjour@hemisphere-project.com</div><div>&lt;m.&gt; [0033] 682 984 800</div></div>'],
+		// 	// typing speed
+		// 	typeSpeed: -50,
+		// 	// time before typing starts
+		// 	startDelay: 500,
+		// 	// backspacing speed
+		// 	backSpeed: -200,
+		// 	// time before backspacing
+		// 	backDelay: 500,
+		// 	// loop
+		// 	loop: false,
+		// 	// false = infinite
+		// 	loopCount: false,
+		// 	// show cursor
+		// 	showCursor: false,
+		// 	// character for cursor
+		// 	cursorChar: "|",
+		// 	// attribute to type (null == text)
+		// 	attr: null,
+		// 	// either html or text
+		// 	contentType: 'html',
+		// 	// call when done callback function
+		// 	callback: function() {},
+		// 	// starting callback function before each string
+		// 	preStringTyped: function() {},
+		// 	//callback for every typed string
+		// 	onStringTyped: function() {},
+		// 	// callback for reset
+		// 	resetCallback: function() {}
+		// });
 
 
 		ajustNoiseSizes();
