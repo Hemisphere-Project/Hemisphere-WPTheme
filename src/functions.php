@@ -559,3 +559,18 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 {
     return '<h2>' . $content . '</h2>';
 }
+
+/*------------------------------------*\
+    Custom search results
+\*------------------------------------*/
+
+
+// function search_filter( $query ) {
+//     if (!is_admin() && $query->is_search ) {
+//         $query->set('meta_key','wpcf-date');
+//         $query->set('orderby','meta_value');
+//         $query->set('order','DESC');
+//     }
+//     return $query;
+// }
+// add_filter( 'pre_get_posts', 'search_filter');

@@ -45,8 +45,10 @@
 										<?php echo get_the_term_list( $post->ID, 'project-type', '', ', ', '' ); ?>
 									</td>
 									<td>
-										<?php echo get_the_term_list( $post->ID, 'membre', '', ', ', '' ); ?>
-										<?php echo get_the_term_list( $post->ID, 'collaborateur', '', ', ', '' ); ?>
+										<?php
+										echo get_the_term_list( $post->ID, 'membre', '', ', ', '' ) ;
+										if ($coll = get_the_term_list( $post->ID, 'collaborateur', '', ', ', '' ) ) echo ', ';
+										echo get_the_term_list( $post->ID, 'collaborateur', '', ', ', '' ); ?>
 									</td>
 									<td>
 										<?php echo get_the_term_list( $post->ID, 'category', '', ', ', '' ); ?>
