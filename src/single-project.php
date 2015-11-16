@@ -11,8 +11,8 @@
 
 
 			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-panel="<?php echo 'dp'.$res_count; ?>">
-
+			<!-- <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-panel="<?php echo 'dp'.$res_count; ?>"> -->
+			<article id="<?php echo $post->post_name; ?>" <?php post_class(); ?> data-panel="<?php echo 'dp'.$res_count; ?>">
 
 				<div class="legend">
 					<div class="legend-line-1">

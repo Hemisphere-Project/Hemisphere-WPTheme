@@ -4,16 +4,16 @@
 
 		<!-- post title -->
 		<div class="title">
-			<!-- <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a> -->
-			<a href="<?php echo get_post_type_archive_link('project').'#post-'.get_the_ID(); ?>" ><?php the_title(); ?></a>
+			<!-- <a href="<?php echo get_post_type_archive_link('project').'#post-'.get_the_ID(); ?>" ><?php the_title(); ?></a> -->
+			<a href="<?php echo get_post_type_archive_link('project').'#'.$post->post_name ?>" ><?php the_title(); ?></a>
 		</div>
 		<!-- /post title -->
 		<?php html5wp_excerpt('html5wp_search','html5wp_search_more'); // Build your custom callback length in functions.php ?>
 
 		<!-- post thumbnail -->
 		<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-			<!-- <a href="<?php the_permalink(); ?>" ?> -->
-			<a href="<?php echo get_post_type_archive_link('project').'#post-'.get_the_ID(); ?>" ?>
+			<!-- <a href="<?php echo get_post_type_archive_link('project').'#post-'.get_the_ID(); ?>" ?> -->
+			<a href="<?php echo get_post_type_archive_link('project').'#'.$post->post_name ?>" ?>
 				<?php the_post_thumbnail(array(240,240)); ?>
 			</a>
 			<!-- <?php the_post_thumbnail(array(240,240));

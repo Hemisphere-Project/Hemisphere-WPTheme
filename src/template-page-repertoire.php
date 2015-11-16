@@ -34,9 +34,8 @@
 										<?php echo types_render_field("date", array("format" => "m.Y")) ?>
 									</td>
 									<td>
-										<!-- <?php echo types_render_field("titre", array()) ?> -->
-										<!-- <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a> -->
-										<a href="<?php echo get_post_type_archive_link('project').'#post-'.get_the_ID(); ?>" ><?php the_title(); ?></a>
+										<!-- <a href="<?php echo get_post_type_archive_link('project').'#post-'.get_the_ID(); ?>" ><?php the_title(); ?></a> -->
+										<a href="<?php echo get_post_type_archive_link('project').'#'.$post->post_name ?>" ><?php the_title(); ?></a>
 									</td>
 									<td>
 										<?php echo types_render_field( "lieu", array( ) ); ?>
