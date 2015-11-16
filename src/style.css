@@ -1020,53 +1020,6 @@ input[type="search"]:-ms-input-placeholder {
   padding-left: 65px;
 }
 
-/*.about .cartouche {
-  font-family: "btpnormal";
-  font-size: 24px;
-  margin-top: 60px;
-}
-.about .cartouche .first-block {
-  margin-left: 24px;
-}
-.about .cartouche .second-block {
-  margin-left: 132px;
-}
-.about .about-content {
-  margin-left: 132px;
-  margin-top: 30px;
-}
-.about .about-content .images-column {
-  width: 590px;
-  float: left;
-  height: 457px;
-  overflow: hidden;
-}
-.about .about-content .images-column img {
-  border: 3px solid #009A65;
-  margin-bottom: 45px;
-}
-.about .about-content .images-column img:last-child {
-  margin-bottom: 0;
-}
-.about .about-content .text-column {
-  width: 275px;
-  margin-left: 630px;
-  padding-right: 5px;
-  height: 457px;
-  overflow: scroll;
-}
-.about .about-content .text-column .about-title {
-  text-transform: uppercase;
-}
-.about .about-content .about-title {
-  margin-bottom: 24px;
-}
-.about .about-content .presentation-text, .about .about-content .acteurs-text, .about .about-content .credits-text {
-  margin-bottom: 48px;
-}
-.about .indent-1 {
-  padding-left: 65px;
-}*/
 
 .labo {
   margin-left: 132px;

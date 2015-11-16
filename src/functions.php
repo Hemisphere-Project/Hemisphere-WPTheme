@@ -105,6 +105,9 @@ function html5blank_header_scripts()
             // Velocity
             wp_register_script('velocity', get_template_directory_uri() . '/js/lib/velocity.min.js', array(), '1.0.0');
 
+            // perfect scrollbar
+            wp_register_script('perfect-scrollbar', get_template_directory_uri() . '/js/lib/perfect-scrollbar.js', array(), '1.0.0');
+
 
             wp_register_script('anchor-position', get_template_directory_uri() . '/js/title-shuffle/AnchorPosition.js', array(), '1.0.0');
 
@@ -123,6 +126,7 @@ function html5blank_header_scripts()
                     'conditionizr',
                     'modernizr',
                     'velocity',
+                    'perfect-scrollbar',
                     'jquery',
                     'typedjs'),
                 '1.0.0');
@@ -565,12 +569,13 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 \*------------------------------------*/
 
 
-// function search_filter( $query ) {
-//     if (!is_admin() && $query->is_search ) {
-//         $query->set('meta_key','wpcf-date');
-//         $query->set('orderby','meta_value');
-//         $query->set('order','DESC');
-//     }
-//     return $query;
-// }
-// add_filter( 'pre_get_posts', 'search_filter');
+function search_filter( $query ) {
+  if (!is_admin() && (is_category() or is_archive()) ){
+  // if (!is_admin() && ($query->is_search or is_category() or is_archive()) ){
+      $query->set('meta_key','wpcf-date');
+      $query->set('orderby','meta_value');
+      $query->set('order','DESC');
+  }
+  return $query;
+}
+add_filter( 'pre_get_posts', 'search_filter');
