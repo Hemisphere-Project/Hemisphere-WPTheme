@@ -36,7 +36,7 @@
 		var phrase1 = $('#introL1').text().split('');
 		var phrase2 = $('#introL2').text().split('');
 		$("#introL1,#introL2").empty();
-		
+
 		$.each(phrase1, function(index,char){
 			var charDiv = $('<span>').addClass("singleChar").html(char).appendTo($("#introL1"));
 		});
@@ -45,10 +45,16 @@
 		});
 
 		$('.singleChar').on('mouseover', function(){
-			$(this).css('font-family', 'btp_modify1');
-			$(this).prev().css('font-family', 'btp_modify1');
-			$(this).prev().prev().css('font-family', 'btp_modify1');
-			$(this).next().css('font-family', 'btp_modify1');
+			$(this).css('font-family', 'btp_modify2');
+			$(this).prev().css('font-family', 'btp_modify2');
+			$(this).prev().prev().css('font-family', 'btp_modify2');
+			$(this).next().css('font-family', 'btp_modify2');
+		});
+		$('.singleChar').on('mouseleave', function(){
+			$(this).css('font-family', 'btpnormal');
+			$(this).prev().css('font-family', 'btpnormal');
+			$(this).prev().prev().css('font-family', 'btpnormal');
+			$(this).next().css('font-family', 'btpnormal');
 		});
 		// CLICK
 		$('.singleChar').on('mousedown', function(){
