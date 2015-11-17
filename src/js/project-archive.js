@@ -54,14 +54,14 @@
 			goUp();
 		});
 
-		$(document).keyup(function(e){
-			if(e.keyCode == 38){
-				goUp();
-			 }
-			 if(e.keyCode == 40){
-				 goDown();
-			 }
-		});
+		// $(document).keyup(function(e){
+		// 	if(e.keyCode == 38){
+		// 		goUp();
+		// 	 }
+		// 	 if(e.keyCode == 40){
+		// 		 goDown();
+		// 	 }
+		// });
 
 
 		$('.elevator').on('click', '.elevator-item', function(event) {
@@ -137,7 +137,8 @@
 	}
 
 	function scrollBackToTop(index){
-		var imgDiv = $("article[data-panel='dp"+index+"']").children(".image-column");
+		// var imgDiv = $("article[data-panel='dp"+index+"']").children(".image-column");
+		var imgDiv = $("article[data-panel='dp"+index+"']").children(".image-column").children(".image-container");
 		imgDiv.animate({scrollTop:0},{duration:0} );
 	}
 
