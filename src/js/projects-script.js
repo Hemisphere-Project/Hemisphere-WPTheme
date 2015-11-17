@@ -45,10 +45,10 @@
 		});
 
 		$('.singleChar').on('mouseover', function(){
-			$(this).css('font-family', 'btp_modify2');
-			$(this).prev().css('font-family', 'btp_modify2');
-			$(this).prev().prev().css('font-family', 'btp_modify2');
-			$(this).next().css('font-family', 'btp_modify2');
+			$(this).css('font-family', 'btp_modify1');
+			$(this).prev().css('font-family', 'btp_modify1');
+			$(this).prev().prev().css('font-family', 'btp_modify1');
+			$(this).next().css('font-family', 'btp_modify1');
 		});
 		$('.singleChar').on('mouseleave', function(){
 			$(this).css('font-family', 'btpnormal');
