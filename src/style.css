@@ -250,13 +250,13 @@ input[type="search"] {
 }
 
 ::-moz-selection {
-  background-color: #009A65;
+  background-color: #009933;
   color: #FFF;
   text-shadow: none;
 }
 
 ::selection {
-  background-color: #009A65;
+  background-color: #009933;
   color: #FFF;
   text-shadow: none;
 }
@@ -270,7 +270,7 @@ input[type="search"] {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #009A65;
+  background-color: #009933;
 }
 
 .repertoire::-webkit-scrollbar, .fixed-table-container-inner::-webkit-scrollbar, .fixed-table-container::-webkit-scrollbar {
@@ -282,7 +282,7 @@ input[type="search"] {
 }
 
 .repertoire::-webkit-scrollbar-thumb {
-  background-color: #009A65;
+  background-color: #009933;
 }
 
 /**
@@ -382,7 +382,7 @@ input[type="search"] {
  * ---
  */
 .header a {
-  color: #009A65;
+  color: #009933;
 }
 .header .header-pack {
   /*float:left;*/
@@ -538,7 +538,7 @@ input[type="search"] {
 
 .intro {
   background:transparent;
-  color: #009A65;
+  color: #009933;
   font-family: "btpnormal";
   font-size: 24px;
   height: 100vh;
@@ -556,7 +556,8 @@ input[type="search"] {
 
 .projects {
   margin: 0 132px 0 132px;
-  padding-top: 246px;
+  /*padding-top: 246px;*/
+    padding-top: 143px;
   /*for the #start anchor */
 }
 
@@ -564,7 +565,7 @@ input[type="search"] {
   margin: 40px 0 0 0;
 }
 .container{
-  background-color: #009A65;
+  background-color: #009933;
 }
 .project-item .cover-image {
   -webkit-filter: grayscale(100%) brightness(160%) contrast(85%);
@@ -582,17 +583,18 @@ input[type="search"] {
 .project-item img {
   padding: 3px;
   width: 100%;
-  /*border: 3px solid #009A65;*/
+  /*border: 3px solid #009933;*/
   float: left;
 }
 .project-item .noise {
-  background-image: url("img/noisy.png");
+  /*background-image: url("img/noisy.png");*/
+  background-image: url("img/noise.png");
   height: 100px;
   width: inherit;
   position: relative;
   top: 3px;
   margin: 0 2.5px;
-  opacity: 0.2;
+  opacity: 0.12;
 }
 .project-item .noise:hover {
   opacity: 0.05;
@@ -771,7 +773,7 @@ input[type="search"] {
 .project .image-column img {
   max-width: 100%;
   margin-bottom: 45px;
-  border: 3px solid #009A65;
+  border: 3px solid #009933;
   max-height: -webkit-calc(100vh - 250px);
   max-height: calc(100vh - 250px);
 }
@@ -797,7 +799,7 @@ input[type="search"] {
   margin-top: 10px;
 }
 .project .info-separator {
-  color: #009A65;
+  color: #009933;
 }
 
 .repertoire {
@@ -816,7 +818,7 @@ input[type="search"] {
 }
 .repertoire .header-background {
   height: 35px;
-  border-bottom: 2px dashed #009A65;
+  border-bottom: 2px dashed #009933;
   background-color: #FFF;
   position: absolute;
   top: 0;
@@ -840,7 +842,7 @@ input[type="search"] {
 }
 .repertoire .repertoire-table .th-inner {
   font-family: "ankacoder_narrowregular";
-  color: #009A65;
+  color: #009933;
   position: absolute;
   top: 0;
   text-align: left;
@@ -850,8 +852,8 @@ input[type="search"] {
 }
 .repertoire .repertoire-table tr {
   width: 100%;
-  border-top: 2px dashed #009A65;
-  border-bottom: 2px dashed #009A65;
+  border-top: 2px dashed #009933;
+  border-bottom: 2px dashed #009933;
 }
 .repertoire .repertoire-table tr:first-child {
   border: none;
@@ -932,11 +934,11 @@ input[type="search"]:-ms-input-placeholder {
   margin-bottom: 40px;
 }
 .search-section .search-results .title a {
-  color: #009A65;
+  color: #009933;
 }
 .search-section .search-results img {
   max-height: 240px;
-  border: 3px solid #009A65;
+  border: 3px solid #009933;
 }
 
 .elevator {
@@ -947,7 +949,7 @@ input[type="search"]:-ms-input-placeholder {
   text-align: center;
   font-family: "btpnormal";
   font-size: 24px;
-  color: #009A65;
+  color: #009933;
 }
 .elevator .elevator-item {
   cursor: pointer;
@@ -995,7 +997,7 @@ input[type="search"]:-ms-input-placeholder {
   overflow: hidden;
 }
 .about .about-content .images-column img {
-  border: 3px solid #009A65;
+  border: 3px solid #009933;
   margin-bottom: 45px;
 }
 .about .about-content .images-column img:last-child {
@@ -1042,7 +1044,7 @@ input[type="search"]:-ms-input-placeholder {
 
 /* body classes for both single and archive labo pages */
 .single-labo, .post-type-archive-labo {
-  background-color: #009A65;
+  background-color: #009933;
 }
 .single-labo .header a, .post-type-archive-labo .header a {
   color: #000;

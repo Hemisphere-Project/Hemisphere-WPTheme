@@ -568,14 +568,38 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     Custom search results
 \*------------------------------------*/
 
-
+/*
 function search_filter( $query ) {
+
   if (!is_admin() && (is_category() or is_archive()) ){
-  // if (!is_admin() && ($query->is_search or is_category() or is_archive()) ){
+  //if (!is_admin() && ($query->is_search or is_category() or is_archive()) ){
       $query->set('meta_key','wpcf-date');
       $query->set('orderby','meta_value');
+      //$query->set('orderby','meta_value_num');
       $query->set('order','DESC');
   }
   return $query;
 }
-add_filter( 'pre_get_posts', 'search_filter');
+add_filter( 'pre_get_posts', 'search_filter');*/
+
+function filter_search_results_by_date( $posts, $query, $c ) {
+	global $wp_query, $wpdb;
+
+	if ( !count( $posts ) ){
+		return $posts;
+	}
+
+	if (!is_admin() && ($wp_query->is_search or is_category() or is_archive()) ){
+
+		//Use of array_multisort to sort multi_dimensionnal array
+		//Need to fill an array with same key and value to sort by.
+		$date_array = array();
+		foreach($posts as $key => $post){
+			$date = get_post_meta($post->ID, 'wpcf-date');
+			$date_array[$key] = $date[0];
+		}
+		array_multisort($date_array, SORT_DESC, $posts);
+	}
+	return $posts;
+}
+add_filter( 'the_posts', 'filter_search_results_by_date' );
