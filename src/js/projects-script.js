@@ -28,39 +28,62 @@
 		// 	$(this).css('font-family', 'btpnormal');
 		// });
 		// CLICK
-		$('.intro-block1').on('mousedown', function(){
-			$(this).css('font-family', 'btp_modify2');
-		});
+		// $('.intro-block1').on('mousedown', function(){
+		// 	$(this).css('font-family', 'btp_modify2');
+		// });
 
-		// HOVER TITLE SCOPE
-		var phrase1 = $('#introL1').text().split('');
-		var phrase2 = $('#introL2').text().split('');
-		$("#introL1,#introL2").empty();
+		typeL1();
 
-		$.each(phrase1, function(index,char){
-			var charDiv = $('<span>').addClass("singleChar").html(char).appendTo($("#introL1"));
-		});
-		$.each(phrase2, function(index,char){
-			var charDiv = $('<span>').addClass("singleChar").html(char).appendTo($("#introL2"));
-		});
+		function typeL1(){
+			$('#introL1').typed({
+						strings: ['Hémisphère,'],
+						typeSpeed: 15,
+						contentType: 'text',
+						showCursor: false,
+						callback: function() { $('#introL1').html('Hémisphère,'); typeL2();}
+				});
+		}
 
-		$('.singleChar').on('mouseover', function(){
-			$(this).css('font-family', 'btp_modify1');
-			$(this).prev().css('font-family', 'btp_modify1');
-			$(this).prev().prev().css('font-family', 'btp_modify1');
-			$(this).next().css('font-family', 'btp_modify1');
-		});
-		$('.singleChar').on('mouseleave', function(){
-			$(this).css('font-family', 'btpnormal');
-			$(this).prev().css('font-family', 'btpnormal');
-			$(this).prev().prev().css('font-family', 'btpnormal');
-			$(this).next().css('font-family', 'btpnormal');
-		});
-		// CLICK
-		$('.singleChar').on('mousedown', function(){
-			$('.singleChar').css('font-family', 'btp_modify2');
-		});
+		function typeL2(){
+			$('#introL2').typed({
+						strings: ['Atelier de dispositifs numériques'],
+						typeSpeed: 15,
+						contentType: 'text',
+						showCursor: false,
+						callback: function() { hoverFx(); }
+			});
+		}
 
+		function hoverFx(){
+			// HOVER TITLE SCOPE
+			var phrase1 = $('#introL1').text().split('');
+			var phrase2 = $('#introL2').text().split('');
+			$("#introL1,#introL2").empty();
+
+			$.each(phrase1, function(index,char){
+				var charDiv = $('<span>').addClass("singleChar").html(char).appendTo($("#introL1"));
+			});
+			$.each(phrase2, function(index,char){
+				var charDiv = $('<span>').addClass("singleChar").html(char).appendTo($("#introL2"));
+			});
+
+			$('.singleChar').on('mouseover', function(){
+				$(this).css('font-family', 'btp_modify1');
+				$(this).prev().css('font-family', 'btp_modify1');
+				$(this).prev().prev().css('font-family', 'btp_modify1');
+				$(this).next().css('font-family', 'btp_modify1');
+			});
+			$('.singleChar').on('mouseleave', function(){
+				$(this).css('font-family', 'btpnormal');
+				$(this).prev().css('font-family', 'btpnormal');
+				$(this).prev().prev().css('font-family', 'btpnormal');
+				$(this).next().css('font-family', 'btpnormal');
+			});
+			// CLICK
+			$('.singleChar').on('mousedown', function(){
+				$('.singleChar').css('font-family', 'btp_modify2');
+			});
+		}
 
 
 

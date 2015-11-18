@@ -586,10 +586,8 @@ input[type="search"] {
   float: left;
 }
 .project-item .noise {
-  /*background-image: url("img/noisy.png");
-  opacity: 0.2;*/
-  background-image: url("img/noise.png");
-  opacity: 0.12;
+  background-image: url("img/noisy.png");
+  opacity: 0.2;
   height: 100px;
   width: inherit;
   position: relative;

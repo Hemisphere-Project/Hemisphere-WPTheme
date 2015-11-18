@@ -9,8 +9,8 @@
 
 <section id="introSection" class="intro">
 	<div class="intro-block1">
-		<div id="introL1" class="intro-block1-l1">Hémisphère,</div>
-		<div id="introL2" class="intro-block1-l2">Atelier de dispositifs numériques</div>
+		<div id="introL1" class="intro-block1-l1"></div>
+		<div id="introL2" class="intro-block1-l2"></div>
 	</div>
 </div>
 <section id="introSpacer" class="intro">
