@@ -1,5 +1,5 @@
 (function( root, $, undefined ) {
 
-		//console.log("hello fuckers");
+		// console.log("hello single project");
 
 } ( this, jQuery ));

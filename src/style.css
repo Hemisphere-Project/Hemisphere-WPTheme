@@ -874,6 +874,7 @@ input[type="search"]:-moz-placeholder {
 }
 input[type="search"]::-moz-placeholder {
   color: #000;
+  opacity:1;
 }
 input[type="search"]:-ms-input-placeholder {
   color: #000;
@@ -1005,8 +1006,11 @@ input[type="search"]:-ms-input-placeholder {
 .about .about-content .text-column {
   width: 670px;
   float: left;
-  height: 550px;
-  overflow: scroll;
+  /*height: 520px;*/
+  height: -webkit-calc(100vh - 230px);
+  height: calc(100vh - 230px);
+  /*overflow-y: scroll;*/
+  /*deleted for ps scrollbar*/
 }
 .about .about-content .text-column .about-title {
   text-transform: uppercase;
@@ -1071,8 +1075,17 @@ input[type="search"]:-ms-input-placeholder {
 
 .image-column{
   overflow: hidden !important;
-  /*margin-right: 657px !important;*/
 }
+
+#about_text_scroll{
+  position: relative;
+  height: inherit;
+  width:inherit;
+  padding-right: 20px;
+  overflow-y:scroll;
+}
+
+
 
 /*- - - - - - - - - - - - - - - -*/
 /* perfect-scrollbar             */
@@ -1103,4 +1116,12 @@ input[type="search"]:-ms-input-placeholder {
   }
   .ps-container:hover.ps-in-scrolling {
     pointer-events: none;
+  }
+
+  .repertoire .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+    position: absolute;
+    background-color: #FFFFFF;
+    border-right: 2px dashed #009A44;
+    right: 0px;
+    width: 0px;
   }

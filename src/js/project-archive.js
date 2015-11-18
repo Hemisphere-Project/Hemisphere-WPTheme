@@ -6,45 +6,12 @@
 
 	$(function () {
 
+		// console.log('realisations');
 
-		/*
-		// DOM ready, take it away
-		var options = {
-			$menu: $(".elevator-items-list"),
-			menuSelector: '.elevator-item',
-			panelSelector: '.project',
-			namespace: '.panelSnap',
-			onSnapStart: function(event){
-				console.log("start  "+event[0].dataset.panel);
-			},
-			onSnapFinish: function(event){
-				//double call here ??
-				console.log("finish  "+event[0].dataset.panel);
-				currentPanelIndex = parseInt(event[0].dataset.panel.substring(2));
-				selectElevator(currentPanelIndex);
-			},
-			onActivate: function(event){
-			},
-			directionThreshold: 1000,
-			slideSpeed: 300,
-			easing: 'swing',
-			offset: 0,
-			navigation: {
-				keys: {
-				  nextKey: 40,
-				  prevKey: 38,
-				},
-				buttons: {
-				  $nextButton: $(".down-arrow"),
-				  $prevButton: $(".up-arrow"),
-				},
-				wrapAround: false
-			}
-		};
-
-		$('body').panelSnap(options);
-
-		*/
+		var containers = document.getElementsByClassName('image-container');
+		$.each(containers,function(index,container){
+				Ps.initialize(container, {maxScrollbarLength: 200});
+		});
 
 
 		$('.down-arrow').click(function(event){
@@ -65,7 +32,6 @@
 
 
 		$('.elevator').on('click', '.elevator-item', function(event) {
-			// console.log("elevator item");
 			currentPanelIndex = event.currentTarget.dataset.panel.substring(2);
 			updatePosition(currentPanelIndex);
 		});
@@ -185,9 +151,7 @@
 				});
 		}
 		else{
-			// console.log("done");
-			// $('.legend').show();
-			// $('.text-column').show();
+
 		}
 	}
 

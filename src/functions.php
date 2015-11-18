@@ -160,7 +160,6 @@ function html5blank_conditional_scripts()
 		wp_register_script('projectarchivescripts',get_template_directory_uri() . '/js/project-archive.js',array(),'1.0.0');
 		wp_enqueue_script('projectarchivescripts');
 	}else if(is_post_type_archive('labo')){
-
 		wp_register_script( 'laboajax', get_template_directory_uri().'/js/labo-ajax.js', array('jquery'), '1.0.0');
 		wp_enqueue_script('laboajax');
 		// pass Ajax Url to script.js
@@ -168,6 +167,9 @@ function html5blank_conditional_scripts()
 	}else if(is_page('a-propos')){
 		wp_register_script('aboutscripts',get_template_directory_uri() . '/js/about-script.js',array(),'1.0.0');
 		wp_enqueue_script('aboutscripts');
+	}else if(is_page('repertoire')){
+		wp_register_script('repertoirescript',get_template_directory_uri() . '/js/repertoire-script.js',array(),'1.0.0');
+		wp_enqueue_script('repertoirescript');
 	}
 }
 

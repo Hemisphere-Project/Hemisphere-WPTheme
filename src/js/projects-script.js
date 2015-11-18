@@ -12,6 +12,7 @@
 
 	$(window).load(function () {
 
+
 		// <init>
 		var menuDefaultOffset = {top:24,left:24};
 		var legendDefaultOffset = {top:60,left:24};
