@@ -2,14 +2,14 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20150318 at Mon Oct 26 15:35:12 2015
+Created by FontForge 20150318 at Wed Nov 18 14:23:37 2015
  By uniteet7
 Copyright (c) 2015, Antoine Lambin
 </metadata>
 <defs>
-<font id="btpmodify2webfont" horiz-adv-x="629" >
+<font id="BTPModify2" horiz-adv-x="629" >
   <font-face 
-    font-family="btpmodify2webfont"
+    font-family="BTPModify2"
     font-weight="700"
     font-stretch="normal"
     units-per-em="1000"
@@ -48,11 +48,11 @@ d="M36 744h103v-240h-103v240z" />
     <glyph glyph-name="plus" unicode="+" horiz-adv-x="606" 
  />
     <glyph glyph-name="comma" unicode="," horiz-adv-x="285" 
- />
+d="M140 183l100 -101v-75l-41 -82l-68 -68l-72 72l68 66l-87 87z" />
     <glyph glyph-name="hyphen" unicode="-" horiz-adv-x="476" 
 d="M50 199v103h376v-103h-376z" />
     <glyph glyph-name="period" unicode="." horiz-adv-x="280" 
- />
+d="M140 183l100 -101l-100 -100l-100 100z" />
     <glyph glyph-name="slash" unicode="/" horiz-adv-x="501" 
 d="M404 857l97 -38l-413 -1059l-98 35z" />
     <glyph glyph-name="zero" unicode="0" horiz-adv-x="660" 
@@ -76,13 +76,13 @@ d="M501 261h104v-510h-104v510zM501 847h104v-483h-104v483zM53 261h104v-510h-104v5
     <glyph glyph-name="nine" unicode="9" horiz-adv-x="625" 
 d="M47 504h105v-504h-105v504zM463 847h104v-1096h-104v1096z" />
     <glyph glyph-name="colon" unicode=":" horiz-adv-x="285" 
- />
+d="M145 522l100 -101l-100 -100l-100 100zM145 183l100 -101l-100 -100l-100 100z" />
     <glyph glyph-name="semicolon" unicode=";" horiz-adv-x="290" 
- />
+d="M145 183l100 -101v-75l-41 -82l-68 -68l-72 72l68 66l-87 87zM145 522l100 -101l-100 -100l-100 100z" />
     <glyph glyph-name="less" unicode="&#x3c;" horiz-adv-x="553" 
- />
+d="M414 753l82 -74l-286 -309l289 -301l-86 -78l-364 380z" />
     <glyph glyph-name="greater" unicode="&#x3e;" horiz-adv-x="553" 
- />
+d="M56 679l82 74l365 -382l-364 -380l-85 78l289 301z" />
     <glyph glyph-name="question" unicode="?" horiz-adv-x="533" 
  />
     <glyph glyph-name="at" unicode="@" horiz-adv-x="862" 
@@ -139,6 +139,18 @@ d="M265 376h103v-240h-103v240zM523 504h105v-504h-105v504zM5 504h105v-504h-105v50
 d="M440 504h105v-504h-105v504zM110 504h103l1 -240h-103z" />
     <glyph glyph-name="Z" unicode="Z" horiz-adv-x="599" 
 d="M459 240h103v-240h-103v240zM54 744h103v-240h-103v240z" />
+    <glyph glyph-name="bracketleft" unicode="[" horiz-adv-x="424" 
+d="M379 848v-104h-200v-889h200v-104h-304v1097h304z" />
+    <glyph glyph-name="backslash" unicode="\" horiz-adv-x="501" 
+d="M5 819l98 38l413 -1062l-97 -35z" />
+    <glyph glyph-name="bracketright" unicode="]" horiz-adv-x="424" 
+d="M45 744v104h304v-1097h-304v104h200v889h-200z" />
+    <glyph glyph-name="asciicircum" unicode="^" horiz-adv-x="594" 
+d="M558 500l-73 -73l-188 185l-188 -184l-73 73l261 252z" />
+    <glyph glyph-name="underscore" unicode="_" horiz-adv-x="594" 
+d="M45 1v104h504v-104h-504z" />
+    <glyph glyph-name="grave" unicode="`" horiz-adv-x="468" 
+d="M427 643l-36 -97l-346 130l35 96z" />
     <glyph glyph-name="a" unicode="a" 
 d="M50 199v103h376v-103h-376z" />
     <glyph glyph-name="b" unicode="b" horiz-adv-x="608" 
