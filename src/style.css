@@ -1093,6 +1093,14 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 
+.repertoire .fixed-table-container-inner{
+    padding-right: 18px;
+}
+.repertoire .header-background{
+    margin-right: 18px;
+}
+
+
 
 /*- - - - - - - - - - - - - - - -*/
 /* perfect-scrollbar             */
