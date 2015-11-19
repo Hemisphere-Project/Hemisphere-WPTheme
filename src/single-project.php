@@ -36,7 +36,7 @@
 				<div class="image-column ">
 					<div class="image-container ">
 						<?php echo types_render_field( "images", array("width" => "1200", "height" => "1200", "proportional" => "true" ) ) ;?>
-					</div>						
+					</div>
 				</div>
 				<div class="text-column">
 					<div class="excerpt">
