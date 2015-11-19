@@ -5,12 +5,12 @@
 		<section class="about">
 			<section class="cartouche">
 				<div class="first-block">
-					<div> Atelier de dispositifs numériques </div>
-					<div> 234 avenue Felix Faure 69003 Lyon </div>
+					<div id="about_1"> Atelier de dispositifs numériques </div>
+					<div id="about_2"> 234 avenue Felix Faure 69003 Lyon </div>
 				</div>
 				<div class="second-block">
-					<div>&lt;m.&gt; bonjour@hemisphere-project.com</div>
-					<div>&lt;t.&gt; [0033] 682 984 800</div>
+					<div id="about_3">&lt;m.&gt; bonjour@hemisphere-project.com</div>
+					<div id="about_4">&lt;t.&gt; [0033] 682 984 800</div>
 				</div>
 
 			</section>

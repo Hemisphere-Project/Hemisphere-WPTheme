@@ -1064,7 +1064,8 @@ input[type="search"]:-ms-input-placeholder {
   position: relative;
   height: inherit;
   width:inherit;
-  padding-right: 3px;
+  /*padding-right: 3px;*/
+  padding-right: 15px;
   background-color:white;
   overflow-y:scroll;
 }
@@ -1120,8 +1121,8 @@ input[type="search"]:-ms-input-placeholder {
 
   .repertoire .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
     position: absolute;
-    background-color: #FFFFFF;
-    border-right: 2px dashed #009A44;
+    background-color: #009A44;
+    /*border-right: 2px dashed #009A44;*/
     right: 0px;
-    width: 0px;
+    width: 3px;
   }
