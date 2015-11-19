@@ -1126,9 +1126,9 @@ input[type="search"]:-ms-input-placeholder {
   }
 
   .repertoire .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
-    position: absolute;
-    background-color: #009A44;
-    /*border-right: 2px dashed #009A44;*/
-    right: 0px;
+    width: 2px;
+  }
+
+  .about .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
     width: 2px;
   }
