@@ -46,7 +46,9 @@
 									<td>
 										<?php
 										echo get_the_term_list( $post->ID, 'membre', '', ', ', '' ) ;
-										if ($coll = get_the_term_list( $post->ID, 'collaborateur', '', ', ', '' ) ) echo ', ';
+										if ($coll = get_the_term_list( $post->ID, 'collaborateur', '', ', ', '' ) ) echo ', ';?>
+										<br><br>
+										<?php
 										echo get_the_term_list( $post->ID, 'collaborateur', '', ', ', '' ); ?>
 									</td>
 									<td>

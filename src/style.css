@@ -801,6 +801,7 @@ input[type="search"] {
   color: #009A44;
 }
 
+
 .repertoire {
   height: 100vh;
   overflow: hidden;
@@ -846,24 +847,28 @@ input[type="search"] {
   top: 0;
   text-align: left;
 }
-.repertoire .repertoire-table th {
+/*.repertoire .repertoire-table th {
   padding-left: 5px;
-}
+}*/
 .repertoire .repertoire-table tr {
-  width: 100%;
-  border-top: 2px dashed #009A44;
   border-bottom: 2px dashed #009A44;
 }
-.repertoire .repertoire-table tr:first-child {
-  border: none;
-}
+
 .repertoire .repertoire-table td {
   text-align: left;
-  padding: 20px 90px 30px 0px;
-  width: 20px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-right: 30px;
   vertical-align: top;
 }
 
+.repertoire .repertoire-table td:nth-child(3) {
+/*width: 14%;*/
+}
+
+.repertoire .repertoire-table td:nth-child(4) {
+width: 23%;
+}
 
 
 
@@ -1125,5 +1130,5 @@ input[type="search"]:-ms-input-placeholder {
     background-color: #009A44;
     /*border-right: 2px dashed #009A44;*/
     right: 0px;
-    width: 3px;
+    width: 2px;
   }
