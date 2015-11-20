@@ -927,7 +927,7 @@ input[type="search"]:-ms-input-placeholder {
 }
 .search-section .row {
   overflow-y:scroll;
-  height:92vh;
+  height:85vh;
 }
 
 
