@@ -515,17 +515,17 @@ input[type="search"] {
 
   /*float*/
 
-  /*margin: 0 132px 0 132px;
+  margin: 0 132px 0 132px;
   padding-top: 143px;
-  max-width:900px;*/
+  max-width:900px;
 
   /*hide under header*/
 
-  max-width:900px;
+  /*max-width:900px;
   overflow-y: scroll;
   height: 70vh;
   margin-left:132px;
-  margin-top: 160px;
+  margin-top: 160px;*/
 }
 
 .project-item {
@@ -1006,7 +1006,7 @@ input[type="search"]:-ms-input-placeholder {
 
 .labo {
   margin-left: 132px;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 .labo .type-labo {
   margin: 0;
@@ -1015,13 +1015,40 @@ input[type="search"]:-ms-input-placeholder {
 .labo .type-labo .labo-title {
   font-family: "btpnormal";
   font-size: 24px;
+  margin-top: 20px;
+  text-decoration: none;
 }
-.labo .type-labo .labo-sub-title {
+
+.labo .type-labo .labo-title a {
+  text-decoration: none;
+}
+
+.labo .type-labo .labo-title a:hover {
+
+  font-family: "btp_modify1";
+}
+.labo .type-labo .labo-title a:active {
+  font-family: "btp_modify2";
+}
+/*.labo .type-labo .labo-sub-title {
   text-indent: 65px;
-}
+}*/
+
 .labo .type-labo .labo-title:before {
   content: ">";
 }
+.labo .type-labo .labo-sub-title {
+padding-left: 45px;
+}
+
+.labo img{
+  /*padding-left: 45px;*/
+  max-width: 50%;
+  height: auto;
+  /*-webkit-filter: grayscale(100%);
+  filter: grayscale(1);*/
+}
+
 
 /* body classes for both single and archive labo pages */
 .single-labo, .post-type-archive-labo {

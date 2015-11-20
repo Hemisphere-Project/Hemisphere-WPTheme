@@ -12,7 +12,7 @@
 			<a href="<?php the_permalink(); ?>"><?php echo types_render_field( "titre", array( ) ); ?></span></a>
 		</div>
 		<div class="labo-sub-title">
-			
+
 			<span class="date"><?php echo types_render_field( "date", array( ) ); ?></span>
 			<span>&lt;Type&gt;</span>
 			<span><?php echo get_the_term_list( $post->ID, 'type-labo', '', ', ', '' ); ?></span>
@@ -31,7 +31,7 @@
 	<!-- /article -->
 
 	<?php endwhile; ?>
-	
+
 	<?php else: ?>
 
 	<!-- article -->
