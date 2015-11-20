@@ -26,13 +26,6 @@
 					</div>
 				</div>
 
-
-				<!--<?php echo types_render_field( "membres", array( ) ); ?>
-				<?php the_category(); ?>
-				<?php echo get_the_term_list( $post->ID, 'membre', '<h5>Membres</h5><ul><li>', '</li><li>', '</li></ul>' ); ?>
-				<?php echo get_the_term_list( $post->ID, 'collaborateur', '<h5>Collaborateurs</h5><ul><li>', '</li><li>', '</li></ul>' ); ?>-->
-
-
 				<div class="image-column ">
 					<div class="image-container ">
 						<?php echo types_render_field( "images", array("width" => "1200", "height" => "1200", "proportional" => "true" ) ) ;?>

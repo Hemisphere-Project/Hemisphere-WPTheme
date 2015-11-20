@@ -20,6 +20,7 @@
 	</div> -->
 </section>
 
+<h1 style = "display:none"> hémisphère, atelier de dispositifs numériques</h1>
 
 <div class="legend">
 	<div class="legend-line-1">
@@ -64,7 +65,7 @@
 		<div class="numbering"><?php echo $cnt+1; ?></div>
 
 		<!-- hidden fields -->
-		<h1 class="title hidden"><?php echo types_render_field( "titre", array( ) ); ?></h1>
+		<h2 class="title hidden"><?php echo types_render_field( "titre", array( ) ); ?></h2>
 		<div class="commanditaire hidden"><?php echo types_render_field( "commanditaire", array( ) ); ?></div>
 		<div class="lieu hidden"><?php echo types_render_field( "lieu", array( ) ); ?></div>
 		<div class="date hidden"><?php echo types_render_field("date", array("format" => "m.Y")) ?></div>

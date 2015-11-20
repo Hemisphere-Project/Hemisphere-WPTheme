@@ -20,19 +20,6 @@
 		var vh = $('#introSection').height();
 
 
-		// ACCUEIL INIT
-		// HOVER TITLE SIMPLE
-		// $('.intro-block1').on('mouseover', function(){
-		// 	$(this).css('font-family', 'btp_modify1');
-		// });
-		// $('.intro-block1').on('mouseleave', function(){
-		// 	$(this).css('font-family', 'btpnormal');
-		// });
-		// CLICK
-		// $('.intro-block1').on('mousedown', function(){
-		// 	$(this).css('font-family', 'btp_modify2');
-		// });
-
 		typeL1();
 
 		function typeL1(){
@@ -104,40 +91,6 @@
 
 
 
-		// typed things
-		// 	console.log(vh);
-		// $(".intro").typed({
-		// 	strings: ['<div class="intro-block1"><div class="intro-block1-l1">Hémisphère,</div></div>','<div class="intro-block1"><div class="intro-block1-l1">Hémisphère,</div><div class="intro-block1-l2">Atelier de dispositifs numériques</div><div class="intro-block1-l3">234 avenue Felix Faure 69003 Lyon</div></div><div class="intro-block2"><div>&lt;m.&gt; bonjour@hemisphere-project.com</div><div>&lt;m.&gt; [0033] 682 984 800</div></div>'],
-		// 	// typing speed
-		// 	typeSpeed: -50,
-		// 	// time before typing starts
-		// 	startDelay: 500,
-		// 	// backspacing speed
-		// 	backSpeed: -200,
-		// 	// time before backspacing
-		// 	backDelay: 500,
-		// 	// loop
-		// 	loop: false,
-		// 	// false = infinite
-		// 	loopCount: false,
-		// 	// show cursor
-		// 	showCursor: false,
-		// 	// character for cursor
-		// 	cursorChar: "|",
-		// 	// attribute to type (null == text)
-		// 	attr: null,
-		// 	// either html or text
-		// 	contentType: 'html',
-		// 	// call when done callback function
-		// 	callback: function() {},
-		// 	// starting callback function before each string
-		// 	preStringTyped: function() {},
-		// 	//callback for every typed string
-		// 	onStringTyped: function() {},
-		// 	// callback for reset
-		// 	resetCallback: function() {}
-		// });
-
 
 		ajustNoiseSizes();
 		adjustBorderSizes();
@@ -173,14 +126,6 @@
 			$(".legend .lgd-lieu").text(currentProject.lieu);
 		}
 
-		function cursorAnimation() {
-		    $('.lgd-dash').animate({
-		        opacity: 0
-		    }, 'fast', 'linear').animate({
-		        opacity: 1
-		    }, 'fast', 'linear');
-		}
-		// setInterval (cursorAnimation, 600);
 
 		window.addEventListener("optimizedScroll", ajustHeader);
 		$( window ).resize(function() { ajustHeader(); });
@@ -234,6 +179,10 @@
 				});
 			});
 		}
+
+
+		// var tables = document.getElementsByClassName('projects');
+		// Ps.initialize(tables[0], {maxScrollbarLength: 200});
 
 
 	});
