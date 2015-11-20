@@ -517,7 +517,7 @@ input[type="search"] {
 
   margin: 0 132px 0 132px;
   padding-top: 143px;
-  max-width:900px;
+  /*max-width:900px;*/
 
   /*hide under header*/
 
