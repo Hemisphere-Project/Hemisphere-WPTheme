@@ -920,7 +920,7 @@ input[type="search"]:-ms-input-placeholder {
   font-size: 24px;
   margin-left: 132px;
 }
-.search-section .search-results {
+.search-section .search-resultats {
   margin-top: 30px;
   margin-left: 132px;
   width: 905px;
@@ -931,16 +931,21 @@ input[type="search"]:-ms-input-placeholder {
 }
 
 
-.search-section .search-results .labo {
+.search-section .search-resultats .labo {
   margin: 0;
 }
-.search-section .search-results article {
+.search-section .search-resultats article {
   margin-bottom: 40px;
 }
-.search-section .search-results .title a {
+.search-section .search-resultats .title a {
   color: #009A44;
 }
-.search-section .search-results img {
+
+.search-section .search-resultats p {
+
+}
+
+.search-section .search-resultats img {
   max-height: 240px;
   border: 3px solid #009A44;
 }
@@ -1099,7 +1104,7 @@ input[type="search"]:-ms-input-placeholder {
     margin-right: 18px;
 }
 
-/*.search-results{
+/*.search-resultats{
     overflow: hidden !important;
 }*/
 

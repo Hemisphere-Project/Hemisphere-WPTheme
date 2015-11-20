@@ -10,7 +10,7 @@
 			</span>
 
 		</div>
-		<div class="search-results row">
+		<div class="search-resultats row">
 			<?php if($wp_query->found_posts == 0) : echo sprintf( __( '%s Search Results for ', 'html5blank' ), $wp_query->found_posts ); echo get_search_query(); endif; ?>
 			<!--<div class="search-results-columns">-->
 				<?php get_template_part('search-loop'); ?>

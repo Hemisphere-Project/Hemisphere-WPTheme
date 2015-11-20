@@ -8,7 +8,7 @@
 			<a href="<?php echo get_post_type_archive_link('project').'#'.$post->post_name ?>" ><?php the_title(); ?></a>
 		</div>
 		<!-- /post title -->
-		<?php html5wp_excerpt('html5wp_search','html5wp_search_more'); // Build your custom callback length in functions.php ?>
+		<?php	html5wp_excerpt('html5wp_search','html5wp_search_more'); // Build your custom callback length in functions.php ?>
 
 		<!-- post thumbnail -->
 		<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
