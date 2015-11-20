@@ -8,10 +8,16 @@
 
 		// console.log('realisations');
 
+		// scrollbar
 		var containers = document.getElementsByClassName('image-container');
 		$.each(containers,function(index,container){
 				Ps.initialize(container, {maxScrollbarLength: 200});
 		});
+
+		// prevent arrows from scrolling between projects (firefox only)
+		document.onkeydown = function (e) {
+				return false;
+		}
 
 
 		$('.down-arrow').click(function(event){
@@ -20,15 +26,6 @@
 		$('.up-arrow').click(function(event){
 			goUp();
 		});
-
-		// $(document).keyup(function(e){
-		// 	if(e.keyCode == 38){
-		// 		goUp();
-		// 	 }
-		// 	 if(e.keyCode == 40){
-		// 		 goDown();
-		// 	 }
-		// });
 
 
 		$('.elevator').on('click', '.elevator-item', function(event) {

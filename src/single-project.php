@@ -78,7 +78,9 @@
 						<span class="info"><?php echo types_render_field("date", array("format" => "Y")) ?></span>
 						</div>
 						<div>
-						<span class="info-separator">&lt;Lien&gt;</span>
+						<!-- <span class="info-separator">&lt;Lien&gt;</span> -->
+						<?php $lien = types_render_field("lien", array(target => "_blank"));
+						if ($lien) echo '<span class="info-separator">&lt;Lien&gt;</span>'; ?>
 						<span class="info"><?php echo types_render_field("lien", array(target => "_blank")) ?></span>
 						</div>
 					</div>
