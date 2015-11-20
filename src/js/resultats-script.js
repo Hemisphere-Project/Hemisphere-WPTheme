@@ -6,10 +6,12 @@
 		// ARCHIVE // CATEGORY // SEARCH
 
 		console.log('resultats script');
-		
+
 		//SCROLLBAR
-		var table = document.getElementsByClassName('search-results');
-		Ps.initialize(table[0], {maxScrollbarLength: 400});
+		var container = document.getElementsByClassName('search-results');
+		Ps.initialize(container[0], {maxScrollbarLength: 200});
+
+
 
 
 	});

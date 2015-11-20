@@ -1139,6 +1139,7 @@ input[type="search"]:-ms-input-placeholder {
 
   .repertoire .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
     width: 3px;
+    margin-top:33px;
   }
 
   .about .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
@@ -1147,4 +1148,5 @@ input[type="search"]:-ms-input-placeholder {
 
 .search-section .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
     width: 3px;
+        margin-top:55px;
   }
