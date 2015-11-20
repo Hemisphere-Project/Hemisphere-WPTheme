@@ -170,7 +170,10 @@ function html5blank_conditional_scripts()
 	}else if(is_page('repertoire')){
 		wp_register_script('repertoirescript',get_template_directory_uri() . '/js/repertoire-script.js',array(),'1.0.0');
 		wp_enqueue_script('repertoirescript');
-	}
+	}else if(is_search() or is_category() or is_archive()){
+  wp_register_script('searchscript',get_template_directory_uri() . '/js/resultats-script.js',array(),'1.0.0');
+  wp_enqueue_script('searchscript');
+  }
 }
 
 // Load HTML5 Blank styles

@@ -906,20 +906,13 @@ input[type="search"]:-ms-input-placeholder {
   border: none;
   outline: none;
 }
-
 .search-section {
   margin-top: 60px;
+  position:fixed;
+  overflow-y: hidden;
 }
 .search-section .search-header {
-  position: fixed;
-  /*.search-input {
-  	animation: blink-empty 1s infinite;
-  	border-left: transparent solid 1px;
-  	margin:5px;
-  }*/
-  /*@keyframes blink-empty {
-  	50% {border-left: 1px solid #333;}
-  }*/
+  /*position: relative;*/
 }
 .search-section .search-header .votre-recherche {
   color: #000;
@@ -928,10 +921,16 @@ input[type="search"]:-ms-input-placeholder {
   margin-left: 132px;
 }
 .search-section .search-results {
-  padding-top: 60px;
+  margin-top: 30px;
   margin-left: 132px;
   width: 905px;
 }
+.search-section .row {
+  overflow-y:scroll;
+  height:92vh;
+}
+
+
 .search-section .search-results .labo {
   margin: 0;
 }
@@ -1100,6 +1099,11 @@ input[type="search"]:-ms-input-placeholder {
     margin-right: 18px;
 }
 
+/*.search-results{
+    overflow: hidden !important;
+}*/
+
+
 
 
 /*- - - - - - - - - - - - - - - -*/
@@ -1134,9 +1138,13 @@ input[type="search"]:-ms-input-placeholder {
   }
 
   .repertoire .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
-    width: 2px;
+    width: 3px;
   }
 
   .about .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
-    width: 2px;
+    width: 3px;
+  }
+
+.search-section .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+    width: 3px;
   }
