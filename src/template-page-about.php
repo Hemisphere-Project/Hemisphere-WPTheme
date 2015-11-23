@@ -21,8 +21,8 @@
 						<div class="presentation-text"><?php echo types_render_field( "presentation", array( ) ); ?></div>
 						<div class="about-title">acteurs:</div>
 						<div class="acteurs-text"><?php echo types_render_field( "acteurs", array( ) ); ?></div>
-						<!-- <div class="about-title">newsletter :</div>
-						<div class="newsletter-text"></div> -->
+						<!-- <div class="about-title">atelier:</div>
+						<div class="atelier-text"><?php echo types_render_field( "atelier_presentation", array( ) ); ?></div> -->
 						<div class="about-title">credits:</div>
 						<div class="credits-text"><?php echo types_render_field( "credits", array( ) ); ?></div>
 					</div>

@@ -164,6 +164,9 @@ function html5blank_conditional_scripts()
 		wp_enqueue_script('laboajax');
 		// pass Ajax Url to script.js
 		wp_localize_script('laboajax', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
+	}else if(is_singular('labo')){
+		wp_register_script('labo-script',get_template_directory_uri() . '/js/labo-script.js',array(),'1.0.0');
+		wp_enqueue_script('labo-script');
 	}else if(is_page('a-propos')){
 		wp_register_script('aboutscripts',get_template_directory_uri() . '/js/about-script.js',array(),'1.0.0');
 		wp_enqueue_script('aboutscripts');
