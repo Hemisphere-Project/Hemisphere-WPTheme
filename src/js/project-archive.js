@@ -16,7 +16,11 @@
 
 		// prevent arrows from scrolling between projects (firefox only)
 		document.onkeydown = function (e) {
-				return false;
+				if (!$('.search-input').is(':focus')){
+					if ((e.keyCode == 38)||(e.keyCode == 40)){
+						return false;
+					}
+				}
 		}
 
 
