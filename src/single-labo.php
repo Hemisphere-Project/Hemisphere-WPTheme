@@ -9,8 +9,8 @@
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<!-- post title -->
 				<div class="labo-title">
-					<!-- <a href="<?php the_permalink(); ?>"><?php echo types_render_field( "titre", array( ) ); ?></span></a> -->
-					<a href="<?php echo get_post_type_archive_link('labo'); ?>"><?php echo types_render_field( "titre", array( ) ); ?></span></a>
+					<a href="<?php the_permalink(); ?>"><?php echo types_render_field( "titre", array( ) ); ?></span></a>
+					<!-- <a href="<?php echo get_post_type_archive_link('labo'); ?>"><?php echo types_render_field( "titre", array( ) ); ?></span></a> -->
 
 				</div>
 				<div class="labo-single-sub-title">
@@ -22,6 +22,7 @@
 				<div class="labo-single-sub-title">
 					<span>&lt;Type&gt;</span>
 					<span><?php echo get_the_term_list( $post->ID, 'type-labo', '', ', ', '' ); ?></span>
+					<!-- <span><?php echo strip_tags ( get_the_term_list( get_the_ID(), 'type-labo', "",", " ) ); ?></span> -->
 					<br>
 					<span>&lt;Equipe&gt;</span>
 					<span class="equipe"><?php echo types_render_field( "equipe", array( ) ); ?></span>

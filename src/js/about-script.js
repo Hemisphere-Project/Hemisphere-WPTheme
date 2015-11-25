@@ -10,10 +10,8 @@
 		e.addEventListener("scroll", function(event){
 			var st = $(this).scrollTop();
 			if (st > lastScrollTop){
-				console.log('dooooo');
 				$(".images-column").scrollTop($(".images-column").scrollTop()+delta);
 			} else {
-				console.log('elseeee');
 				$(".images-column").scrollTop($(".images-column").scrollTop()-delta);
 			}
 			lastScrollTop = st;

@@ -1048,14 +1048,13 @@ input[type="search"]:-ms-input-placeholder {
 padding-left: 45px;
 }
 
-.labo img{
+.single-labo img{
   max-width: 50%;
   height: auto;
-  /*-webkit-filter: grayscale(100%);
+  /*border: 3px solid black;
+  -webkit-filter: grayscale(100%);
   filter: grayscale(1);*/
 }
-
-
 /* body classes for both single and archive labo pages */
 .single-labo, .post-type-archive-labo {
   background-color: #009A44;
@@ -1065,6 +1064,7 @@ padding-left: 45px;
 }
 .single-labo .header .current, .post-type-archive-labo .header .current {
   color: #FFF !important;
+  /*opacity: 0.8;*/
 }
 
 /*- - - - - - - - - - - - - - - -*/
