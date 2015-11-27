@@ -1047,7 +1047,7 @@ input[type="search"]:-ms-input-placeholder {
 }
 .labol2{
   margin-top: 0px;
-  padding-left: 0px;
+  padding-left: 30px;
 }
 
 .labo .type-labo .labo-sub-title {
@@ -1061,7 +1061,7 @@ padding-left: 45px;
 .single-labo img{
   max-width: 50%;
   height: auto;
-  border: 3px solid black;
+  border: 2px solid white;
 }
 /* body classes for both single and archive labo pages */
 .single-labo, .post-type-archive-labo {
