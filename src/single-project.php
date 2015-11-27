@@ -39,11 +39,11 @@
 					<div class="infos">
 						<div>
 						<span class="info-separator">&lt;Domaine&gt;</span>
-						<span class="info"><?php echo get_the_term_list( $post->ID, 'category', '', ', ', '' ); ?></span>
+						<h2 class="info"><?php echo get_the_term_list( $post->ID, 'category', '', ', ', '' ); ?></h2>
 						</div>
 						<div>
 						<span class="info-separator">&lt;Type&gt;</span>
-						<span class="info"><?php echo get_the_term_list( $post->ID, 'project-type', '', ', ', '' ); ?></span>
+						<h2 class="info"><?php echo get_the_term_list( $post->ID, 'project-type', '', ', ', '' ); ?></h2>
 						</div>
 						<br>
 						<div>
@@ -64,7 +64,7 @@
 						<div>
 						<br>
 						<span class="info-separator">&lt;Lieu&gt;</span>
-						<span class="info"><?php echo types_render_field( "lieu", array( ) ); ?></span>
+						<h3 class="info"><?php echo types_render_field( "lieu", array( ) ); ?></h3>
 						</div>
 						<div>
 						<span class="info-separator">&lt;Annee&gt;</span>

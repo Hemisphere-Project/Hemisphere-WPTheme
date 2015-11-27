@@ -749,24 +749,27 @@ input[type="search"] {
 .project .text-column {
   font-family: "ankacoder_narrowregular";
   font-size: 15px;
-  /*position:fixed;*/
   max-width: 50%;
   width: 275px;
   float: right;
   margin-right: 342px;
   margin-top: -webkit-calc(-100vh + 230px);
   margin-top: calc(-100vh + 230px);
-  /*top:$project-margin-top;*/
 }
 .project .text-column p {
   margin-top: 0;
 }
 .project .infos {
   margin-top: 10px;
-
 }
 .project .info-separator {
   color: #009A44;
+}
+
+.project .infos h2, h3{
+  font-size: 15px;
+  font-weight: normal;
+  display:inline;
 }
 
 
@@ -1047,7 +1050,7 @@ input[type="search"]:-ms-input-placeholder {
 }
 .labol2{
   margin-top: 0px;
-  padding-left: 30px;
+  padding-left: 0px;
 }
 
 .labo .type-labo .labo-sub-title {
