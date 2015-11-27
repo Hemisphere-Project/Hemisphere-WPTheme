@@ -54,7 +54,7 @@
 						<div class="element" ><a href="<?php echo get_post_type_archive_link('labo'); ?>">Laboratoire__</a></div>
 						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'a-propos' ) );?>">À propos__</a></div>
 
-					<?php elseif(is_post_type_archive('labo') || $post->post_parent == 'labo') : ?>
+					<?php elseif(is_post_type_archive('labo')) : ?>
 
 						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'hemisphere' ) )."#start";?>">Hémisphère__</a></div>
 						<div class="element" ><a href="<?php echo get_post_type_archive_link('project'); ?>">Réalisations__</a></div>
@@ -111,5 +111,5 @@
 			<!-- /header -->
 
 			<!-- TRICK FOR FONT PRELOAD -->
-			<span style="color: transparent; font-family: 'btp_modify1';">dispositifs</span>
-			<span style="color: transparent; font-family: 'btp_modify2';">numériques</span>
+			<!-- <span style="color: transparent; font-family: 'btp_modify1'; height:0px; font-size:0px; line-height:0px; " >dispositifs</span>
+			<span style="color: transparent; font-family: 'btp_modify2'; height:0px; font-size:0px; line-height:0px; ">numériques</span> -->
