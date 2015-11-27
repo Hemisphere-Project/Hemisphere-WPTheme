@@ -35,7 +35,6 @@
 			<!-- header -->
 			<header class="header clear" role="banner">
 
-					<!-- logo -->
 					<div class="header-pack">
 
 						<?php if(is_page('hemisphere')) : ?>
@@ -99,17 +98,6 @@
 					</div>
 
 
-					<!-- /logo -->
 
-					<!-- nav -->
-					<!--<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>-->
-					<!-- /nav -->
 
 			</header>
-			<!-- /header -->
-
-			<!-- TRICK FOR FONT PRELOAD -->
-			<!-- <span style="color: transparent; font-family: 'btp_modify1'; height:0px; font-size:0px; line-height:0px; " >dispositifs</span>
-			<span style="color: transparent; font-family: 'btp_modify2'; height:0px; font-size:0px; line-height:0px; ">numériques</span> -->

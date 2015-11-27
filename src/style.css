@@ -368,6 +368,12 @@ input[type="search"] {
   font-family: "btp_modify2";
 }
 
+.footer{
+  position: fixed;
+     bottom: 0;
+
+}
+
 /**
  * partials/nav
  * ---
