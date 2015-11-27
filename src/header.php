@@ -53,7 +53,7 @@
 						<div class="element" ><a href="<?php echo get_post_type_archive_link('labo'); ?>">Laboratoire__</a></div>
 						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'a-propos' ) );?>">À propos__</a></div>
 
-					<?php elseif(is_post_type_archive('labo')) : ?>
+					<?php elseif(is_post_type_archive('labo')||is_singular('labo') ) : ?>
 
 						<div class="element" ><a href="<?php echo get_permalink( get_page_by_path( 'hemisphere' ) )."#start";?>">Hémisphère__</a></div>
 						<div class="element" ><a href="<?php echo get_post_type_archive_link('project'); ?>">Réalisations__</a></div>
