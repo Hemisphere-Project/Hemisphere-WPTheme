@@ -12,7 +12,7 @@
 		<div id="introL1" class="intro-block1-l1"></div>
 		<div id="introL2" class="intro-block1-l2"></div>
 	</div>
-</div>
+</section>
 <section id="introSpacer" class="intro">
 	<!-- <div class="intro-block2">
 		<div>&lt;m.&gt; bonjour@hemisphere-project.com</div>
@@ -20,7 +20,6 @@
 	</div> -->
 </section>
 
-<h1 style = "display:none"> hémisphère, atelier de dispositifs numériques</h1>
 
 <div class="legend">
 	<div class="legend-line-1">

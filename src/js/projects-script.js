@@ -93,7 +93,7 @@
 
 
 		ajustNoiseSizes();
-		adjustBorderSizes();
+		ajustBorderSizes();
 
 
 		// REALISATIONS
@@ -169,7 +169,7 @@
 			});
 		}
 		// GREEN CONTAINER SIZES
-		function adjustBorderSizes(){
+		function ajustBorderSizes(){
 			$( ".cover-image a" ).each(function( index ) {
 				var imgHeight = $(this).children("img").height();
 				var imgWidth = $(this).children("img").width();
