@@ -342,13 +342,10 @@ input[type="search"] {
   color: #009A44;
 }
 .header .header-pack {
-  /*float:left;*/
   position: fixed;
   top: 24px;
   left: 24px;
   z-index: 1000;
-  /*font-family:$font-family-base;
-  font-size:$font-size-base;*/
 }
 .header .header-pack .element {
   font-family: "btpnormal";
