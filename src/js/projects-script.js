@@ -97,34 +97,48 @@
 
 
 		// REALISATIONS
+		// $(".container").on("mouseover",function(event){
+		// 	currentProject.numbering = $(event.currentTarget.parentElement).find(".numbering").text()+' — ';
+		// 	currentProject.date = $(event.currentTarget.parentElement).find(".date").text();
+		// 	currentProject.title = $(event.currentTarget.parentElement).find(".title").text();
+		// 	currentProject.commanditaire = $(event.currentTarget.parentElement).find(".commanditaire").text();
+		// 	currentProject.lieu = $(event.currentTarget.parentElement).find(".lieu").text()+', ';
+		// 	hideIntroAnim();
+		// 	updateCurrentProject();
+		// 	$('.lgd-dash').hide();
+		// });
+		//
+		// $(".container").on("mouseleave",function(event){
+		// 	currentProject.numbering = "";
+		// 	currentProject.date = "";
+		// 	currentProject.title = "";
+		// 	currentProject.commanditaire = "";
+		// 	currentProject.lieu = "";
+		// 	updateCurrentProject();
+		// 	$('.lgd-dash').show();
+		// });
+		//
+		// function updateCurrentProject(){
+		// 	$(".legend .lgd-numbering").text(currentProject.numbering);
+		// 	$(".legend .lgd-annee").text(currentProject.date);
+		// 	$(".legend .lgd-title").text(currentProject.title);
+		// 	$(".legend .lgd-commanditaire").text(currentProject.commanditaire);
+		// 	$(".legend .lgd-lieu").text(currentProject.lieu);
+		// }
+
+
+
+		// LITTLE legend
+
+		$(".little_legend").css('visibility', 'hidden');
+
 		$(".container").on("mouseover",function(event){
-			currentProject.numbering = $(event.currentTarget.parentElement).find(".numbering").text()+' — ';
-			currentProject.date = $(event.currentTarget.parentElement).find(".date").text();
-			currentProject.title = $(event.currentTarget.parentElement).find(".title").text();
-			currentProject.commanditaire = $(event.currentTarget.parentElement).find(".commanditaire").text();
-			currentProject.lieu = $(event.currentTarget.parentElement).find(".lieu").text()+', ';
-			hideIntroAnim();
-			updateCurrentProject();
-			$('.lgd-dash').hide();
+			$(event.currentTarget.parentElement).find(".little_legend").css('visibility','visible');
 		});
 
 		$(".container").on("mouseleave",function(event){
-			currentProject.numbering = "";
-			currentProject.date = "";
-			currentProject.title = "";
-			currentProject.commanditaire = "";
-			currentProject.lieu = "";
-			updateCurrentProject();
-			$('.lgd-dash').show();
+			$(event.currentTarget.parentElement).find(".little_legend").css('visibility', 'hidden');
 		});
-
-		function updateCurrentProject(){
-			$(".legend .lgd-numbering").text(currentProject.numbering);
-			$(".legend .lgd-annee").text(currentProject.date);
-			$(".legend .lgd-title").text(currentProject.title);
-			$(".legend .lgd-commanditaire").text(currentProject.commanditaire);
-			$(".legend .lgd-lieu").text(currentProject.lieu);
-		}
 
 
 		window.addEventListener("optimizedScroll", ajustHeader);
