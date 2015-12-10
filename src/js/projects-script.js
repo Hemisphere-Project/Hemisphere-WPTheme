@@ -138,7 +138,7 @@
 			textdiv.html('');
 			textdiv.typed({
 						strings: [texttype],
-						typeSpeed: 5,
+						typeSpeed: 10,
 						contentType: 'text',
 						showCursor: false,
 						callback: function() { textdiv.data('typed', null); }
