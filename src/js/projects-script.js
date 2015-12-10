@@ -129,16 +129,27 @@
 
 
 		// LITTLE legend
-
 		$(".little_legend").css('visibility', 'hidden');
 
 		$(".container").on("mouseover",function(event){
 			$(event.currentTarget.parentElement).find(".little_legend").css('visibility','visible');
+			var textdiv = $(event.currentTarget.parentElement).find(".little_title");
+			var texttype = textdiv.html();
+			textdiv.html('');
+			textdiv.typed({
+						strings: [texttype],
+						typeSpeed: 5,
+						contentType: 'text',
+						showCursor: false,
+						callback: function() { textdiv.data('typed', null); }
+				});
 		});
 
 		$(".container").on("mouseleave",function(event){
 			$(event.currentTarget.parentElement).find(".little_legend").css('visibility', 'hidden');
 		});
+
+
 
 
 		window.addEventListener("optimizedScroll", ajustHeader);

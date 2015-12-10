@@ -66,7 +66,9 @@
 		<div class="lieu hidden"><?php echo types_render_field( "lieu", array( ) ); ?></div>
 		<div class="date hidden"><?php echo types_render_field("date", array("format" => "m.Y")) ?></div> -->
 
-		<div class="little_legend"><?php echo '<'.($cnt+1).'> '; echo types_render_field( "titre", array( ) ); ?>
+		<div class="little_legend">
+			<div class="little_num"><?php echo '<'.($cnt+1).'> '; ?></div>
+			<div class="little_title"><?php echo types_render_field( "titre", array( ) ); ?></div>
 		</div>
 
 

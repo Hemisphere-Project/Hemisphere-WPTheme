@@ -519,7 +519,8 @@ input[type="search"] {
   /*float*/
 
   margin: 0 132px 0 132px;
-  padding-top: 143px;
+  /*padding-top: 143px;*/
+  padding-top: 60px;
   /*max-width:900px;*/
 
   /*hide under header*/
@@ -602,6 +603,14 @@ input[type="search"] {
 
 .little_legend{
   padding-top: 6px;
+  height:37px;
+}
+.little_num{
+  display: inline;
+  color: #009A44;
+}
+.little_title{
+  display: inline;
 }
 
 /* grid */
