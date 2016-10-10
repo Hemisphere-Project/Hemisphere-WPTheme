@@ -12,7 +12,7 @@
 
 	$(window).load(function () {
 
-
+		console.log("HOME");
 		// <init>
 		var menuDefaultOffset = {top:24,left:24};
 		var legendDefaultOffset = {top:60,left:24};
@@ -153,7 +153,11 @@
 
 
 		window.addEventListener("optimizedScroll", ajustHeader);
-		$( window ).resize(function() { ajustHeader(); });
+		$( window ).resize(function() { 
+			ajustHeader(); 
+			ajustNoiseSizes(); 
+			ajustBorderSizes();  
+		});
 		$('.intro').on('click', hideIntroAnim);
 
 
@@ -199,11 +203,15 @@
 				var imgHeight = $(this).children("img").height();
 				var imgWidth = $(this).children("img").width();
 				$(this).parent().parent().css({
-						'height': imgHeight+2,
-						'width': imgWidth
+						// 'height': imgHeight+2,
+						// 'width': imgWidth
+						'height': imgHeight+6,
+						'width': '100%'
 				});
 			});
 		}
+
+
 
 
 		// var tables = document.getElementsByClassName('projects');
