@@ -2,7 +2,7 @@
 
 	<main role="main">
 	<!-- section -->
-	<section>
+	<section class="realisations">
 		<?php $res_count = 0 ?>
 
 
@@ -11,7 +11,6 @@
 
 
 			<!-- article -->
-			<!-- <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-panel="<?php echo 'dp'.$res_count; ?>"> -->
 			<article id="<?php echo $post->post_name; ?>" <?php post_class(); ?> data-panel="<?php echo 'dp'.$res_count; ?>">
 
 				<div class="legend">

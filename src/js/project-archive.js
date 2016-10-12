@@ -82,19 +82,22 @@
 
 	function updatePosition(index){
 		scrollToPanel("article[data-panel='dp"+index+"']",function(){
-			if(window.location.hash != $("article[data-panel='dp"+index+"']").attr("id"))
-				window.location.hash = $("article[data-panel='dp"+index+"']").attr("id");
+			// if(window.location.hash != $("article[data-panel='dp"+index+"']").attr("id"))
+			// 	window.location.hash = $("article[data-panel='dp"+index+"']").attr("id");
 		});
-
+		// enlevé du callback
+		if(window.location.hash != $("article[data-panel='dp"+index+"']").attr("id"))
+			window.location.hash = $("article[data-panel='dp"+index+"']").attr("id");
 		scrollBackToTop(index);
 		selectElevator(index);
 		animateText(index);
-		//window.location.hash = $("article[data-panel='dp"+index+"']").attr("id");
 	}
 
 	function scrollToPanel(selector,completecb){
 		var aTag = $(selector);
 		$('html,body').animate({scrollTop: aTag.offset().top},{duration:0,easing:"swing",complete:completecb}); // changed duration 400 to 0
+		// $('.project').each(function(index,div){$(this).css('z-index','100');})
+		// aTag.css('z-index','101');
 	}
 
 	function selectElevator(index){

@@ -731,18 +731,25 @@ input[type="search"] {
     width: 90%;
   }
 }
+
+/*------------------------------------*/
+/*------------------------------------*\
+    REALISATIONS (PROJECT ARCHIVE)
+/*------------------------------------*/
+/*------------------------------------*/
+
+
 .post-type-archive-project {
   overflow-y: hidden;
-  /* body */
 }
 
-.project {
+.realisations .project {
   margin: 0;
 }
-.project .legend {
+.realisations .project .legend {
   position: relative;
 }
-.project .image-column {
+.realisations .project .image-column {
   height: -webkit-calc(100vh - 230px);
   height: calc(100vh - 230px);
   overflow-y: scroll;
@@ -752,17 +759,17 @@ input[type="search"] {
   /*max-width:6*$base-grid + 5*$base-grid-margin;*/
   text-align: center;
 }
-.project .image-column img {
+.realisations .project .image-column img {
   max-width: 100%;
   margin-bottom: 45px;
   border: 3px solid #009A44;
   max-height: -webkit-calc(100vh - 250px);
   max-height: calc(100vh - 250px);
 }
-.project .image-column img:last-child {
+.realisations .project .image-column img:last-child {
   margin-bottom: 0;
 }
-.project .text-column {
+.realisations .project .text-column {
   font-family: "ankacoder_narrowregular";
   font-size: 15px;
   max-width: 50%;
@@ -772,30 +779,36 @@ input[type="search"] {
   margin-top: -webkit-calc(-100vh + 230px);
   margin-top: calc(-100vh + 230px);
 }
-.project .text-column p {
+.realisations .project .text-column p {
   margin-top: 0;
 }
-.project .infos {
+.realisations .project .infos {
   margin-top: 10px;
 }
-.project .info-separator {
+.realisations .project .info-separator {
   color: #009A44;
 }
 
-.project .infos h2, h3{
+.realisations .project .infos h2, h3{
   font-size: 15px;
   font-weight: normal;
   display:inline;
 }
 
+/*------------------------------------*/
+/*------------------------------------*\
+    REPERTOIRE
+/*------------------------------------*/
+/*------------------------------------*/
 
-.repertoire {
+
+.repertoireSection  {
   height: 100vh;
   overflow: hidden;
-  padding-left: 64px;
-  padding-right: 64px;
+  padding-left: 128px;
+  padding-right: 128px;
 }
-.repertoire .fixed-table-container {
+.repertoireSection  .fixed-table-container {
   margin-top: 104px;
   width: 100%;
   height: 100%;
@@ -803,7 +816,7 @@ input[type="search"] {
   position: relative;
   padding-top: 30px;
 }
-.repertoire .header-background {
+.repertoireSection  .header-background {
   height: 35px;
   border-bottom: 2px dashed #009A44;
   background-color: #FFF;
@@ -812,13 +825,13 @@ input[type="search"] {
   right: 0;
   left: 0;
 }
-.repertoire .fixed-table-container-inner {
+.repertoireSection  .fixed-table-container-inner {
   overflow-x: hidden;
   overflow-y: auto;
   height: 100%;
   margin-top: 3px;
 }
-.repertoire .repertoire-table {
+.repertoireSection  .repertoire-table {
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
@@ -827,21 +840,21 @@ input[type="search"] {
   padding-left: 5px;
   margin-bottom: 300px;
 }
-.repertoire .repertoire-table .th-inner {
+.repertoireSection  .repertoire-table .th-inner {
   font-family: "ankacoder_narrowregular";
   color: #009A44;
   position: absolute;
   top: 0;
   text-align: left;
 }
-/*.repertoire .repertoire-table th {
+/*.repertoireSection  .repertoire-table th {
   padding-left: 5px;
 }*/
-.repertoire .repertoire-table tr {
+.repertoireSection  .repertoire-table tr {
   border-bottom: 2px dashed #009A44;
 }
 
-.repertoire .repertoire-table td {
+.repertoireSection  .repertoire-table td {
   text-align: left;
   padding-top: 40px;
   padding-bottom: 30px;
@@ -849,11 +862,11 @@ input[type="search"] {
   vertical-align: top;
 }
 
-.repertoire .repertoire-table td:nth-child(3) {
+.repertoireSection  .repertoire-table td:nth-child(3) {
 /*width: 14%;*/
 }
 
-.repertoire .repertoire-table td:nth-child(4) {
+.repertoireSection  .repertoire-table td:nth-child(4) {
 width: 23%;
 }
 
@@ -946,6 +959,7 @@ input[type="search"]:-ms-input-placeholder {
   font-family: "btpnormal";
   font-size: 24px;
   color: #009A44;
+  z-index: 200;
 }
 .elevator .elevator-item {
   cursor: pointer;
@@ -1125,10 +1139,10 @@ padding-left: 45px;
 }
 
 
-.repertoire .fixed-table-container-inner{
+.repertoireSection  .fixed-table-container-inner{
     padding-right: 18px;
 }
-.repertoire .header-background{
+.repertoireSection  .header-background{
     margin-right: 18px;
 }
 
@@ -1170,7 +1184,7 @@ padding-left: 45px;
     pointer-events: none;
   }
 
-  .repertoire .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  .repertoireSection  .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
     width: 3px;
     margin-top:33px;
   }

@@ -2,7 +2,7 @@
 
 	<main role="main">
 
-		<section class="repertoire">
+		<section class="repertoireSection">
 			<div class="fixed-table-container">
 				<div class="header-background"> </div>
 				<div class="fixed-table-container-inner">

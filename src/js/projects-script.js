@@ -80,7 +80,7 @@
 		var introStep = (hashtag !="#start");
 		if (introStep){
 			$(".header-pack").offset({top:menuDefaultOffset.top+vh,left:menuDefaultOffset.left});
-			$(".legend").offset({top:legendDefaultOffset.top+vh,left:legendDefaultOffset.left});
+			// $(".legend").offset({top:legendDefaultOffset.top+vh,left:legendDefaultOffset.left});
 		}
 		else {
 			$('.intro').hide();
@@ -153,10 +153,10 @@
 
 
 		window.addEventListener("optimizedScroll", ajustHeader);
-		$( window ).resize(function() { 
-			ajustHeader(); 
-			ajustNoiseSizes(); 
-			ajustBorderSizes();  
+		$( window ).resize(function() {
+			ajustHeader();
+			ajustNoiseSizes();
+			ajustBorderSizes();
 		});
 		$('.intro').on('click', hideIntroAnim);
 
@@ -172,7 +172,7 @@
 				});
 				$(".intro").fadeTo(500, 0.2);
 				$(".header-pack").animate({top:menuDefaultOffset.top, left:menuDefaultOffset.left}, 500, "linear");
-				$(".legend").animate({top:legendDefaultOffset.top, left:legendDefaultOffset.left}, 500, "linear");
+				// $(".legend").animate({top:legendDefaultOffset.top, left:legendDefaultOffset.left}, 500, "linear");
 			}
 		}
 
@@ -184,7 +184,7 @@
 			if (currentScrollTop > 0 && vh > 0 && introStep) hideIntroAnim();
 			else  if(currentScrollTop < vh ){
 				$(".header-pack").offset({top:menuDefaultOffset.top+vh,left:menuDefaultOffset.left});
-				$(".legend").offset({top:legendDefaultOffset.top+vh,left:legendDefaultOffset.left});
+				// $(".legend").offset({top:legendDefaultOffset.top+vh,left:legendDefaultOffset.left});
 			}
 		}
 
