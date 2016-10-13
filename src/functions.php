@@ -117,6 +117,8 @@ function html5blank_header_scripts()
 
             wp_register_script('masonry', get_template_directory_uri() . '/bower_components/masonry/dist/masonry.pkgd.min.js', array(), '1.0.0');
 
+            wp_register_script('globalscript', get_template_directory_uri() . '/js/script-allpages.js', array('jquery'), '1.0.0'); // Custom scripts
+            wp_enqueue_script('globalscript'); // Enqueue it!
 
             // Custom scripts
             wp_register_script(
@@ -130,9 +132,6 @@ function html5blank_header_scripts()
                     'jquery',
                     'typedjs'),
                 '1.0.0');
-
-
-
             // Enqueue Scripts
             wp_enqueue_script('html5blankscripts');
 

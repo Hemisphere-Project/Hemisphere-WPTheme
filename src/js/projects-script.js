@@ -129,7 +129,7 @@
 
 
 		// LITTLE legend
-		$(".little_legend").css('visibility', 'hidden');
+		// $(".little_legend").css('visibility', 'hidden');
 
 		$(".container").on("mouseover",function(event){
 			$(event.currentTarget.parentElement).find(".little_legend").css('visibility','visible');

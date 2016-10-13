@@ -71,6 +71,13 @@
 			<div class="little_title"><?php echo types_render_field( "titre", array( ) ); ?></div>
 		</div>
 
+		<div class="mobile_little_legend">
+			<div class="little_num"><?php echo '<'.($cnt+1).'> '; ?></div>
+			<div class="little_title"><?php echo types_render_field( "titre", array( ) ); ?></div><br>
+			<div class="commanditaire"><?php echo types_render_field( "commanditaire", array( ) ); ?></div>
+			<div class="lieu"><?php echo types_render_field( "lieu", array( ) ); ?>, <?php echo types_render_field("date", array("format" => "m.Y")) ?></div>
+		</div>
+
 
 
 

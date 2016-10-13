@@ -6,7 +6,6 @@
 
 
 
-
 	});
 
 } ( this, jQuery ));
