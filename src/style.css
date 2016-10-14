@@ -346,6 +346,8 @@ input[type="search"] {
   top: 24px;
   left: 24px;
   z-index: 1000;
+  white-space:nowrap;
+  overflow:hidden;
 }
 .header .header-pack .element {
   font-family: "btpnormal";
@@ -1218,7 +1220,7 @@ padding-left: 45px;
 /*------------------------------------*/
 
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:700px) {
 
   .header-pack .element a{
     display:block;
@@ -1240,8 +1242,8 @@ padding-left: 45px;
 
   /*  HOME PAGE   */
   .row{
-    width:82%;
-    margin-left: 8%
+    width:84%;
+    margin-left: 7%
   }
   .projects{
     margin-top:50px;
@@ -1341,7 +1343,10 @@ padding-left: 45px;
   }
 
 
- /* ATTENTION, SI LANDING SUR PAGE REALISATIONS VIA GOOGLE -- REDIRECTION SUR HOMEPAGE !!! */
+ /* ATTENTION, SI LANDING SUR REALISATIONS ou LABO via google --> contenu pas affiché */
+ .realisations, .elevator, .labo, .search-section{
+   display:none;
+ }
 
 
 
